@@ -14,6 +14,8 @@ Voici comment les élèves et leurs partenaires internationaux créent des mosa�
 
 **Thème** : Célébrations | **Pays** : Martinique, France, Royaume-Uni | **Niveau** : Lycée
 
+![Mosaïque Caribéenne de Noël](/images/mosaique-caribeenne-noel.png)
+
 ### Contributions Principales
 
 #### 🇲🇶 Martinique : Noël sous les Tropiques

@@ -18,4 +18,6 @@ La mosaïque est la vue d'ensemble visuelle de toutes les contributions. Chaque 
 
 ## Exemple : Nos Rituels de Fin d'Année
 
+![Vue d'écran de la mosaïque](/images/ecran-final.png)
+
 [Voir la mosaïque complète →](/exemples)
