@@ -2,16 +2,3 @@
   command = "hugo --minify"
   publish = "public"
 
-[build.environment]
-  HUGO_VERSION = "0.121.0"
-  HUGO_ENABLEGITINFO = "true"
-
-[[redirects]]
-  from = "/admin"
-  to = "/.netlify/functions/auth"
-  status = 200
-
-[[redirects]]
-  from = "/api/auth"
-  to = "/.netlify/functions/auth"
-  status = 200
