@@ -1,38 +1,80 @@
 {{ define "main" }}
+
+<!-- Hero Section -->
 <section class="hero">
   <div class="container">
     <h1>{{ .Title }}</h1>
     <p>Transformez les échanges scolaires en fresques narratives interactives et pédagogiques.</p>
-    <a href="/fresques/" class="cta-button">Découvrir les Fresques</a>
+    <div style="margin-top: 40px;">
+      <a href="/fresques/" class="cta-button">Découvrir les Fresques</a>
+      <a href="/offre-services/" class="cta-button secondary">Nos Services</a>
+    </div>
   </div>
 </section>
 
+<!-- Mission Section -->
+<section class="section" style="background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%); color: white;">
+  <div class="container">
+    <h2 style="color: white;">Notre Mission</h2>
+    <p style="text-align: center; font-size: 18px; max-width: 700px; margin: 30px auto 0; color: #E0E0E0; line-height: 1.8;">
+      Favoriser les échanges interculturels authentiques à travers des fresques narratives créatives et pédagogiques.
+    </p>
+    <p style="text-align: center; font-size: 16px; max-width: 700px; margin: 20px auto 0; color: #B0B0B0;">
+      Un antidote à la superficialité des contenus digitaux. Avec LangLink, chaque élève crée une œuvre unique et réfléchie.
+    </p>
+  </div>
+</section>
+
+<!-- Services Overview -->
 <section class="section">
   <div class="container">
-    <h2>Nos Services</h2>
+    <h2>Nos 4 Services Clés</h2>
     <div class="grid">
       <div class="card">
-        <h3>Fresques Narratives</h3>
-        <p>Créez des fresques interactives basées sur les cultures et traditions du monde.</p>
+        <h3 style="color: var(--primary-blue); font-size: 28px;">1️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Matching Garanti</h4>
+        <p>Trouvez automatiquement une classe partenaire compatible. Zéro recherche, zéro effort.</p>
       </div>
       <div class="card">
-        <h3>Offre sur Mesure</h3>
-        <p>Adaptez nos services à vos besoins pédagogiques spécifiques.</p>
+        <h3 style="color: var(--primary-blue); font-size: 28px;">2️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Triple Filtre de Sécurité</h4>
+        <p>Zone blanche éducative inviolable. Aucun contenu inapproprié n'atteint jamais les élèves.</p>
       </div>
       <div class="card">
-        <h3>Exemples Inspirants</h3>
-        <p>Découvrez les projets réalisés par d'autres établissements.</p>
+        <h3 style="color: var(--primary-blue); font-size: 28px;">3️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Fiche Clé en Main</h4>
+        <p>Transforme 10 heures de préparation en 10 minutes d'appropriation.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--primary-blue); font-size: 28px;">4️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Cadre de Réflexion Guidée</h4>
+        <p>Force la réflexion avant l'action. Du bavardage à la pensée profonde.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Examples Preview -->
 <section class="section" style="background: #F5F5F7;">
   <div class="container">
-    <h2>Notre Mission</h2>
-    <p style="text-align: center; font-size: 18px; max-width: 600px; margin: 0 auto;">
-      Favoriser les échanges interculturels authentiques à travers des fresques narratives créatives et pédagogiques.
+    <h2>Exemple : Nos Rituels de Fin d'Année</h2>
+    <p style="text-align: center; margin-bottom: 40px; font-size: 18px; color: #666;">
+      Découvrez comment une classe en France, une au Royaume-Uni et une en Martinique créent ensemble une mosaïque culturelle unique.
     </p>
+    <div style="text-align: center;">
+      <a href="/exemples/" class="cta-button">Voir l'exemple complet</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section" style="background: linear-gradient(135deg, var(--secondary-yellow) 0%, #FFB700 100%); color: var(--dark-text);">
+  <div class="container" style="text-align: center;">
+    <h2 style="color: var(--dark-text);">Prêt à Transformer vos Échanges ?</h2>
+    <p style="font-size: 18px; margin: 20px 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Lancez un projet pilote avec votre classe et découvrez la puissance des fresques narratives.
+    </p>
+    <a href="/offre-services/" class="cta-button" style="background: var(--primary-blue); color: white;">Commencer un Projet</a>
   </div>
 </section>
 
