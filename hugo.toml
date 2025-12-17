@@ -1,0 +1,28 @@
+baseURL = "http://localhost:1313/"
+languageCode = "fr"
+title = "LangLink"
+theme = "ananke"
+pagerSize = 3
+
+[outputs]
+  home = ["HTML", "JSON"]
+
+[[menu.main]]
+  name = "Accueil"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Fresques Narratives"
+  url = "/fresques/"
+  weight = 2
+
+[[menu.main]]
+  name = "Offre de Services"
+  url = "/offre-services/"
+  weight = 3
+
+[[menu.main]]
+  name = "Exemples"
+  url = "/exemples/"
+  weight = 4
