@@ -7,6 +7,22 @@
         {{ .Content }}
       </div>
     {{ end }}
+    
+    {{ if .Pages }}
+      <h2 style="margin-top: 60px; margin-bottom: 30px;">Sous-sections</h2>
+      <div class="grid">
+        {{ range .Pages }}
+          <div class="card">
+            <h3><a href="{{ .Permalink }}" style="color: var(--primary-blue); text-decoration: none;">{{ .Title }}</a></h3>
+            {{ if .Description }}
+              <p>{{ .Description }}</p>
+            {{ else }}
+              <p>{{ .Summary }}</p>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
   </div>
 </section>
 {{ end }}
