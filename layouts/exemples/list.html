@@ -716,24 +716,24 @@
 
             <div class="carousel-container">
                 <div class="carousel-inner" role="region" aria-label="Carrousel de d&eacute;mos" aria-live="polite">
-                    <div class="carousel-slide active" id="slide-0" data-index="0" role="group" aria-roledescription="slide" aria-label="D&eacute;mo 1 sur 3">
-                        <img src="/demos/interface-eleve.png" alt="Interface &Eacute;l&egrave;ve - Cr&eacute;er une contribution guid&eacute;e">
-                        <div class="slide-overlay">
-                            <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
-                        </div>
-                    </div>
-                    <div class="carousel-slide" id="slide-1" data-index="1" role="group" aria-roledescription="slide" aria-label="D&eacute;mo 2 sur 3">
-                        <img src="/demos/construction-progressive.png" alt="Construction Progressive - Observez la fresque se construire">
-                        <div class="slide-overlay">
-                            <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
-                        </div>
-                    </div>
-                    <div class="carousel-slide" id="slide-2" data-index="2" role="group" aria-roledescription="slide" aria-label="D&eacute;mo 3 sur 3">
-                        <img src="/demos/carte-mentale.png" alt="Carte Mentale Interactive - Explorez les connexions culturelles">
-                        <div class="slide-overlay">
-                            <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
-                        </div>
-                    </div>
+                    <div class="carousel-slide active" id="slide-0" data-index="0" role="group" aria-roledescription="slide" aria-label="Démo 1 sur 3">
+    <img src="{{ .Site.BaseURL }}demos/interface-eleve.png" alt="Interface Élève - Créer une contribution guidée">
+    <div class="slide-overlay">
+        <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
+    </div>
+</div>
+<div class="carousel-slide" id="slide-1" data-index="1" role="group" aria-roledescription="slide" aria-label="Démo 2 sur 3">
+    <img src="{{ .Site.BaseURL }}demos/construction-progressive.png" alt="Construction Progressive - Observez la fresque se construire">
+    <div class="slide-overlay">
+        <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
+    </div>
+</div>
+<div class="carousel-slide" id="slide-2" data-index="2" role="group" aria-roledescription="slide" aria-label="Démo 3 sur 3">
+    <img src="{{ .Site.BaseURL }}demos/carte-mentale.png" alt="Carte Mentale Interactive - Explorez les connexions culturelles">
+    <div class="slide-overlay">
+        <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
+    </div>
+</div>
                 </div>
 
                 <button class="carousel-btn carousel-btn-prev" aria-label="D&eacute;mo pr&eacute;c&eacute;dente">
@@ -822,9 +822,12 @@
                 });
                 
                 // Slide clicks
-                this.elements.slides.forEach((slide, index) => {
-                    slide.addEventListener('click', () => this.openDemo(index));
-                });
+this.elements.slides.forEach((slide, index) => {
+    slide.style.cursor = 'pointer';
+    slide.addEventListener('click', () => {
+        this.openDemo(index);
+    });
+});
                 
                 // Info button
                 this.elements.infoBtn.addEventListener('click', () => this.showInfo());
