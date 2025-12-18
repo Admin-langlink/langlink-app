@@ -1,26 +1,45 @@
 ---
 title: "Fresques Narratives Interactives"
-description: "Transformez les échanges scolaires en fresques narratives guidées par l'IA"
+description: "Créez des œuvres collectives riches et nuancées"
 draft: false
 ---
 
-# Fresques Narratives Interactives
+Les Fresques Narratives Interactives sont le cœur pédagogique de LangLink. Ce ne sont pas de simples galeries de photos, mais des **œuvres collectives qui se construisent progressivement**, transformant les contributions individuelles en une mosaïque culturelle cohérente et impactante.
 
-Les Fresques Narratives sont le cœur pédagogique de LangLink. Ce sont des projets structurés et guidés qui transforment les échanges superficiels en œuvres collectives nuancées et profondément réfléchies.
+## Qu'est-ce qu'une Fresque Narrative ?
 
-## Trois Visualisations Complémentaires
+Une Fresque Narrative est une **création collective interculturelle** guidée par l'IA et structurée pédagogiquement. Chaque élève ajoute une "brique" à l'œuvre, et l'IA détecte automatiquement les **connexions culturelles** entre les contributions.
 
-Chaque fresque se présente sous trois formes pour explorer les connexions culturelles de manière intuitive :
+### Principes Fondamentaux
 
-- **Mosaïque** : Vue d'ensemble visuelle des contributions, groupées par thème ou pays
-- **Timeline** : Chronologie des rituels et célébrations à travers l'année
-- **Carte Mentale** : Représentation des liens sémantiques et des convergences culturelles
+- **Pas de page blanche** – Une thématique imposée guide la créativité
+- **Construction progressive** – L'œuvre s'enrichit session par session
+- **Réflexion guidée** – Obligation d'expliquer le "pourquoi" de chaque choix
+- **Connexions culturelles** – L'IA tisse des liens invisibles entre les cultures
 
-## Comment Ça Fonctionne ?
+## 4 Visualisations Immersives
 
-1. Votre classe choisit une fresque thématique
-2. LangLink vous met en relation avec une classe partenaire compatible
-3. Chaque élève contribue via le Cadre de Réflexion Guidée (CRG)
-4. Les contributions sont publiées et reliées pour former une mosaïque culturelle unique
+Découvrez les différentes façons d'explorer et de comprendre votre Fresque Narrative :
 
-[Découvrir nos fresques →](/fresques/exemples)
+### 1. **Mosaïque** – Vue Artistique
+Une visualisation pointilliste où l'image collective se révèle progressivement, pixel par pixel. Chaque contribution devient un élément visuel de l'œuvre finale.
+
+### 2. **Timeline** – Vue Chronologique
+Organisez les contributions par ordre de dépôt ou thématiquement. Suivez l'évolution de la pensée collective au fil du temps.
+
+### 3. **Carte Mentale** – Vue Connectée
+Une visualisation organique en réseau où chaque contribution devient un nœud. L'IA tisse des liens sémantiques entre les contributions pour révéler les convergences culturelles.
+
+### 4. **Je Réponds** – Interface Élève
+L'espace de création structuré où les élèves passent par le Cadre de Réflexion Guidée avant de publier leur contribution.
+
+## Bénéfices Pédagogiques
+
+- **Ludique & Engageant** – Transforme l'apprentissage en quête collective passionnante
+- **Créativité Libérée** – Chaque élève exprime sa vision unique dans un cadre sécurisant
+- **Gratification Finale** – La récompense visuelle immédiate de voir sa contribution intégrée
+- **Fierté Collective** – Sentiment d'appartenance à une communauté mondiale bienveillante
+
+---
+
+Explorez les différentes visualisations ci-dessous pour découvrir comment fonctionne une Fresque Narrative complète.
