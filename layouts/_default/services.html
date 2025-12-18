@@ -1,0 +1,52 @@
+---
+title: "Services"
+description: "4 services clés pour un projet international réussi et sécurisé"
+draft: false
+layout: "services"
+
+---{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p>Quatre services clés pour transformer vos échanges scolaires en fresques narratives pédagogiques.</p>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <h3 style="color: var(--primary-blue); font-size: 28px;">1️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Matching Garanti</h4>
+        <p>Trouvez automatiquement une classe partenaire compatible. Zéro recherche, zéro effort.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--primary-blue); font-size: 28px;">2️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Triple Filtre de Sécurité</h4>
+        <p>Zone blanche éducative inviolable. Aucun contenu inapproprié n'atteint jamais les élèves.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--primary-blue); font-size: 28px;">3️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Fiche Clé en Main</h4>
+        <p>Transforme 10 heures de préparation en 10 minutes d'appropriation.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--primary-blue); font-size: 28px;">4️⃣</h3>
+        <h4 style="color: var(--primary-blue);">Cadre de Réflexion Guidée</h4>
+        <p>Force la réflexion avant l'action. Du bavardage à la pensée profonde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Content -->
+<section class="section" style="background: #F5F5F7;">
+  <div class="container">
+    {{ .Content }}
+  </div>
+</section>
+
+{{ end }}

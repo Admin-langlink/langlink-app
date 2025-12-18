@@ -17,8 +17,8 @@ pagerSize = 3
   weight = 2
 
 [[menu.main]]
-  name = "Offre de Services"
-  url = "/offre-services/"
+  name = "Services"
+  url = "/services/"
   weight = 3
 
 [[menu.main]]
