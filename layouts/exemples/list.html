@@ -2,196 +2,147 @@
 
 <style>
 .exemples-page {
-        background: white;
-    }
-
-    .exemples-hero {
-        background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
-        color: white;
-        padding: 80px 40px;
-        text-align: center;
-    }
-
-    .exemples-hero h1 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-
-    .exemples-content {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 80px 40px;
-        line-height: 1.8;
-    }
-
-    .exemples-content h2 {
-        font-size: 2em;
-        color: var(--primary-blue);
-        margin: 60px 0 30px 0;
-        font-weight: 700;
-    }
-
-    .exemples-content h3 {
-        font-size: 1.5em;
-        color: #333;
-        margin: 40px 0 20px 0;
-        font-weight: 600;
-    }
-
-    .exemples-content p {
-        font-size: 1.05em;
-        color: #555;
-        margin-bottom: 15px;
-    }
-
-    .step-box {
-        background: #f5f5f7;
-        border-left: 4px solid var(--primary-blue);
-        padding: 25px;
-        margin: 30px 0;
-        border-radius: 8px;
-    }
-
-    .step-box h3 {
-        color: var(--primary-blue);
-        margin-bottom: 10px;
-        font-size: 1.2em;
-    }
-
-    .step-box p {
-        margin: 10px 0;
-    }
-
-    .timeline-item {
-        display: flex;
-        gap: 30px;
-        margin: 40px 0;
-    }
-
-    .timeline-number {
-        min-width: 60px;
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.5em;
-        flex-shrink: 0;
-    }
-
-    .timeline-content h4 {
-        color: #333;
-        font-size: 1.2em;
-        margin-bottom: 10px;
-    }
-
-    .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        margin: 50px 0;
-    }
-
-    .benefit-card {
-        background: #f8f9fa;
-        padding: 30px;
-        border-radius: 12px;
-        border-top: 4px solid var(--primary-blue);
-    }
-
-    .benefit-card h4 {
-        color: var(--primary-blue);
-        font-size: 1.1em;
-        margin-bottom: 12px;
-    }
-
-    .cta-section {
-        background: linear-gradient(135deg, var(--secondary-yellow) 0%, #FFB700 100%);
-        color: var(--dark-text);
-        padding: 60px 40px;
-        text-align: center;
-        margin-top: 80px;
-    }
-
-    .cta-section h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-        font-weight: 700;
-        color: var(--dark-text);
-    }
-
-    .cta-button {
-        display: inline-block;
-        background: var(--primary-blue);
-        color: white;
-        padding: 18px 40px;
-        border-radius: 10px;
-        font-weight: 700;
-        text-decoration: none;
-        margin-top: 25px;
-        transition: all 0.3s;
-    }
-
-    .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 40px rgba(0,82,204,0.3);
-    }
-
-    @media (max-width: 768px) {
-        .benefits-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .timeline-item {
-            flex-direction: column;
-        }
-
-        .exemples-hero h1 {
-            font-size: 1.8em;
-        }
-        .carousel-slide {
-    cursor: pointer;
+    background: white;
 }
 
-.carousel-slide:hover img {
-    filter: brightness(0.9) saturate(1.1);
-    transform: scale(1.02);
-}
-
-.carousel-slide:hover::after {
-    content: '🎬 Cliquez pour lancer';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.7);
+.exemples-hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
     color: white;
-    padding: 20px 40px;
-    border-radius: 15px;
-    font-size: 1.3em;
-    font-weight: 700;
-    z-index: 100;
-    white-space: nowrap;
-    animation: fadeIn 0.3s ease-out;
+    padding: 80px 40px;
+    text-align: center;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
+.exemples-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
-    }
-    /* ===== SECTION DÉMOS CAROUSEL ===== */
+
+.exemples-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    line-height: 1.8;
+}
+
+.exemples-content h2 {
+    font-size: 2em;
+    color: var(--primary-blue);
+    margin: 60px 0 30px 0;
+    font-weight: 700;
+}
+
+.exemples-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 40px 0 20px 0;
+    font-weight: 600;
+}
+
+.exemples-content p {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.step-box {
+    background: #f5f5f7;
+    border-left: 4px solid var(--primary-blue);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.step-box h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.step-box p {
+    margin: 10px 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.timeline-number {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    flex-shrink: 0;
+}
+
+.timeline-content h4 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.benefit-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.benefit-card h4 {
+    color: var(--primary-blue);
+    font-size: 1.1em;
+    margin-bottom: 12px;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--secondary-yellow) 0%, #FFB700 100%);
+    color: var(--dark-text);
+    padding: 60px 40px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,82,204,0.3);
+}
+
+/* ===== SECTION DÉMOS CAROUSEL ===== */
 
 .demos-section {
     margin: 100px 0;
@@ -223,74 +174,48 @@
 
 .carousel-container {
     position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    background: transparent;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    background: white;
     border-radius: 20px;
     overflow: visible;
-    padding: 0 40px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
 }
 
 .carousel-inner {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 550px;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
-}
-
-.carousel-slides-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 }
 
 .carousel-slide {
-    cursor: pointer;
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .carousel-slide.active {
     opacity: 1;
-    transform: translateX(0);
-    z-index: 10;
-}
-
-.carousel-slide.prev {
-    opacity: 0.3;
-    transform: translateX(-100%);
-    z-index: 5;
-}
-
-.carousel-slide.next {
-    opacity: 0.4;
-    transform: translateX(120%);
-    z-index: 5;
 }
 
 .carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.carousel-slide.active:hover img {
+.carousel-slide:hover img {
     filter: brightness(0.7) saturate(1.1);
     transform: scale(1.01);
 }
 
-.carousel-slide.active:hover .slide-overlay {
+.carousel-slide:hover .slide-overlay {
     opacity: 1;
 }
 
@@ -300,7 +225,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,70 +237,18 @@
 .slide-overlay-text {
     background: rgba(102, 126, 234, 0.95);
     color: white;
-    padding: 25px 50px;
+    padding: 20px 40px;
     border-radius: 15px;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 700;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-
-.carousel-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-    z-index: 20;
-}
-
-.carousel-dots {
-    position: absolute;
-    bottom: 20px;
-    right: 0;
-    display: flex;
-    gap: 10px;
-    z-index: 20;
-}
-
-.slide-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 5;
-}
-
-.slide-overlay-text {
-    background: rgba(102, 126, 234, 0.95);
-    color: white;
-    padding: 25px 50px;
-    border-radius: 15px;
-    font-size: 1.4em;
-    font-weight: 700;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-
-.carousel-controls {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-    z-index: 10;
 }
 
 .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -385,21 +258,30 @@
     font-size: 1.5em;
     transition: all 0.3s;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
 .carousel-btn:hover {
     background: white;
-    transform: scale(1.1);
+    transform: translateY(-50%) scale(1.1);
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.carousel-btn-prev {
+    left: -80px;
+}
+
+.carousel-btn-next {
+    right: -80px;
 }
 
 .carousel-dots {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     display: flex;
     gap: 10px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .carousel-dot {
@@ -425,6 +307,7 @@
     background: white;
     padding: 40px;
     text-align: center;
+    border-radius: 15px;
 }
 
 .demo-info h3 {
@@ -451,24 +334,6 @@
     flex-wrap: wrap;
 }
 
-.demo-btn-primary {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
-    color: white;
-    padding: 16px 40px;
-    border-radius: 12px;
-    border: none;
-    font-weight: 700;
-    font-size: 1.05em;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 10px 30px rgba(0,82,204,0.3);
-}
-
-.demo-btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 45px rgba(0,82,204,0.5);
-}
-
 .demo-btn-secondary {
     background: #f0f4ff;
     color: var(--primary-blue);
@@ -488,6 +353,18 @@
 }
 
 @media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .exemples-hero h1 {
+        font-size: 1.8em;
+    }
+
     .carousel-inner {
         height: 400px;
     }
@@ -500,14 +377,18 @@
         font-size: 1.3em;
     }
     
-    .carousel-controls {
-        bottom: 15px;
-    }
-    
     .carousel-btn {
         width: 40px;
         height: 40px;
         font-size: 1.2em;
+    }
+
+    .carousel-btn-prev {
+        left: -60px;
+    }
+
+    .carousel-btn-next {
+        right: -60px;
     }
 }
 </style>
@@ -627,51 +508,38 @@
     </div>
 
 </div>
+
 <!-- DÉMOS INTERACTIVES - CAROUSEL -->
 <div class="demos-section">
     <div class="demos-title">
-        <h2>Explorez les Expériences</h2>
-        <p>Trois démos interactives pour comprendre concrètement comment fonctionnent les fresques narratives LangLink</p>
+        <h2>Explorez les Exp&eacute;riences</h2>
+        <p>Trois d&eacute;mos interactives pour comprendre concr&egrave;tement comment fonctionnent les fresques narratives LangLink</p>
     </div>
 
-    <div class="carousel-inner">
-    <div class="carousel-slides-wrapper" id="carouselInner">
-        <div class="carousel-slide active" onclick="openDemo(0)">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECréer une contribution guidée%3C/text%3E%3C/svg%3E" alt="Interface Élève">
-            <div class="slide-overlay">
-                <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+    <div class="carousel-container">
+        <div class="carousel-inner">
+            <div class="carousel-slide active" id="slide-0" onclick="openDemo(0)">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECr&eacute;er une contribution guid&eacute;e%3C/text%3E%3C/svg%3E" alt="Interface Élève">
+                <div class="slide-overlay">
+                    <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
+                </div>
+            </div>
+            <div class="carousel-slide" id="slide-1" onclick="openDemo(1)">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
+                <div class="slide-overlay">
+                    <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
+                </div>
+            </div>
+            <div class="carousel-slide" id="slide-2" onclick="openDemo(2)">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
+                <div class="slide-overlay">
+                    <div class="slide-overlay-text">🎬 Cliquez pour lancer</div>
+                </div>
             </div>
         </div>
-        <div class="carousel-slide next" onclick="openDemo(1)">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
-            <div class="slide-overlay">
-                <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
-            </div>
-        </div>
-        <div class="carousel-slide" onclick="openDemo(2)">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
-            <div class="slide-overlay">
-                <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
-            </div>
-        </div>
-    </div>
 
-    <div class="carousel-controls">
-        <button class="carousel-btn" onclick="previousDemo()">❮</button>
-        <button class="carousel-btn" onclick="nextDemo()">❯</button>
-    </div>
-
-    <div class="carousel-dots">
-        <div class="carousel-dot active" onclick="goToDemo(0)"></div>
-        <div class="carousel-dot" onclick="goToDemo(1)"></div>
-        <div class="carousel-dot" onclick="goToDemo(2)"></div>
-    </div>
-</div>
-
-        <div class="carousel-controls">
-            <button class="carousel-btn" onclick="previousDemo()">❮</button>
-            <button class="carousel-btn" onclick="nextDemo()">❯</button>
-        </div>
+        <button class="carousel-btn carousel-btn-prev" onclick="previousDemo()">❮</button>
+        <button class="carousel-btn carousel-btn-next" onclick="nextDemo()">❯</button>
 
         <div class="carousel-dots">
             <div class="carousel-dot active" onclick="goToDemo(0)"></div>
@@ -681,11 +549,11 @@
     </div>
 
     <div class="demo-info">
-        <h3 id="demoTitle">Interface &Eacute;l&egrave;ve</h3>
+        <h3 id="demoTitle">📝 Interface &Eacute;l&egrave;ve</h3>
         <p id="demoDescription">Voyez comment les &eacute;l&egrave;ves cr&eacute;ent leurs contributions avec le Cadre de R&eacute;flexion Guid&eacute;e. Une interface structur&eacute;e en 4 &eacute;tapes o&ugrave; la r&eacute;flexion est obligatoire avant la publication. L&rsquo;IA guide &agrave; chaque &eacute;tape sans faire le travail &agrave; la place.</p>
         <div class="demo-buttons">
-    <button class="demo-btn-secondary" onclick="toggleInfo()">ℹ️ Plus d'infos</button>
-</div>
+            <button class="demo-btn-secondary" onclick="toggleInfo()">ℹ️ Plus d&rsquo;infos</button>
+        </div>
     </div>
 </div>
 
@@ -716,36 +584,45 @@ let currentDemoIndex = 0;
 function updateDemo(index) {
     currentDemoIndex = index;
     
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-    
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active', 'next', 'prev');
-        
-        if (i === index) {
-            slide.classList.add('active');
-        } else if (i === (index + 1) % slides.length) {
-            slide.classList.add('next');
-        } else {
-            slide.classList.add('prev');
-        }
+    document.querySelectorAll('.carousel-slide').forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
     });
     
-    dots.forEach((dot, i) => {
+    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
         dot.classList.toggle('active', i === index);
     });
     
-    // Update info
     document.getElementById('demoTitle').innerHTML = demos[index].icon + ' ' + demos[index].title;
     document.getElementById('demoDescription').innerHTML = demos[index].description;
 }
 
-// Auto-rotate carousel (optionnel)
+function nextDemo() {
+    updateDemo((currentDemoIndex + 1) % demos.length);
+}
+
+function previousDemo() {
+    updateDemo((currentDemoIndex - 1 + demos.length) % demos.length);
+}
+
+function goToDemo(index) {
+    updateDemo(index);
+}
+
+function openDemo(index) {
+    window.open(demos[index].url, '_blank', 'width=1920,height=1080,menubar=no,location=no,resizable=yes,scrollbars=yes');
+}
+
+function toggleInfo() {
+    alert('D&eacute;mo ' + (currentDemoIndex + 1) + '/3\n\n' + demos[currentDemoIndex].title + '\n\n' + demos[currentDemoIndex].description);
+}
+
 setInterval(() => {
-    if (document.hidden) return;
-    nextDemo();
+    if (!document.hidden) {
+        nextDemo();
+    }
 }, 8000);
 </script>
+
 <div class="cta-section">
     <h2>Pr&ecirc;t &agrave; vivre cette exp&eacute;rience ?</h2>
     <p>LangLink transforme l&rsquo;id&eacute;e simple cr&eacute;er ensemble en une exp&eacute;rience p&eacute;dagogique profonde et mesurable.</p>
