@@ -239,24 +239,50 @@
 }
 
 .carousel-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-slide.active {
-    opacity: 1;
+    cursor: pointer;
+    position: relative;
 }
 
 .carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.carousel-slide:hover img {
+    filter: brightness(0.7) saturate(1.1);
+    transform: scale(1.01);
+}
+
+.carousel-slide:hover .slide-overlay {
+    opacity: 1;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.slide-overlay-text {
+    background: rgba(102, 126, 234, 0.95);
+    color: white;
+    padding: 25px 50px;
+    border-radius: 15px;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 .carousel-controls {
@@ -529,14 +555,24 @@
     </div>
 
     <div class="carousel-inner" id="carouselInner">
+   <div class="carousel-inner" id="carouselInner">
     <div class="carousel-slide active" onclick="openDemo(0)">
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECréer une contribution guidée%3C/text%3E%3C/svg%3E" alt="Interface Élève">
+        <div class="slide-overlay">
+            <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+        </div>
     </div>
     <div class="carousel-slide" onclick="openDemo(1)">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
+        <div class="slide-overlay">
+            <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+        </div>
     </div>
     <div class="carousel-slide" onclick="openDemo(2)">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
+        <div class="slide-overlay">
+            <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+        </div>
     </div>
 </div>
 
