@@ -223,24 +223,59 @@
 
 .carousel-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    background: white;
+    background: transparent;
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+    overflow: visible;
+    padding: 0 40px;
 }
 
 .carousel-inner {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+.carousel-slides-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 .carousel-slide {
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 10;
+}
+
+.carousel-slide.prev {
+    opacity: 0.3;
+    transform: translateX(-100%);
+    z-index: 5;
+}
+
+.carousel-slide.next {
+    opacity: 0.4;
+    transform: translateX(120%);
+    z-index: 5;
 }
 
 .carousel-slide img {
@@ -250,13 +285,58 @@
     transition: all 0.3s ease;
 }
 
-.carousel-slide:hover img {
+.carousel-slide.active:hover img {
     filter: brightness(0.7) saturate(1.1);
     transform: scale(1.01);
 }
 
-.carousel-slide:hover .slide-overlay {
+.carousel-slide.active:hover .slide-overlay {
     opacity: 1;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.slide-overlay-text {
+    background: rgba(102, 126, 234, 0.95);
+    color: white;
+    padding: 25px 50px;
+    border-radius: 15px;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 20;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    display: flex;
+    gap: 10px;
+    z-index: 20;
 }
 
 .slide-overlay {
@@ -554,25 +634,37 @@
         <p>Trois démos interactives pour comprendre concrètement comment fonctionnent les fresques narratives LangLink</p>
     </div>
 
-    <div class="carousel-inner" id="carouselInner">
-   <div class="carousel-inner" id="carouselInner">
-    <div class="carousel-slide active" onclick="openDemo(0)">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECréer une contribution guidée%3C/text%3E%3C/svg%3E" alt="Interface Élève">
-        <div class="slide-overlay">
-            <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+    <div class="carousel-inner">
+    <div class="carousel-slides-wrapper" id="carouselInner">
+        <div class="carousel-slide active" onclick="openDemo(0)">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECréer une contribution guidée%3C/text%3E%3C/svg%3E" alt="Interface Élève">
+            <div class="slide-overlay">
+                <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+            </div>
+        </div>
+        <div class="carousel-slide next" onclick="openDemo(1)">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
+            <div class="slide-overlay">
+                <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+            </div>
+        </div>
+        <div class="carousel-slide" onclick="openDemo(2)">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
+            <div class="slide-overlay">
+                <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
+            </div>
         </div>
     </div>
-    <div class="carousel-slide" onclick="openDemo(1)">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
-        <div class="slide-overlay">
-            <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
-        </div>
+
+    <div class="carousel-controls">
+        <button class="carousel-btn" onclick="previousDemo()">❮</button>
+        <button class="carousel-btn" onclick="nextDemo()">❯</button>
     </div>
-    <div class="carousel-slide" onclick="openDemo(2)">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
-        <div class="slide-overlay">
-            <div class="slide-overlay-text">🎬 Cliquez pour lancer la démo</div>
-        </div>
+
+    <div class="carousel-dots">
+        <div class="carousel-dot active" onclick="goToDemo(0)"></div>
+        <div class="carousel-dot" onclick="goToDemo(1)"></div>
+        <div class="carousel-dot" onclick="goToDemo(2)"></div>
     </div>
 </div>
 
@@ -624,39 +716,28 @@ let currentDemoIndex = 0;
 function updateDemo(index) {
     currentDemoIndex = index;
     
-    // Update slides
-    document.querySelectorAll('.carousel-slide').forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active', 'next', 'prev');
+        
+        if (i === index) {
+            slide.classList.add('active');
+        } else if (i === (index + 1) % slides.length) {
+            slide.classList.add('next');
+        } else {
+            slide.classList.add('prev');
+        }
     });
     
-    // Update dots
-    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dots.forEach((dot, i) => {
         dot.classList.toggle('active', i === index);
     });
     
     // Update info
     document.getElementById('demoTitle').innerHTML = demos[index].icon + ' ' + demos[index].title;
     document.getElementById('demoDescription').innerHTML = demos[index].description;
-}
-
-function nextDemo() {
-    updateDemo((currentDemoIndex + 1) % demos.length);
-}
-
-function previousDemo() {
-    updateDemo((currentDemoIndex - 1 + demos.length) % demos.length);
-}
-
-function goToDemo(index) {
-    updateDemo(index);
-}
-
-function openDemo(index) {
-    window.open(demos[index].url, '_blank', 'width=1920,height=1080,menubar=no,location=no,resizable=yes,scrollbars=yes');
-}
-
-function toggleInfo() {
-    alert('Démo ' + (currentDemoIndex + 1) + '/3\n\n' + demos[currentDemoIndex].title + '\n\n' + demos[currentDemoIndex].description);
 }
 
 // Auto-rotate carousel (optionnel)
