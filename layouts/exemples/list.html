@@ -259,10 +259,12 @@
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
             cursor: pointer;
+            pointer-events: none;
         }
 
         .carousel-slide.active {
             opacity: 1;
+            pointer-events: auto;
         }
 
         .carousel-slide img {
@@ -825,6 +827,7 @@
 this.elements.slides.forEach((slide, index) => {
     slide.style.cursor = 'pointer';
     slide.addEventListener('click', () => {
+        console.log('Clicking slide index:', index, 'Demo URL:', this.demos[index].url);
         this.openDemo(index);
     });
 });
@@ -890,9 +893,16 @@ this.elements.slides.forEach((slide, index) => {
             }
 
             openDemo(index) {
-                const demo = this.demos[index];
-                window.open(demo.url, '_blank', 'width=1920,height=1080,menubar=no,location=no,resizable=yes,scrollbars=yes');
-            }
+    console.log('openDemo called with index:', index);
+    const demo = this.demos[index];
+    console.log('Demo object:', demo);
+    if (demo && demo.url) {
+        console.log('Opening URL:', demo.url);
+        window.open(demo.url, '_blank', 'width=1920,height=1080,menubar=no,location=no,resizable=yes,scrollbars=yes');
+    } else {
+        console.error('Demo not found for index:', index);
+    }
+}
 
             showInfo() {
                 const modal = new InfoModal(this.demos[this.currentIndex], this.currentIndex + 1, this.demos.length);
