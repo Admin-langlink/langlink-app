@@ -2,13 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fresques/mosaique/</loc>
-  </url><url>
-    <loc>http://localhost:1313/fresques/timeline/</loc>
+    <loc>http://localhost:1313/fresques/reponse/</loc>
   </url><url>
     <loc>http://localhost:1313/fresques/mindmap/</loc>
-  </url><url>
-    <loc>http://localhost:1313/fresques/reponse/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
@@ -18,10 +14,12 @@
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>http://localhost:1313/pages/</loc>
+    <loc>http://localhost:1313/fresques/mosaique/</loc>
   </url><url>
-    <loc>http://localhost:1313/offre-services/</loc>
+    <loc>http://localhost:1313/services/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/fresques/timeline/index.md/timeline/</loc>
   </url>
 </urlset>
