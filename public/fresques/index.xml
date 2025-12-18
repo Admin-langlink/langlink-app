@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fresques Narratives Interactives on LangLink</title>
+    <link>http://localhost:1313/fresques/</link>
+    <description>Recent content in Fresques Narratives Interactives on LangLink</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <atom:link href="http://localhost:1313/fresques/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mosaïque</title>
+      <link>http://localhost:1313/fresques/mosaique/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fresques/mosaique/</guid>
+      <description>&lt;h1 id=&#34;mosaïque-culturelle&#34;&gt;Mosaïque Culturelle&lt;/h1&gt;&#xA;&lt;p&gt;La mosaïque est la vue d&amp;rsquo;ensemble visuelle de toutes les contributions. Chaque brique représente une contribution d&amp;rsquo;un élève, reliée thématiquement aux autres.&lt;/p&gt;&#xA;&lt;h2 id=&#34;comment-ça-fonctionne-&#34;&gt;Comment ça fonctionne ?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Zoom sur les briques&lt;/strong&gt; : Cliquez sur une contribution pour lire l&amp;rsquo;analyse complète&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Filtrer par thème&lt;/strong&gt; : Explorez les &amp;ldquo;Fêtes&amp;rdquo;, &amp;ldquo;Rituels&amp;rdquo;, &amp;ldquo;Traditions&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Filtrer par pays&lt;/strong&gt; : Découvrez les contributions d&amp;rsquo;une culture spécifique&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Voir les connexions&lt;/strong&gt; : Les lignes relient les contributions similaires ou complémentaires&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;exemple--nos-rituels-de-fin-dannée&#34;&gt;Exemple : Nos Rituels de Fin d&amp;rsquo;Année&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/ecran-final.png&#34; alt=&#34;Vue d&amp;rsquo;écran de la mosaïque&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Timeline</title>
+      <link>http://localhost:1313/fresques/timeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fresques/timeline/</guid>
+      <description>&lt;h1 id=&#34;timeline-des-célébrations&#34;&gt;Timeline des Célébrations&lt;/h1&gt;&#xA;&lt;p&gt;La timeline organise les contributions selon le calendrier de l&amp;rsquo;année. Découvrez comment les différentes cultures célèbrent à travers les saisons.&lt;/p&gt;&#xA;&lt;h2 id=&#34;structure&#34;&gt;Structure&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Par mois&lt;/strong&gt; : Janvier à Décembre&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Par culture&lt;/strong&gt; : Traditions de chaque pays&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Interactif&lt;/strong&gt; : Cliquez sur une date pour explorer les célébrations&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;à-quoi-sert-la-timeline-&#34;&gt;À quoi sert la timeline ?&lt;/h2&gt;&#xA;&lt;p&gt;Elle révèle les &lt;strong&gt;synchronicités culturelles&lt;/strong&gt; : certaines célébrations reviennent à la même période dans différentes cultures, d&amp;rsquo;autres sont uniques à une région.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Carte Mentale</title>
+      <link>http://localhost:1313/fresques/mindmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fresques/mindmap/</guid>
+      <description>&lt;h1 id=&#34;carte-mentale-interactive&#34;&gt;Carte Mentale Interactive&lt;/h1&gt;&#xA;&lt;p&gt;La carte mentale visualise les &lt;strong&gt;connexions conceptuelles&lt;/strong&gt; entre les contributions. Elle révèle comment des éléments culturels différents convergent autour de concepts universels.&lt;/p&gt;&#xA;&lt;h2 id=&#34;concepts-clés-révélés&#34;&gt;Concepts clés révélés&lt;/h2&gt;&#xA;&lt;p&gt;Par exemple, pour &amp;ldquo;Nos Rituels de Fin d&amp;rsquo;Année&amp;rdquo; :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Convivialité&lt;/strong&gt; : Réveillon (FR), Christmas Dinner (UK), Célébration tropicale (MQ)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tradition Familiale&lt;/strong&gt; : Présence, partage, transmission&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Rupture avec le Quotidien&lt;/strong&gt; : Préparation spéciale, vêtements, rituels distincts&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Nourriture comme Vecteur&lt;/strong&gt; : Omniprésent dans toutes les cultures&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;comment-lutiliser-&#34;&gt;Comment l&amp;rsquo;utiliser ?&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Cliquez sur un concept central&lt;/li&gt;&#xA;&lt;li&gt;Explorez les branches (pays/contributions)&lt;/li&gt;&#xA;&lt;li&gt;Découvrez les &lt;strong&gt;similarités universelles&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Identifiez les &lt;strong&gt;nuances culturelles&lt;/strong&gt; qui les distinguent&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;pédagogie&#34;&gt;Pédagogie&lt;/h2&gt;&#xA;&lt;p&gt;La carte mentale transforme les observations en &lt;strong&gt;analyse structurée&lt;/strong&gt;. Elle aide les élèves à comprendre que la &lt;strong&gt;diversité culturelle&lt;/strong&gt; repose souvent sur des fondamentaux humains partagés.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Je Réponds</title>
+      <link>http://localhost:1313/fresques/reponse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fresques/reponse/</guid>
+      <description>&lt;h1 id=&#34;je-réponds---cadre-de-réflexion-guidée&#34;&gt;Je Réponds - Cadre de Réflexion Guidée&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Je Réponds&lt;/strong&gt; est l&amp;rsquo;interface où chaque élève contribue à la fresque narrative via le &lt;strong&gt;Cadre de Réflexion Guidée (CRG)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;le-processus-en-6-étapes&#34;&gt;Le Processus en 6 Étapes&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-comprendre&#34;&gt;1️⃣ Comprendre&lt;/h3&gt;&#xA;&lt;p&gt;Découvrez le thème de la fresque et les ressources guidées préparées par votre enseignant.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Exemple&lt;/strong&gt; : &amp;ldquo;Nos Rituels de Fin d&amp;rsquo;Année&amp;rdquo; - Explorez comment différentes cultures célèbrent.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-préparer&#34;&gt;2️⃣ Préparer&lt;/h3&gt;&#xA;&lt;p&gt;Utilisez les prompts IA pour structurer votre pensée et identifier les éléments culturels pertinents.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
