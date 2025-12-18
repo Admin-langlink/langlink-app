@@ -1,89 +1,37 @@
-# Offre de Services LangLink
-
-Une solution **clé en main** qui réduit la barrière d'entrée du professeur à l'expérimentation d'un projet international.
-
+---
+title: "LangLink"
+description: "Transformez les échanges scolaires en fresques narratives interactives"
+draft: false
 ---
 
-## 1 Matching Garanti
+# Bienvenue sur LangLink
 
-**Oubliez la recherche fastidieuse de partenaires.**
+**Rendre l'apprentissage linguistique humain et interculturel accessible à tous.**
 
-LangLink garantit, dès l'inscription, une classe partenaire de culture et d'âge compatible, alignée sur votre thématique, prête à collaborer.
+Langlink est un réseau relationnel éducatif fondé sur des Fresques Narratives guidées par l'IA. Un antidote à la superficialité des contenus digitaux.
 
-### Ce que vous obtenez :
-- ✅ Classe partenaire automatiquement mise en relation
-- ✅ Vérification des engagements (calendrier, sécurité)
-- ✅ 0 effort de recherche ni de contact initial
-- ✅ Notification dès que votre binôme est prêt à démarrer
+## Le Problème
 
----
+Les échanges scolaires traditionnels souffrent de :
+- **Superficialité** : Contenus courts, réactions spontanées, absence de contextualisation
+- **Manque de structure** : Pas d'outils pédagogiques clairs pour guider les élèves
+- **Recherche complexe** : Difficulté majeure à trouver des partenaires compatibles
 
-## 2 Triple Filtre de Sécurité
+## La Solution : Fresques Narratives
 
-**Une zone blanche éducative inviolable.**
+Une plateforme fermée et modérée qui transforme les échanges en **œuvres collectives riches de sens**.
 
-Le Triple Filtre garantit qu'aucun contenu sensible, inapproprié ou personnel n'atteint jamais les élèves partenaires.
+Chaque élève crée, réfléchit, et se relie aux autres dans un cadre **100% sécurisé**.
 
-### Trois couches de validation :
-1. **Filtre IA** : Détection automatique des contenus inappropriés
-2. **Filtre Enseignant** : Validation manuelle par le pédagogue
-3. **Filtre Technique** : Communication asynchrone et traçable
+### 4 Piliers de LangLink
 
-### Bénéfices :
-- ✅ Conformité RGPD totale
-- ✅ Protection des données des mineurs
-- ✅ Tranquillité d'esprit pour l'établissement et les parents
-- ✅ Responsabilisation collaborative
+1. **Matching Garanti** – Trouvez votre classe partenaire en 1 clic
+2. **Triple Filtre de Sécurité** – Zone blanche éducative inviolable
+3. **Fiche Pédagogique Clé en Main** – Zéro préparation, 100% efficacité
+4. **Cadre de Réflexion Guidée (CRG)** – Du bavardage à la pensée profonde
 
----
+## Notre Mission
 
-## 3 Fiche Pédagogique Clé en Main
+Favoriser les échanges interculturels authentiques à travers des fresques narratives créatives et pédagogiques.
 
-**Transforme 10 heures de préparation en 10 minutes d'appropriation.**
-
-LangLink fournit l'intégralité des objectifs, du matériel et de l'évaluation pour chaque fresque.
-
-### Inclus dans chaque fiche :
-- ✅ **Objectifs Curriculaires Clairs** : Alignés sur le CECRL et l'EMC
-- ✅ **Grille d'Évaluation Prête à l'Emploi** : Critères de notation détaillés
-- ✅ **Matériel de Lancement Élève** : Diaporama d'introduction et trames
-- ✅ **Guide de l'Enseignant** : FAQ et suggestions d'approfondissement
-- ✅ **Automatisation de la collecte** : Zéro collecte manuelle
-
----
-
-## 4 Le Cadre de Réflexion Guidée (CRG)
-
-**Du bavardage à la réflexion profonde.**
-
-Le CRG transforme chaque interaction en opportunité d'apprentissage réfléchi. Il force la pensée avant l'action.
-
-### Processus en 6 étapes :
-
-1. **Comprendre** : Consultation des ressources guidées
-2. **Préparer** : Structuration de la pensée avec prompts IA
-3. **Rédiger** : Rédaction obligatoire du "Contexte & Signification"
-4. **Traduire & Vérifier** : Assistance IA pour traduction et ton
-5. **Modérer** : Passage par le Triple Filtre
-6. **Relier** : Publication et connexion avec contributions des pairs
-
-### Caractéristiques clés :
-- ✅ Workflow de la Pensée Forcé
-- ✅ Upload conditionnel (réflexion obligatoire avant publication)
-- ✅ Guidage contextuel par IA
-- ✅ Lenteur intentionnalisée (promotion de la prise de recul)
-- ✅ Validation pédagogique assurée
-
----
-
-## Pour qui ?
-
-- **Établissements scolaires** : Collèges et lycées cherchant l'internationalisation
-- **Réseaux internationaux** : AEFE, IB Schools, établissements bilingues
-- **Enseignants de langues** : Enseignants cherchant à dynamiser leurs échanges
-
-## Prochaines étapes ?
-
-Prêt à transformer vos échanges scolaires ?
-
-[Démarrer un projet pilote →](#contact)
+**Faire de l'échange international un pilier structurant de l'éducation civique et linguistique moderne.**
