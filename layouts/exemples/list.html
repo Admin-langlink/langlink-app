@@ -154,6 +154,42 @@
         .exemples-hero h1 {
             font-size: 1.8em;
         }
+        .carousel-slide {
+    cursor: pointer;
+}
+
+.carousel-slide:hover img {
+    filter: brightness(0.9) saturate(1.1);
+    transform: scale(1.02);
+}
+
+.carousel-slide:hover::after {
+    content: '🎬 Cliquez pour lancer';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-size: 1.3em;
+    font-weight: 700;
+    z-index: 100;
+    white-space: nowrap;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
     }
     /* ===== SECTION DÉMOS CAROUSEL ===== */
 
@@ -492,18 +528,17 @@
         <p>Trois démos interactives pour comprendre concrètement comment fonctionnent les fresques narratives LangLink</p>
     </div>
 
-    <div class="carousel-container">
-        <div class="carousel-inner" id="carouselInner">
-            <div class="carousel-slide active">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECréer une contribution guidée%3C/text%3E%3C/svg%3E" alt="Interface Élève">
-            </div>
-            <div class="carousel-slide">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
-            </div>
-            <div class="carousel-slide">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
-            </div>
-        </div>
+    <div class="carousel-inner" id="carouselInner">
+    <div class="carousel-slide active" onclick="openDemo(0)">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECréer une contribution guidée%3C/text%3E%3C/svg%3E" alt="Interface Élève">
+    </div>
+    <div class="carousel-slide" onclick="openDemo(1)">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
+    </div>
+    <div class="carousel-slide" onclick="openDemo(2)">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
+    </div>
+</div>
 
         <div class="carousel-controls">
             <button class="carousel-btn" onclick="previousDemo()">❮</button>
@@ -521,9 +556,8 @@
         <h3 id="demoTitle">Interface &Eacute;l&egrave;ve</h3>
         <p id="demoDescription">Voyez comment les &eacute;l&egrave;ves cr&eacute;ent leurs contributions avec le Cadre de R&eacute;flexion Guid&eacute;e. Une interface structur&eacute;e en 4 &eacute;tapes o&ugrave; la r&eacute;flexion est obligatoire avant la publication. L&rsquo;IA guide &agrave; chaque &eacute;tape sans faire le travail &agrave; la place.</p>
         <div class="demo-buttons">
-            <button class="demo-btn-primary" onclick="openDemo(0)">🚀 Lancer la d&eacute;mo en plein &eacute;cran</button>
-            <button class="demo-btn-secondary" onclick="toggleInfo()">ℹ️ Plus d&rsquo;infos</button>
-        </div>
+    <button class="demo-btn-secondary" onclick="toggleInfo()">ℹ️ Plus d'infos</button>
+</div>
     </div>
 </div>
 
