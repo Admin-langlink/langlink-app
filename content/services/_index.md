@@ -1,16 +1,10 @@
----
-title: "Offre de Services"
-description: "4 services clés pour un projet international réussi et sécurisé"
-draft: false
----
-
 # Offre de Services LangLink
 
 Une solution **clé en main** qui réduit la barrière d'entrée du professeur à l'expérimentation d'un projet international.
 
 ---
 
-## 1️⃣ Matching Garanti
+## 1 Matching Garanti
 
 **Oubliez la recherche fastidieuse de partenaires.**
 
@@ -24,7 +18,7 @@ LangLink garantit, dès l'inscription, une classe partenaire de culture et d'âg
 
 ---
 
-## 2️⃣ Triple Filtre de Sécurité
+## 2 Triple Filtre de Sécurité
 
 **Une zone blanche éducative inviolable.**
 
@@ -43,7 +37,7 @@ Le Triple Filtre garantit qu'aucun contenu sensible, inapproprié ou personnel n
 
 ---
 
-## 3️⃣ Fiche Pédagogique Clé en Main
+## 3 Fiche Pédagogique Clé en Main
 
 **Transforme 10 heures de préparation en 10 minutes d'appropriation.**
 
@@ -58,7 +52,7 @@ LangLink fournit l'intégralité des objectifs, du matériel et de l'évaluation
 
 ---
 
-## 4️⃣ Le Cadre de Réflexion Guidée (CRG)
+## 4 Le Cadre de Réflexion Guidée (CRG)
 
 **Du bavardage à la réflexion profonde.**
 
