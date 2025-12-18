@@ -1,6 +1,10 @@
 {{ define "main" }}
 
 <style>
+.exemples-page {
+        background: white;
+    }
+
     .exemples-hero {
         background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
         color: white;
@@ -47,6 +51,12 @@
         padding: 25px;
         margin: 30px 0;
         border-radius: 8px;
+    }
+
+    .step-box h3 {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        font-size: 1.2em;
     }
 
     .step-box p {
@@ -145,6 +155,219 @@
             font-size: 1.8em;
         }
     }
+    /* ===== SECTION DÉMOS CAROUSEL ===== */
+
+.demos-section {
+    margin: 100px 0;
+    background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+    border-radius: 20px;
+    padding: 60px 40px;
+    border: 2px solid rgba(102,126,234,0.2);
+}
+
+.demos-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.demos-title h2 {
+    font-size: 2.5em;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.demos-title p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-btn:hover {
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid white;
+}
+
+.carousel-dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+
+.carousel-dot:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+.demo-info {
+    background: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.demo-info h3 {
+    font-size: 1.8em;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.demo-info p {
+    font-size: 1.05em;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.demo-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.demo-btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
+    color: white;
+    padding: 16px 40px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(0,82,204,0.3);
+}
+
+.demo-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 45px rgba(0,82,204,0.5);
+}
+
+.demo-btn-secondary {
+    background: #f0f4ff;
+    color: var(--primary-blue);
+    padding: 16px 40px;
+    border-radius: 12px;
+    border: 2px solid var(--primary-blue);
+    font-weight: 700;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.demo-btn-secondary:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 400px;
+    }
+    
+    .demo-info {
+        padding: 25px;
+    }
+    
+    .demo-info h3 {
+        font-size: 1.3em;
+    }
+    
+    .carousel-controls {
+        bottom: 15px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+}
 </style>
 
 <div class="exemples-hero">
@@ -262,49 +485,116 @@
     </div>
 
 </div>
-<!-- DÉMOS INTERACTIVES -->
+<!-- DÉMOS INTERACTIVES - CAROUSEL -->
+<div class="demos-section">
+    <div class="demos-title">
+        <h2>Explorez les Expériences</h2>
+        <p>Trois démos interactives pour comprendre concrètement comment fonctionnent les fresques narratives LangLink</p>
+    </div>
 
-<!-- Démo 1: Interface Élève -->
-<div class="demo-section">
-    <div class="demo-header">
-        <h2>D&eacute;mo 1 : Interface &Eacute;l&egrave;ve</h2>
-        <p>Voyez comment les &eacute;l&egrave;ves cr&eacute;ent leurs contributions avec le Cadre de R&eacute;flexion Guid&eacute;e</p>
+    <div class="carousel-container">
+        <div class="carousel-inner" id="carouselInner">
+            <div class="carousel-slide active">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23667eea' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E📝 Interface Élève%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3ECréer une contribution guidée%3C/text%3E%3C/svg%3E" alt="Interface Élève">
+            </div>
+            <div class="carousel-slide">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%231a1a2e' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🏗️ Construction Progressive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EObservez la fresque se construire%3C/text%3E%3C/svg%3E" alt="Construction Progressive">
+            </div>
+            <div class="carousel-slide">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Crect fill='%23302b63' width='1200' height='600'/%3E%3Ctext x='50%25' y='50%25' font-size='48' fill='%23667eea' text-anchor='middle' dominant-baseline='middle' font-weight='700'%3E 🧠 Carte Mentale Interactive%3C/text%3E%3Ctext x='50%25' y='55%25' font-size='24' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3EExplorez les connexions culturelles%3C/text%3E%3C/svg%3E" alt="Carte Mentale">
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="carousel-btn" onclick="previousDemo()">❮</button>
+            <button class="carousel-btn" onclick="nextDemo()">❯</button>
+        </div>
+
+        <div class="carousel-dots">
+            <div class="carousel-dot active" onclick="goToDemo(0)"></div>
+            <div class="carousel-dot" onclick="goToDemo(1)"></div>
+            <div class="carousel-dot" onclick="goToDemo(2)"></div>
+        </div>
     </div>
-    <div class="demo-container">
-        <iframe src="/demos/interface-eleve.html" title="Interface Élève - Créer ma Contribution"></iframe>
-    </div>
-    <div class="demo-description">
-        <p><strong>Ce que l&rsquo;&eacute;l&egrave;ve vit :</strong> Une interface structur&eacute;e en 4 &eacute;tapes o&ugrave; la r&eacute;flexion est obligatoire avant la publication. L&rsquo;IA guide &agrave; chaque &eacute;tape sans faire le travail &agrave; la place.</p>
+
+    <div class="demo-info">
+        <h3 id="demoTitle">Interface &Eacute;l&egrave;ve</h3>
+        <p id="demoDescription">Voyez comment les &eacute;l&egrave;ves cr&eacute;ent leurs contributions avec le Cadre de R&eacute;flexion Guid&eacute;e. Une interface structur&eacute;e en 4 &eacute;tapes o&ugrave; la r&eacute;flexion est obligatoire avant la publication. L&rsquo;IA guide &agrave; chaque &eacute;tape sans faire le travail &agrave; la place.</p>
+        <div class="demo-buttons">
+            <button class="demo-btn-primary" onclick="openDemo(0)">🚀 Lancer la d&eacute;mo en plein &eacute;cran</button>
+            <button class="demo-btn-secondary" onclick="toggleInfo()">ℹ️ Plus d&rsquo;infos</button>
+        </div>
     </div>
 </div>
 
-<!-- Démo 2: Construction Progressive -->
-<div class="demo-section">
-    <div class="demo-header">
-        <h2>D&eacute;mo 2 : Construction Progressive</h2>
-        <p>Observez comment la fresque se construit session apr&egrave;s session, contribution par contribution</p>
-    </div>
-    <div class="demo-container">
-        <iframe src="/demos/construction-progressive.html" title="Construction Progressive de la Fresque"></iframe>
-    </div>
-    <div class="demo-description">
-        <p><strong>Ce que l&rsquo;enseignant vit :</strong> Un tableau de bord en temps r&eacute;el montrant l&rsquo;&eacute;volution de la fresque. On peut naviguer session par session pour voir comment l&rsquo;oeuvre collective &eacute;merge progressivement.</p>
-    </div>
-</div>
+<script>
+const demos = [
+    {
+        title: "Interface &Eacute;l&egrave;ve",
+        description: "Voyez comment les &eacute;l&egrave;ves cr&eacute;ent leurs contributions avec le Cadre de R&eacute;flexion Guid&eacute;e. Une interface structur&eacute;e en 4 &eacute;tapes o&ugrave; la r&eacute;flexion est obligatoire avant la publication. L&rsquo;IA guide &agrave; chaque &eacute;tape sans faire le travail &agrave; la place.",
+        url: "/demos/interface-eleve.html",
+        icon: "📝"
+    },
+    {
+        title: "Construction Progressive",
+        description: "Observez comment la fresque se construit session apr&egrave;s session. Un tableau de bord en temps r&eacute;el montrant l&rsquo;&eacute;volution de l&rsquo;oeuvre collective. On peut naviguer session par session pour voir comment chaque contribution enrichit la fresque.",
+        url: "/demos/construction-progressive.html",
+        icon: "🏗️"
+    },
+    {
+        title: "Carte Mentale Interactive",
+        description: "Explorez les connexions culturelles d&eacute;tect&eacute;es automatiquement par l&rsquo;IA. Une visualisation spectaculaire montrant comment les contributions sont interconnect&eacute;es. Parfait pour communiquer l&rsquo;impact du projet aux parents et &agrave; la direction.",
+        url: "/demos/carte-mentale.html",
+        icon: "🧠"
+    }
+];
 
-<!-- Démo 3: Carte Mentale Interactive -->
-<div class="demo-section">
-    <div class="demo-header">
-        <h2>D&eacute;mo 3 : Carte Mentale Interactive</h2>
-        <p>Explorez les connexions culturelles d&eacute;tect&eacute;es automatiquement par l&rsquo;IA entre les contributions</p>
-    </div>
-    <div class="demo-container">
-        <iframe src="/demos/carte-mentale.html" title="Carte Mentale Interactive"></iframe>
-    </div>
-    <div class="demo-description">
-        <p><strong>Ce que l&rsquo;&eacute;tablissement communique :</strong> Une visualisation spectaculaire montrant comment les contributions sont interconnect&eacute;es. Parfait pour les parents, la direction, et la communication externe.</p>
-    </div>
-</div>
+let currentDemoIndex = 0;
+
+function updateDemo(index) {
+    currentDemoIndex = index;
+    
+    // Update slides
+    document.querySelectorAll('.carousel-slide').forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+    
+    // Update dots
+    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+    
+    // Update info
+    document.getElementById('demoTitle').innerHTML = demos[index].icon + ' ' + demos[index].title;
+    document.getElementById('demoDescription').innerHTML = demos[index].description;
+}
+
+function nextDemo() {
+    updateDemo((currentDemoIndex + 1) % demos.length);
+}
+
+function previousDemo() {
+    updateDemo((currentDemoIndex - 1 + demos.length) % demos.length);
+}
+
+function goToDemo(index) {
+    updateDemo(index);
+}
+
+function openDemo(index) {
+    window.open(demos[index].url, '_blank', 'width=1920,height=1080,menubar=no,location=no,resizable=yes,scrollbars=yes');
+}
+
+function toggleInfo() {
+    alert('Démo ' + (currentDemoIndex + 1) + '/3\n\n' + demos[currentDemoIndex].title + '\n\n' + demos[currentDemoIndex].description);
+}
+
+// Auto-rotate carousel (optionnel)
+setInterval(() => {
+    if (document.hidden) return;
+    nextDemo();
+}, 8000);
+</script>
 <div class="cta-section">
     <h2>Pr&ecirc;t &agrave; vivre cette exp&eacute;rience ?</h2>
     <p>LangLink transforme l&rsquo;id&eacute;e simple cr&eacute;er ensemble en une exp&eacute;rience p&eacute;dagogique profonde et mesurable.</p>
