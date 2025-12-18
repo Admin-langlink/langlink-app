@@ -1,0 +1,823 @@
+{{ define "main" }}
+
+<style>
+    .exemples-page {
+        background: white;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
+        color: white;
+        padding: 80px 40px;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .hero-section p {
+        font-size: 1.3em;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+        opacity: 0.95;
+    }
+
+    .narrative-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 80px 40px;
+        line-height: 1.8;
+    }
+
+    .narrative-section h2 {
+        font-size: 2em;
+        color: var(--primary-blue);
+        margin: 60px 0 30px 0;
+        font-weight: 700;
+    }
+
+    .narrative-section h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin: 40px 0 20px 0;
+        font-weight: 600;
+    }
+
+    .narrative-section p {
+        font-size: 1.05em;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .step-box {
+        background: #f5f5f7;
+        border-left: 4px solid var(--primary-blue);
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+
+    .step-box h4 {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .timeline-item {
+        display: flex;
+        gap: 30px;
+        margin: 40px 0;
+    }
+
+    .timeline-number {
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-blue) 0%, #0042A0 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.5em;
+        flex-shrink: 0;
+    }
+
+    .timeline-content h4 {
+        color: #333;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .mockup-section {
+        background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
+        padding: 60px 40px;
+        margin: 80px 0;
+    }
+
+    .mockup-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .mockup-title {
+        text-align: center;
+        font-size: 2em;
+        color: var(--primary-blue);
+        margin-bottom: 50px;
+        font-weight: 700;
+    }
+
+    .mockup-embed {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        overflow: hidden;
+    }
+
+    .mockup-embed iframe {
+        width: 100%;
+        height: 1200px;
+        border: none;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin: 50px 0;
+    }
+
+    .benefit-card {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 12px;
+        border-top: 4px solid var(--primary-blue);
+    }
+
+    .benefit-card h4 {
+        color: var(--primary-blue);
+        font-size: 1.1em;
+        margin-bottom: 12px;
+    }
+
+    .benefit-card p {
+        color: #666;
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+
+    .quote-section {
+        background: linear-gradient(135deg, var(--secondary-yellow) 0%, #FFB700 100%);
+        color: var(--dark-text);
+        padding: 60px 40px;
+        text-align: center;
+        margin: 80px 0;
+    }
+
+    .quote-section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .quote-section p {
+        font-size: 1.2em;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .cta-button-large {
+        display: inline-block;
+        background: var(--primary-blue);
+        color: white;
+        padding: 18px 40px;
+        border-radius: 10px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-top: 25px;
+        transition: all 0.3s;
+    }
+
+    .cta-button-large:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(0,82,204,0.3);
+    }
+
+    @media (max-width: 768px) {
+        .hero-section h1 {
+            font-size: 2em;
+        }
+
+        .hero-section p {
+            font-size: 1em;
+        }
+
+        .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .timeline-item {
+            flex-direction: column;
+        }
+
+        .narrative-section {
+            padding: 40px 20px;
+        }
+    }
+</style>
+
+<div class="exemples-page">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Cas d'Étude Complet</h1>
+        <p>Découvrez comment trois classes créent ensemble une mosaïque culturelle unique à travers une Fresque Narrative LangLink</p>
+    </div>
+
+    <!-- Main Narrative -->
+    <div class="narrative-section">
+        
+        <h2>Nos Rituels de Fin d'Année</h2>
+        <p style="font-size: 1.2em; color: var(--primary-blue); font-weight: 600; margin-bottom: 30px;">Un parcours complet en 8 semaines</p>
+
+        <!-- Overview -->
+        <div class="step-box">
+            <h4>Vue d'Ensemble du Projet</h4>
+            <p><strong>Thème :</strong> Nos rituels de fin d'année</p>
+            <p><strong>Durée :</strong> 8 semaines | <strong>Participants :</strong> 78 élèves</p>
+            <p><strong>Pays impliqués :</strong> France, Royaume-Uni, Martinique</p>
+            <p><strong>Résultat :</strong> 50+ contributions organisées en mosaïque, timeline et carte mentale connectée</p>
+        </div>
+
+        <!-- Phase 1 -->
+        <h2>Phase 1 : L'Enseignant Prépare</h2>
+        <p>L'enseignant français se connecte à LangLink et navigue simplement le catalogue de fresques disponibles.</p>
+
+        <div class="timeline-item">
+            <div class="timeline-number">1</div>
+            <div class="timeline-content">
+                <h4>Inscription et Sélection</h4>
+                <p>Choisir un thème ("Nos Rituels de Fin d'Année") et une période. <strong>Temps : 5 minutes</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">2</div>
+            <div class="timeline-content">
+                <h4>Matching Garanti</h4>
+                <p>LangLink calcule automatiquement les partenaires idéaux (compatibilité calendaire, niveau linguistique, fuseau horaire). <strong>Temps : Automatique (1 minute)</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">3</div>
+            <div class="timeline-content">
+                <h4>Fiche Pédagogique Clé en Main</h4>
+                <p>Télécharger une fiche complète avec objectifs, diaporama, guide, grille d'évaluation. Tout est prêt. <strong>Temps : 10 minutes</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">4</div>
+            <div class="timeline-content">
+                <h4>Onboarding des Classes</h4>
+                <p>Les trois enseignants ajoutent leurs élèves. L'espace est déverrouillé. <strong>Temps : 10 minutes</strong></p>
+            </div>
+        </div>
+
+        <div class="step-box">
+            <h4>✅ Charge enseignant totale : 25 minutes. Zéro logistique.</h4>
+        </div>
+
+        <!-- Phase 2 -->
+        <h2>Phase 2 : Les Élèves Découvrent</h2>
+        <p>Les élèves se connectent et explorent le thème à travers des ressources inspirantes. Avant de créer, ils réfléchissent à LEUR rituel personnel.</p>
+
+        <div class="timeline-item">
+            <div class="timeline-number">1</div>
+            <div class="timeline-content">
+                <h4>Découverte du Thème</h4>
+                <p>Les élèves voient le thème, les ressources d'inspiration, et explorent les contributions des autres pays. Ça les inspire. <strong>Temps : 20 minutes</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">2</div>
+            <div class="timeline-content">
+                <h4>Préparation Mentale</h4>
+                <p>L'IA guidée pose des questions : "Quel est TON rituel ?" pour structurer la pensée. <strong>Temps : 15 minutes</strong></p>
+            </div>
+        </div>
+
+        <!-- Phase 3 - Mockup -->
+        <h2>Phase 3 : Les Élèves Créent</h2>
+        <p>Le moment crucial : le <strong>Cadre de Réflexion Guidée</strong> force l'élève à réfléchir avant d'agir.</p>
+    </div>
+
+    <!-- Mockup Section -->
+    <div class="mockup-section">
+        <div class="mockup-container">
+            <div class="mockup-title">Interface Élève : "Je Réponds"</div>
+            <div class="mockup-embed">
+                <iframe srcdoc='<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LangLink - Créer ma Contribution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .theme-info {
+            background: #f0f4ff;
+            padding: 15px 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-info .icon {
+            font-size: 2em;
+        }
+
+        .theme-info .text {
+            flex: 1;
+        }
+
+        .theme-title {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .theme-desc {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+        }
+
+        .creation-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .step-indicator::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #e0e0e0;
+            z-index: 0;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #999;
+        }
+
+        .step.active .step-circle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+        }
+
+        .step-label {
+            font-size: 0.85em;
+            color: #999;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .step.active .step-label {
+            color: #667eea;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .section-title {
+            color: #333;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .upload-zone {
+            border: 3px dashed #667eea;
+            border-radius: 15px;
+            padding: 60px 40px;
+            text-align: center;
+            background: #f8f9ff;
+        }
+
+        .upload-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+
+        .upload-text {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .upload-hint {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .required-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .char-counter {
+            text-align: right;
+            color: #999;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+
+        .ai-assistant {
+            background: #f8f9ff;
+            border: 2px solid #667eea;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .ai-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .ai-title {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .ai-suggestions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .ai-suggestion {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .ai-suggestion:hover {
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f0f4ff;
+            color: #667eea;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .help-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .help-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .help-list {
+            list-style: none;
+        }
+
+        .help-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .help-list li::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .examples-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .example-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .example-label {
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .example-text {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Créer ma Contribution</h1>
+            <div class="theme-info">
+                <div class="icon">🌍</div>
+                <div class="text">
+                    <div class="theme-title">Thème : Nos rituels de fin d''année</div>
+                    <div class="theme-desc">Partage un rituel, une tradition ou un moment spécial de ta culture pendant les fêtes de fin d''année</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <div class="creation-panel">
+                <div class="step-indicator">
+                    <div class="step active">
+                        <div class="step-circle">1</div>
+                        <div class="step-label">Média</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-circle">2</div>
+                        <div class="step-label">Contexte</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-circle">3</div>
+                        <div class="step-label">Signification</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-circle">4</div>
+                        <div class="step-label">Validation</div>
+                    </div>
+                </div>
+
+                <div class="form-section active">
+                    <div class="section-title">📸 Étape 1 : Choisis ton image</div>
+                    <div class="upload-zone">
+                        <div class="upload-icon">📤</div>
+                        <div class="upload-text">Clique pour choisir une photo</div>
+                        <div class="upload-hint">JPG, PNG ou GIF (max 5MB)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="help-card">
+                    <h3>💡 Conseils</h3>
+                    <ul class="help-list">
+                        <li>Choisis une photo qui montre bien ta tradition</li>
+                        <li>Explique le "pourquoi" pas juste le "quoi"</li>
+                        <li>Pense aux élèves d''autres pays qui vont lire</li>
+                        <li>Sois authentique et personnel</li>
+                    </ul>
+                </div>
+
+                <div class="examples-card">
+                    <h3>📚 Bon exemple</h3>
+                    <div class="example-item">
+                        <div class="example-label">🇯🇵 Japan:</div>
+                        <div class="example-text">"Au Japon, commander du KFC pour Noël peut paraître surprenant mais c''est devenu une vraie tradition depuis les années 70..."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>'></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Continue Narrative -->
+    <div class="narrative-section">
+        
+        <h2>Le Différenciateur Clé : "Pensée Forcée"</h2>
+        <p>Contrairement aux réseaux sociaux où on partage d'abord et on réfléchit après, le CRG <strong>force l'élève à réfléchir avant de partager</strong>.</p>
+
+        <div class="step-box">
+            <h4>Caractéristiques du CRG</h4>
+            <p>✅ <strong>Champ "Contexte & Signification" obligatoire</strong> – Pas de publication sans analyse</p>
+            <p>✅ <strong>Bouton "Publier" inactif</strong> – Tant que les champs ne sont pas complétés</p>
+            <p>✅ <strong>Lenteur Intentionnalisée</strong> – Promeut la prise de recul et la nuance</p>
+            <p>✅ <strong>Étayage Cognitif par l'IA</strong> – Guidage sans imposition</p>
+        </div>
+
+        <!-- Phase 4 -->
+        <h2>Phase 4 : La Fresque se Construit</h2>
+        <p>Au fil des semaines, 50+ contributions s'accumulent et se visualisent de trois façons :</p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h4>Mosaïque (Vue Artistique)</h4>
+                <p>Une mappemonde qui se révèle progressivement, pixel par pixel. Chaque contribution devient une brique visuelle.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>Timeline (Vue Chronologique)</h4>
+                <p>Suivez l'évolution chronologique des contributions et comment la pensée collective progresse.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>Carte Mentale (Vue Connectée)</h4>
+                <p>L'IA tisse automatiquement les liens sémantiques pour révéler les convergences culturelles invisibles.</p>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <h2>Résultats Finaux</h2>
+        
+        <h3>Pour l'Élève</h3>
+        <div class="step-box">
+            <p>✅ Engagement authentique avec des pairs du monde entier</p>
+            <p>✅ Pensée critique développée et empathie interculturelle acquise</p>
+            <p>✅ Anglais pratiqué dans un contexte réel et motivant</p>
+            <p>✅ Fierté de contribuer à une œuvre collective unique</p>
+        </div>
+
+        <h3>Pour l'Enseignant</h3>
+        <div class="step-box">
+            <p>✅ Gain de temps massif (fiche clé en main, correction assistée)</p>
+            <p>✅ Preuve d'impact tangible et mesurable</p>
+            <p>✅ Valorisation pédagogique et innovante</p>
+            <p>✅ Minimal de charge logistique</p>
+        </div>
+
+        <h3>Pour l'Établissement</h3>
+        <div class="step-box">
+            <p>✅ Innovation pédagogique visible et communicable</p>
+            <p>✅ Labellisation internationale possible</p>
+            <p>✅ Communication positive (réseaux, presse, portes ouvertes)</p>
+            <p>✅ Attractivité accrue pour les inscriptions</p>
+        </div>
+
+    </div>
+
+    <!-- Final CTA -->
+    <div class="quote-section">
+        <h2>Prêt à Vivre Cette Expérience ?</h2>
+        <p>LangLink transforme l'idée simple "créer ensemble" en une expérience pédagogique profonde et mesurable.</p>
+        <a href="/services/" class="cta-button-large">Commencer un Projet Pilote</a>
+    </div>
+
+</div>
+
+{{ end }}
