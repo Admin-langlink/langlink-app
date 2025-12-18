@@ -1,32 +1,30 @@
 ---
 title: "Mosaïque"
-description: "Vue artistique pointilliste de la Fresque Narrative"
+description: "Visualisation pointilliste de votre Fresque Narrative"
 draft: false
+weight: 1
+slug: "mosaique"
+subtitle: "Une visualisation artistique où l'image collective se révèle progressivement"
 ---
 
-## Visualisation Pointilliste
+# Mosaïque – Vue Artistique
 
-La **Mosaïque** est une représentation artistique où l'image collective se révèle progressivement, **pixel par pixel**, au fil des contributions des élèves.
+Une visualisation pointilliste où l'image collective se **révèle progressivement, pixel par pixel**. Chaque contribution devient un élément visuel de l'œuvre finale.
 
-### Le Concept
+## Concept
 
-Chaque contribution élève remplit un pixel d'une image thématique. Initialement, l'image est floue et pixelisée. Au fur et à mesure que les élèves contribuent, les pixels deviennent nets, et l'image finale émerge progressivement.
+La Mosaïque transforme les contributions individuelles en une **image collective cohérente**. Plutôt que de lister les contributions linéairement, cette visualisation les intègre dans une composition visuelle harmonieuse.
 
-### Les 3 États d'un Pixel
+## Principes
 
-- **Pixel Gris (vide)** – Zone en attente de contribution
-- **Pixel Pixelisé (en cours)** – Contribution en préparation
-- **Pixel Net (validé)** – Contribution publiée et intégrée
+- **Progressivité** : L'image se complète au fur et à mesure des contributions
+- **Artistique** : Chaque pixel représente une voix dans le collectif
+- **Satisfaisant** : Voir l'œuvre se construire crée de l'engagement
+- **Inclusif** : Chaque contribution compte, quelle que soit sa taille
 
-### Bénéfices Pédagogiques
+## Bénéfices Pédagogiques
 
-- **Visualisation Progressive** – Les élèves voient concrètement l'impact de leur travail
-- **Motivation Visuelle** – Chaque contribution "débloque" un nouveau pixel
-- **Œuvre Collective Impactante** – L'image finale est visuellement spectaculaire
-- **Sens de l'Accomplissement** – "J'ai aidé à créer ça !"
-
-### Cas d'Usage
-
-Idéal pour les projets thématiques à forte dimension visuelle : art, culture, géographie, patrimoine culturel.
-
-La Mosaïque transforme les contributions individuelles en une **image collective visuellement impactante**.
+- Gratification visuelle immédiate
+- Sens de contribution à une œuvre collective
+- Appréciation de la diversité culturelle
+- Motivation accrue pour continuer à contribuer
