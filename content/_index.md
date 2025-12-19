@@ -1,18 +1,14 @@
 ---
-title: "LangLink - Fresques Narratives Intercultureles"
+title: "LangLink - Connectez votre classe au monde"
+description: "Transformez l'apprentissage des langues avec des projets interculturels et des fresques narratives interactives"
+keywords: "apprentissage langues, projets interculturels, pédagogie interculturelle, fresques narratives"
+type: "home"
+layout: "home"
 draft: false
 ---
 
 # Bienvenue sur LangLink
 
-Transformez les échanges scolaires en fresques narratives interactives. LangLink est une plateforme pédagogique qui permet aux élèves de créer, collaborer et partager leurs découvertes culturelles.
+Connectez votre classe au monde en 2 semaines avec nos fresques narratives interactives.
 
-## Notre Mission
-
-Favoriser les échanges interculturels authentiques à travers des fresques narratives créatives et pédagogiques.
-
-## Nos Services
-
-- **Matching Garanti** : Trouvez votre classe partenaire
-- **Fresques Narratives** : Créez vos propres fresques interactives
-- **Exemples Inspirants** : Découvrez des projets réalisés
+LangLink est une plateforme pédagogique qui transforme l'apprentissage des langues en une aventure collective et interculturelle.

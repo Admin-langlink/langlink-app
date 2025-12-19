@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suivez l&#39;évolution du projet : comment les idées se répondent et s&#39;enrichissent">
+    <meta name="keywords" content="[projet pédagogique, timeline, rituels noël]">
+    
+    
+    <meta property="og:title" content="Rituels de Noël - Vue Chronologique | LangLink">
+    <meta property="og:description" content="Suivez l&#39;évolution du projet : comment les idées se répondent et s&#39;enrichissent">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:1313/cas-pratique/exemples/rituels-noel/projet/">
+    <meta property="og:image" content="http://localhost:1313/og-image.png">
+    
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Rituels de Noël - Vue Chronologique | LangLink</title>
+    
+    <style>
+        :root {
+            --primary-blue: #0052CC;
+            --dark-blue: #0042A0;
+            --secondary-yellow: #FFC700;
+            --dark-text: #1a1a1a;
+            --gray-text: #555;
+            --gray-light: #999;
+            --bg-light: #f5f5f7;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-md: 0 15px 40px rgba(0,82,204,0.3);
+            --shadow-lg: 0 30px 80px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background: var(--white);
+        }
+
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--dark-blue);
+        }
+
+         
+        .navbar {
+            background: var(--white);
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+  transition: opacity 0.3s ease;
+  max-height: 50px;
+}
+
+.navbar-logo:hover img {
+  opacity: 0.85;
+}
+
+        .burger-menu {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .burger-menu:hover {
+            color: var(--dark-blue);
+        }
+
+        .burger-menu.active {
+            color: var(--dark-blue);
+        }
+
+         
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-bottom: 1px solid #e0e0e0;
+            max-height: calc(100vh - 50px);
+            overflow-y: auto;
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+        }
+
+        .mobile-menu.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mobile-menu-section {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu-section-title {
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .mobile-menu-item {
+            padding: 8px 0;
+            color: var(--dark-text);
+            display: block;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-item:hover {
+            color: var(--primary-blue);
+            padding-left: 5px;
+        }
+
+         
+        main {
+            min-height: calc(100vh - 200px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+         
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: var(--secondary-yellow);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.85);
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-yellow);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 10px;
+        }
+
+         
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 12px 15px;
+            }
+
+            .navbar-logo {
+                font-size: 1.2em;
+            }
+
+            .burger-menu {
+                font-size: 1.3em;
+            }
+
+            main {
+                min-height: calc(100vh - 150px);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="http://localhost:1313/" class="navbar-logo" style="display: flex; align-items: center;">
+  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="height: 45px; width: auto;">
+    <defs>
+      <linearGradient id="gradBleu" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1e5ba8" />
+        <stop offset="100%" stop-color="#5a9fd8" />
+      </linearGradient>
+      <linearGradient id="gradJaune" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#e8a910" />
+        <stop offset="100%" stop-color="#ffc700" />
+      </linearGradient>
+    </defs>
+    <rect x="80" y="80" width="80" height="240" fill="url(#gradBleu)" rx="12"/>
+    <rect x="80" y="300" width="160" height="60" fill="url(#gradBleu)" rx="12"/>
+    <rect x="240" y="80" width="80" height="240" fill="url(#gradJaune)" rx="12"/>
+    <rect x="160" y="300" width="160" height="60" fill="url(#gradJaune)" rx="12"/>
+    <circle cx="200" cy="220" r="20" fill="#ffffff" opacity="0.95"/>
+  </svg>
+</a>
+        <button class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
+            ☰
+        </button>
+    </nav>
+
+    
+    <div class="mobile-menu" id="mobileMenu">
+        
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">🎯 Solution</div>
+            <a href="/solution/enseignant/" class="mobile-menu-item">Pour les enseignants</a>
+            <a href="/solution/apprenant/" class="mobile-menu-item">Pour les apprenants</a>
+            <a href="/solution/etablissement/" class="mobile-menu-item">Pour les établissements</a>
+        </div>
+
+        
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">🎨 Comment ça marche ?</div>
+            <a href="/fresque/" class="mobile-menu-item">Vue d'ensemble</a>
+            <a href="/fresque/mosaique/" class="mobile-menu-item">Mosaïque</a>
+            <a href="/fresque/projet/" class="mobile-menu-item">Projet Pédagogique</a>
+            <a href="/fresque/carte-mentale/" class="mobile-menu-item">Carte Mentale</a>
+            <a href="/fresque/reponse/" class="mobile-menu-item">Je Réponds</a>
+        </div>
+
+        
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">📚 Cas Pratiques</div>
+            <a href="/cas-pratique/" class="mobile-menu-item">Vue d'ensemble</a>
+            <a href="/cas-pratique/exemples/" class="mobile-menu-item">Exemples de projets</a>
+            <a href="/cas-pratique/exemples/rituels-noel/" class="mobile-menu-item">Rituels de Noël</a>
+            <a href="/cas-pratique/temoignages/" class="mobile-menu-item">Témoignages</a>
+        </div>
+
+        
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">⚙️ Plateforme</div>
+            <a href="/plateforme/" class="mobile-menu-item">Vue d'ensemble</a>
+            <a href="/plateforme/experience-utilisateur/" class="mobile-menu-item">App Élèves</a>
+            <a href="/plateforme/securite-conformite/" class="mobile-menu-item">Sécurité & RGPD</a>
+        </div>
+
+        
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">🎓 Accompagnement</div>
+            <a href="/accompagnement/" class="mobile-menu-item">Vue d'ensemble</a>
+            <a href="/accompagnement/formation-enseignants/" class="mobile-menu-item">Formation</a>
+            <a href="/accompagnement/guides-pedagogiques/" class="mobile-menu-item">Guides</a>
+            <a href="/accompagnement/fiches-sequences/" class="mobile-menu-item">Fiches Séquences</a>
+        </div>
+
+        
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">📝 Blog</div>
+            <a href="/blog/posts/" class="mobile-menu-item">Tous les articles</a>
+            <a href="/blog/posts/qu-est-ce-qu-une-fresque-narrative/" class="mobile-menu-item">Fresques Narratives</a>
+            <a href="/blog/posts/reseaux-sociaux-apprentissage-langues/" class="mobile-menu-item">Réseaux sociaux</a>
+            <a href="/blog/posts/trouver-correspondant-apprendre-langue/" class="mobile-menu-item">Trouver un correspondant</a>
+            <a href="/blog/posts/securite-donnees-scolaires-rgpd/" class="mobile-menu-item">Sécurité données</a>
+            <a href="/blog/posts/interagir-vraie-personne-apprendre-langue/" class="mobile-menu-item">Interaction authentique</a>
+        </div>
+
+        
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">ℹ️ Infos</div>
+            <a href="/a-propos/" class="mobile-menu-item">À propos</a>
+            <a href="/contact/" class="mobile-menu-item">Contact</a>
+            <a href="/faq/" class="mobile-menu-item">FAQ</a>
+            <a href="/tarifs/" class="mobile-menu-item">Tarifs</a>
+        </div>
+    </div>
+
+    
+    <main>
+        
+<style>
+    :root {
+        --primary-blue: #0052CC;
+        --dark-blue: #0042A0;
+        --secondary-yellow: #FFC700;
+        --dark-text: #1a1a1a;
+        --gray-text: #555;
+        --bg-light: #f5f5f7;
+        --white: #ffffff;
+        --shadow-md: 0 15px 40px rgba(0,82,204,0.3);
+        --shadow-lg: 0 30px 80px rgba(0,0,0,0.15);
+    }
+
+    .single-hero {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+        color: var(--white);
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .single-hero h1 {
+        font-size: clamp(2em, 6vw, 3em);
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .single-hero p {
+        font-size: 1.1em;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.95;
+    }
+
+    .single-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
+
+    .single-content h2 {
+        font-size: 1.8em;
+        color: var(--primary-blue);
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .single-content h3 {
+        font-size: 1.3em;
+        color: var(--dark-blue);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .single-content p {
+        font-size: 1.05em;
+        color: var(--gray-text);
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .single-content ul, .single-content ol {
+        margin: 20px 0 20px 30px;
+        color: var(--gray-text);
+        line-height: 1.8;
+    }
+
+    .single-content li {
+        margin-bottom: 12px;
+    }
+
+    .single-content strong {
+        color: var(--dark-text);
+        font-weight: 600;
+    }
+
+    .single-content em {
+        color: var(--primary-blue);
+        font-style: italic;
+    }
+
+    .single-content code {
+        background: var(--bg-light);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        color: var(--dark-blue);
+        font-size: 0.9em;
+    }
+
+    .single-content pre {
+        background: var(--dark-text);
+        color: #00ff00;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 20px 0;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .single-content blockquote {
+        border-left: 4px solid var(--primary-blue);
+        padding-left: 20px;
+        margin: 30px 0;
+        color: var(--gray-text);
+        font-style: italic;
+        background: var(--bg-light);
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .single-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 0.95em;
+    }
+
+    .single-content th {
+        background: var(--primary-blue);
+        color: var(--white);
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .single-content td {
+        border: 1px solid #e0e0e0;
+        padding: 12px;
+        color: var(--gray-text);
+    }
+
+    .single-content tr:nth-child(even) {
+        background: var(--bg-light);
+    }
+
+     
+    .cta-box {
+        background: var(--bg-light);
+        border-left: 4px solid var(--secondary-yellow);
+        padding: 30px;
+        border-radius: 8px;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    .cta-box h3 {
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+    }
+
+    .cta-box p {
+        margin-bottom: 20px;
+    }
+
+    .cta-box a {
+        display: inline-block;
+        background: var(--primary-blue);
+        color: var(--white);
+        padding: 12px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .cta-box a:hover {
+        background: var(--dark-blue);
+        transform: translateY(-2px);
+    }
+
+     
+    .related-posts {
+        background: var(--bg-light);
+        padding: 40px 20px;
+        margin-top: 60px;
+        border-radius: 8px;
+    }
+
+    .related-posts h3 {
+        color: var(--primary-blue);
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .related-card {
+        background: var(--white);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .related-card h4 {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+    .related-card p {
+        font-size: 0.95em;
+        color: var(--gray-text);
+        margin-bottom: 15px;
+    }
+
+    .related-card a {
+        color: var(--primary-blue);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .related-card a:hover {
+        text-decoration: underline;
+    }
+
+     
+    @media (max-width: 768px) {
+        .single-hero {
+            padding: 40px 15px;
+        }
+
+        .single-hero h1 {
+            font-size: 1.8em;
+        }
+
+        .single-content {
+            padding: 40px 15px;
+        }
+
+        .single-content h2 {
+            font-size: 1.5em;
+        }
+
+        .single-content h3 {
+            font-size: 1.1em;
+        }
+
+        .cta-box {
+            padding: 20px;
+        }
+    }
+</style>
+
+
+<section class="single-hero">
+    <h1>Rituels de Noël - Vue Chronologique</h1>
+    
+    <p>Suivez l&#39;évolution du projet : comment les idées se répondent et s&#39;enrichissent</p>
+    
+</section>
+
+
+<div class="single-content">
+    <h1 id="rituels-de-noël--la-vue-projet-pédagogique">Rituels de Noël : La vue Projet Pédagogique</h1>
+<h2 id="lévolution-collective">L&rsquo;évolution collective</h2>
+<p>Suivez comment le projet s&rsquo;est construit, jour après jour, contribution après contribution.</p>
+<h3 id="semaine-1--découverte">Semaine 1 : Découverte</h3>
+<ul>
+<li>Élève 1 : &ldquo;En France, on met des sabots devant la cheminée&rdquo;</li>
+<li>Élève 2 : &ldquo;Chez nous, c&rsquo;est le Père Fouettard qui vient !&rdquo;</li>
+<li>Élève 3 : &ldquo;Et nous, ce sont les rois mages&hellip;&rdquo;</li>
+</ul>
+<h3 id="semaine-2--approfondissement">Semaine 2 : Approfondissement</h3>
+<ul>
+<li>Élève 4 : &ldquo;C&rsquo;est drôle, en Italie aussi il y a une sorcière !&rdquo;</li>
+<li>Élève 5 : &ldquo;Je vois un lien&hellip; le sacrifice et le renouvellement&rdquo;</li>
+<li>Élève 6 : &ldquo;Et la lumière ? Elle est partout !&rdquo;</li>
+</ul>
+<h3 id="semaine-3-4--synthèse">Semaine 3-4 : Synthèse</h3>
+<p>Les élèves voient comment les rituels se répondent, comment des thèmes universaux émergent (lumière, famille, partage, renouvellement).</p>
+<h3 id="intérêt-pédagogique">Intérêt pédagogique</h3>
+<ul>
+<li><strong>Analyse du processus</strong> : Comment se construit une connaissance collective</li>
+<li><strong>Influence des pairs</strong> : Voir comment les idées s&rsquo;enrichissent</li>
+<li><strong>Compréhension profonde</strong> : Les universaux culturels</li>
+</ul>
+<p><a href="#">Retour au projet</a> | <a href="#">Voir la Carte Mentale →</a></p>
+
+
+    
+    
+</div>
+
+
+    </main>
+
+    
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>LangLink</h3>
+                <p style="margin-bottom: 15px; font-size: 0.95em; line-height: 1.7;">
+                    Transformez l'apprentissage des langues avec des fresques narratives interactives et interculturels.
+                </p>
+                <p style="font-size: 0.9em; color: rgba(255, 255, 255, 0.6);">
+                    © 2024 LangLink. Tous droits réservés.
+                </p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>🎯 Solution</h3>
+                <ul>
+                    <li><a href="/solution/enseignant/">Pour les enseignants</a></li>
+                    <li><a href="/solution/apprenant/">Pour les apprenants</a></li>
+                    <li><a href="/solution/etablissement/">Pour les établissements</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>🎨 Comment ça marche</h3>
+                <ul>
+                    <li><a href="/fresque/mosaique/">Mosaïque</a></li>
+                    <li><a href="/fresque/projet/">Projet Pédagogique</a></li>
+                    <li><a href="/fresque/carte-mentale/">Carte Mentale</a></li>
+                    <li><a href="/fresque/reponse/">Je Réponds</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>📚 Ressources</h3>
+                <ul>
+                    <li><a href="/accompagnement/">Accompagnement</a></li>
+                    <li><a href="/accompagnement/guides-pedagogiques/">Guides</a></li>
+                    <li><a href="/accompagnement/fiches-sequences/">Fiches Séquences</a></li>
+                    <li><a href="/blog/posts/">Blog</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>⚖️ Légal</h3>
+                <ul>
+                    <li><a href="/a-propos/">À propos</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/tarifs/">Tarifs & Modalités</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p><strong>LangLink</strong> - Fresques narratives interactives pour l'apprentissage des langues</p>
+            <p>Conception pédagogique • Technologie IA • Sécurité RGPD</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        
+        const burgerMenu = document.getElementById('burgerMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        burgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+            burgerMenu.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
+        });
+
+        
+        document.querySelectorAll('.mobile-menu-item').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                burgerMenu.classList.remove('active');
+                burgerMenu.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar') && !e.target.closest('.mobile-menu')) {
+                mobileMenu.classList.remove('active');
+                burgerMenu.classList.remove('active');
+                burgerMenu.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+</html>
