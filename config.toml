@@ -1,0 +1,140 @@
+baseURL = "https://langlink.app/"
+languageCode = "fr-FR"
+title = "LangLink - Fresques narratives pour l'apprentissage des langues"
+theme = ""
+
+# ==================== MINIFICATION ====================
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  minifyOutput = true
+
+# ==================== IMAGES ====================
+[imaging]
+  resampleFilter = "Lanczos"
+  quality = 85
+  anchor = "Smart"
+
+# ==================== PARAMS ====================
+[params]
+  description = "Transformez l'apprentissage des langues avec des fresques narratives interactives, interculturels et guidées par l'IA."
+  author = "LangLink"
+  og_image = "/images/og-image.jpg"
+  
+# ==================== OUTPUTS ====================
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ==================== MARKUP ====================
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# ==================== MENU PRINCIPAL ====================
+[[menu.main]]
+  name = "Solution"
+  weight = 10
+  identifier = "solution"
+  
+[[menu.main]]
+  name = "Pour les enseignants"
+  parent = "solution"
+  url = "/solution/enseignant/"
+  weight = 1
+  
+[[menu.main]]
+  name = "Pour les apprenants"
+  parent = "solution"
+  url = "/solution/apprenant/"
+  weight = 2
+  
+[[menu.main]]
+  name = "Pour les établissements"
+  parent = "solution"
+  url = "/solution/etablissement/"
+  weight = 3
+
+[[menu.main]]
+  name = "Comment ça marche"
+  url = "/fresque/"
+  weight = 20
+
+[[menu.main]]
+  name = "Cas pratiques"
+  url = "/cas-pratique/"
+  weight = 30
+
+[[menu.main]]
+  name = "Accompagnement"
+  url = "/accompagnement/"
+  weight = 35
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 40
+
+[[menu.main]]
+  name = "À propos"
+  url = "/a-propos/"
+  weight = 45
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 50
+
+# ==================== MENU FOOTER ====================
+[[menu.footer]]
+  name = "Pour les enseignants"
+  url = "/solution/enseignant/"
+  weight = 1
+
+[[menu.footer]]
+  name = "Pour les apprenants"
+  url = "/solution/apprenant/"
+  weight = 2
+
+[[menu.footer]]
+  name = "Pour les établissements"
+  url = "/solution/etablissement/"
+  weight = 3
+
+[[menu.footer]]
+  name = "Guides pédagogiques"
+  url = "/accompagnement/guides-pedagogiques/"
+  weight = 4
+
+[[menu.footer]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 5
+
+[[menu.footer]]
+  name = "FAQ"
+  url = "/faq/"
+  weight = 6
+
+[[menu.footer]]
+  name = "Tarifs"
+  url = "/tarifs/"
+  weight = 7
+
+[[menu.footer]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 8
+
+# ==================== SERVER ====================
+[server]
+  [[server.headers]]
+    for = "/**"
+    [server.headers.values]
+      Cache-Control = "max-age=3600, public"
+
+# ==================== SITEMAP ====================
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
