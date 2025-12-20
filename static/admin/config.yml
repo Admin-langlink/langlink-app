@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tonnom/langlink-app
+  repo: Admin-langlink/langlink-app
   branch: main
   auth_endpoint: /api/auth
   base_url: https://netlify.app
