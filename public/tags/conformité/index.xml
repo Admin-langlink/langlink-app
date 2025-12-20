@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Conformité on LangLink</title>
-    <link>http://localhost:1313/tags/conformit%C3%A9/</link>
-    <description>Recent content in Conformité on LangLink</description>
+    <title>Conformité on </title>
+    <link>//localhost:1313/tags/conformit%C3%A9/</link>
+    <description>Recent content in Conformité on </description>
     <generator>Hugo</generator>
-    <language>fr</language>
+    <language>en</language>
     <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/conformit%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/conformit%C3%A9/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sécurité des données scolaires : RGPD, modération et bonnes pratiques</title>
-      <link>http://localhost:1313/blog/posts/securite-donnees-scolaires-rgpd/</link>
+      <link>//localhost:1313/blog/posts/securite-donnees-scolaires-rgpd/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/securite-donnees-scolaires-rgpd/</guid>
+      <guid>//localhost:1313/blog/posts/securite-donnees-scolaires-rgpd/</guid>
       <description>&lt;h1 id=&#34;sécurité-des-données-scolaires--rgpd-modération-et-bonnes-pratiques&#34;&gt;Sécurité des données scolaires : RGPD, modération et bonnes pratiques&lt;/h1&gt;&#xA;&lt;p&gt;La protection des données est &lt;strong&gt;fondamentale&lt;/strong&gt; quand on travaille avec des mineurs. Qu&amp;rsquo;est-ce que tu dois savoir en tant qu&amp;rsquo;enseignant ou établissement ?&lt;/p&gt;&#xA;&lt;h2 id=&#34;rgpd--les-bases-pour-léducation&#34;&gt;RGPD : Les bases pour l&amp;rsquo;éducation&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-quest-ce-que-le-rgpd-&#34;&gt;📜 Qu&amp;rsquo;est-ce que le RGPD ?&lt;/h3&gt;&#xA;&lt;p&gt;Le &lt;strong&gt;Règlement Général sur la Protection des Données&lt;/strong&gt; (RGPD) est une loi européenne qui s&amp;rsquo;applique à &lt;strong&gt;toutes les organisations&lt;/strong&gt; traitant des données personnelles, y compris les écoles.&lt;/p&gt;</description>
     </item>
   </channel>

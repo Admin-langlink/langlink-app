@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Digital on LangLink</title>
-    <link>http://localhost:1313/tags/digital/</link>
-    <description>Recent content in Digital on LangLink</description>
+    <title>Digital on </title>
+    <link>//localhost:1313/tags/digital/</link>
+    <description>Recent content in Digital on </description>
     <generator>Hugo</generator>
-    <language>fr</language>
+    <language>en</language>
     <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/digital/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/digital/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Les réseaux sociaux et l&#39;apprentissage des langues : opportunités et risques</title>
-      <link>http://localhost:1313/blog/posts/reseaux-sociaux-apprentissage-langues/</link>
+      <link>//localhost:1313/blog/posts/reseaux-sociaux-apprentissage-langues/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/reseaux-sociaux-apprentissage-langues/</guid>
+      <guid>//localhost:1313/blog/posts/reseaux-sociaux-apprentissage-langues/</guid>
       <description>&lt;h1 id=&#34;les-réseaux-sociaux-et-lapprentissage-des-langues--opportunités-et-risques&#34;&gt;Les réseaux sociaux et l&amp;rsquo;apprentissage des langues : opportunités et risques&lt;/h1&gt;&#xA;&lt;p&gt;Les réseaux sociaux sont omniprésents dans la vie des élèves. Comment les intégrer &lt;strong&gt;intelligemment&lt;/strong&gt; dans l&amp;rsquo;apprentissage des langues ?&lt;/p&gt;&#xA;&lt;h2 id=&#34;le-contexte-actuel&#34;&gt;Le contexte actuel&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-les-chiffres&#34;&gt;📱 Les chiffres&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;86% des 13-17 ans utilisent les réseaux sociaux&lt;/li&gt;&#xA;&lt;li&gt;TikTok : 1 milliard d&amp;rsquo;utilisateurs&lt;/li&gt;&#xA;&lt;li&gt;51% des enfants apprennent des langues via les réseaux&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-spécificités-pédagogiques&#34;&gt;🎥 Spécificités pédagogiques&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Contenu court et engageant (microlearning)&lt;/li&gt;&#xA;&lt;li&gt;Authenticité du langage (non-filtré)&lt;/li&gt;&#xA;&lt;li&gt;Viralité et partage naturel&lt;/li&gt;&#xA;&lt;li&gt;Gamification intégrée&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;opportunités-pour-lenseignement&#34;&gt;Opportunités pour l&amp;rsquo;enseignement&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-apprentissage-authentique&#34;&gt;✅ Apprentissage authentique&lt;/h3&gt;&#xA;&lt;p&gt;Les réseaux offrent du &lt;strong&gt;vrai langage&lt;/strong&gt; en contexte réel.&lt;/p&gt;</description>
     </item>
   </channel>

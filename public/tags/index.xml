@@ -1,123 +1,123 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on LangLink</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on LangLink</description>
+    <title>Tags on </title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on </description>
     <generator>Hugo</generator>
-    <language>fr</language>
+    <language>en</language>
     <lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Authentique</title>
-      <link>http://localhost:1313/tags/authentique/</link>
+      <link>//localhost:1313/tags/authentique/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/authentique/</guid>
+      <guid>//localhost:1313/tags/authentique/</guid>
       <description></description>
     </item>
     <item>
       <title>Conversation</title>
-      <link>http://localhost:1313/tags/conversation/</link>
+      <link>//localhost:1313/tags/conversation/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/conversation/</guid>
+      <guid>//localhost:1313/tags/conversation/</guid>
       <description></description>
     </item>
     <item>
       <title>Correspondant</title>
-      <link>http://localhost:1313/tags/correspondant/</link>
+      <link>//localhost:1313/tags/correspondant/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/correspondant/</guid>
+      <guid>//localhost:1313/tags/correspondant/</guid>
       <description></description>
     </item>
     <item>
       <title>Interaction</title>
-      <link>http://localhost:1313/tags/interaction/</link>
+      <link>//localhost:1313/tags/interaction/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/interaction/</guid>
+      <guid>//localhost:1313/tags/interaction/</guid>
       <description></description>
     </item>
     <item>
       <title>Conformité</title>
-      <link>http://localhost:1313/tags/conformit%C3%A9/</link>
+      <link>//localhost:1313/tags/conformit%C3%A9/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/conformit%C3%A9/</guid>
+      <guid>//localhost:1313/tags/conformit%C3%A9/</guid>
       <description></description>
     </item>
     <item>
       <title>Données</title>
-      <link>http://localhost:1313/tags/donn%C3%A9es/</link>
+      <link>//localhost:1313/tags/donn%C3%A9es/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/donn%C3%A9es/</guid>
+      <guid>//localhost:1313/tags/donn%C3%A9es/</guid>
       <description></description>
     </item>
     <item>
       <title>RGPD</title>
-      <link>http://localhost:1313/tags/rgpd/</link>
+      <link>//localhost:1313/tags/rgpd/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rgpd/</guid>
+      <guid>//localhost:1313/tags/rgpd/</guid>
       <description></description>
     </item>
     <item>
       <title>Sécurité</title>
-      <link>http://localhost:1313/tags/s%C3%A9curit%C3%A9/</link>
+      <link>//localhost:1313/tags/s%C3%A9curit%C3%A9/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/s%C3%A9curit%C3%A9/</guid>
+      <guid>//localhost:1313/tags/s%C3%A9curit%C3%A9/</guid>
       <description></description>
     </item>
     <item>
       <title>Correspondants</title>
-      <link>http://localhost:1313/tags/correspondants/</link>
+      <link>//localhost:1313/tags/correspondants/</link>
       <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/correspondants/</guid>
+      <guid>//localhost:1313/tags/correspondants/</guid>
       <description></description>
     </item>
     <item>
       <title>Échange</title>
-      <link>http://localhost:1313/tags/%C3%A9change/</link>
+      <link>//localhost:1313/tags/%C3%A9change/</link>
       <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%C3%A9change/</guid>
+      <guid>//localhost:1313/tags/%C3%A9change/</guid>
       <description></description>
     </item>
     <item>
       <title>Interculturel</title>
-      <link>http://localhost:1313/tags/interculturel/</link>
+      <link>//localhost:1313/tags/interculturel/</link>
       <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/interculturel/</guid>
+      <guid>//localhost:1313/tags/interculturel/</guid>
       <description></description>
     </item>
     <item>
       <title>Digital</title>
-      <link>http://localhost:1313/tags/digital/</link>
+      <link>//localhost:1313/tags/digital/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/digital/</guid>
+      <guid>//localhost:1313/tags/digital/</guid>
       <description></description>
     </item>
     <item>
       <title>Langue Vivante</title>
-      <link>http://localhost:1313/tags/langue-vivante/</link>
+      <link>//localhost:1313/tags/langue-vivante/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/langue-vivante/</guid>
+      <guid>//localhost:1313/tags/langue-vivante/</guid>
       <description></description>
     </item>
     <item>
       <title>Réseaux Sociaux</title>
-      <link>http://localhost:1313/tags/r%C3%A9seaux-sociaux/</link>
+      <link>//localhost:1313/tags/r%C3%A9seaux-sociaux/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/r%C3%A9seaux-sociaux/</guid>
+      <guid>//localhost:1313/tags/r%C3%A9seaux-sociaux/</guid>
       <description></description>
     </item>
     <item>
       <title>Collaboratif</title>
-      <link>http://localhost:1313/tags/collaboratif/</link>
+      <link>//localhost:1313/tags/collaboratif/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/collaboratif/</guid>
+      <guid>//localhost:1313/tags/collaboratif/</guid>
       <description></description>
     </item>
     <item>
       <title>Fresques</title>
-      <link>http://localhost:1313/tags/fresques/</link>
+      <link>//localhost:1313/tags/fresques/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/fresques/</guid>
+      <guid>//localhost:1313/tags/fresques/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,84 +1,6 @@
-baseURL = "https://langlink.app/"
-languageCode = "fr-FR"
-title = "LangLink - Fresques narratives pour l'apprentissage des langues"
-theme = ""
+# === MENU PRINCIPAL (Version Adaptée) ===
 
-# === CONTENT ===
-contentDir = "content"
-dataDir = "data"
-layoutDir = "layouts"
-publishDir = "public"
-
-# === PAGINATION ===
-paginate = 12
-paginatePath = "page"
-
-# === PERMALINKS ===
-[permalinks]
-  blog = "/blog/:year/:month/:slug/"
-  
-# === TAXONOMIES ===
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-
-# === BUILD ===
-[build]
-  writeStats = true
-
-# === MINIFICATION ===
-[minify]
-  disableCSS = false
-  disableHTML = false
-  disableJS = false
-  disableJSON = false
-  disableSVG = false
-  disableXML = false
-  minifyOutput = true
-  
-  [minify.tdewolff]
-    [minify.tdewolff.html]
-      keepWhitespace = false
-
-# === IMAGES ===
-[imaging]
-  resampleFilter = "Lanczos"
-  quality = 85
-  anchor = "Smart"
-
-# === PARAMS ===
-[params]
-  description = "Transformez l'apprentissage des langues avec des fresques narratives interactives, interculturelles et guidées par l'IA."
-  author = "LangLink"
-  og_image = "/images/og-image.jpg"
-  twitter_handle = "@langlink"
-  email = "contact@langlink.app"
-  
-  # Analytics (à remplir plus tard)
-  google_analytics = ""
-  
-  # Features
-  [params.features]
-    dark_mode = false
-    cookie_consent = true
-
-# === OUTPUTS ===
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS"]
-
-# === MARKUP ===
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  
-  [markup.highlight]
-    style = "monokai"
-    lineNos = true
-    lineNumbersInTable = true
-
-# === MENU PRINCIPAL ===
+# Dropdown "Solution"
 [[menu.main]]
   name = "Solution"
   weight = 10
@@ -89,68 +11,51 @@ paginatePath = "page"
   parent = "solution"
   url = "/solution/enseignant/"
   weight = 1
-  [menu.main.params]
-    description = "Outils pédagogiques structurés et suivi intégré"
-    icon = "teacher"
   
   [[menu.main]]
   name = "Pour les apprenants"
   parent = "solution"
   url = "/solution/apprenant/"
   weight = 2
-  [menu.main.params]
-    description = "Expérience ludique et créative"
-    icon = "student"
   
   [[menu.main]]
   name = "Pour les établissements"
   parent = "solution"
   url = "/solution/etablissement/"
   weight = 3
-  [menu.main.params]
-    description = "Dimension interculturelle renforcée"
-    icon = "school"
 
+# Menu principal
 [[menu.main]]
-  name = "Comment ça marche"
+  name = "La Fresque"
   url = "/fresque/"
   weight = 20
 
 [[menu.main]]
+  name = "Plateforme"
+  url = "/plateforme/"
+  weight = 30
+
+[[menu.main]]
+  name = "Accompagnement"
+  url = "/accompagnement/"
+  weight = 35
+
+[[menu.main]]
   name = "Cas pratiques"
   url = "/cas-pratique/"
-  weight = 30
+  weight = 40
 
 [[menu.main]]
   name = "Blog"
   url = "/blog/"
-  weight = 40
+  weight = 50
 
-# === MENU FOOTER ===
-[[menu.footer]]
-  name = "À propos"
-  url = "/a-propos/"
-  weight = 10
+[[menu.main]]
+  name = "FAQ"
+  url = "/faq/"
+  weight = 60
 
-[[menu.footer]]
-  name = "Confidentialité"
-  url = "/confidentialite/"
-  weight = 20
-
-[[menu.footer]]
-  name = "Mentions légales"
-  url = "/mentions-legales/"
-  weight = 30
-
-[[menu.footer]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 40
-
-# === SECURITY ===
-[security]
-  [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
-  [security.http]
-    methods = ['(?i)GET|POST']
-    urls = ['.*']
+[[menu.main]]
+  name = "Tarifs"
+  url = "/tarifs/"
+  weight = 70

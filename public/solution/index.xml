@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nos Solutions on LangLink</title>
-    <link>http://localhost:1313/solution/</link>
-    <description>Recent content in Nos Solutions on LangLink</description>
+    <title>Nos Solutions on </title>
+    <link>//localhost:1313/solution/</link>
+    <description>Recent content in Nos Solutions on </description>
     <generator>Hugo</generator>
-    <language>fr</language>
-    <atom:link href="http://localhost:1313/solution/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="//localhost:1313/solution/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pour les apprenants</title>
-      <link>http://localhost:1313/solution/apprenant/</link>
+      <link>//localhost:1313/solution/apprenant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/solution/apprenant/</guid>
+      <guid>//localhost:1313/solution/apprenant/</guid>
       <description>&lt;h1 id=&#34;pour-les-apprenants&#34;&gt;Pour les apprenants&lt;/h1&gt;&#xA;&lt;h2 id=&#34;pourquoi-langlink-&#34;&gt;Pourquoi LangLink ?&lt;/h2&gt;&#xA;&lt;p&gt;L&amp;rsquo;apprentissage des langues n&amp;rsquo;a jamais été aussi ludique et significatif.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-une-expérience-différente&#34;&gt;✨ Une expérience différente&lt;/h2&gt;&#xA;&lt;h3 id=&#34;créer-plutôt-que-réciter&#34;&gt;Créer plutôt que réciter&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Exprimez votre vision unique à travers une fresque narrative&lt;/li&gt;&#xA;&lt;li&gt;Pas de leçon ennuyeuse, du vrai travail créatif&lt;/li&gt;&#xA;&lt;li&gt;Votre contribution compte réellement&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;collaborer-à-linternational&#34;&gt;Collaborer à l&amp;rsquo;international&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Travaillez avec d&amp;rsquo;autres jeunes du monde&lt;/li&gt;&#xA;&lt;li&gt;Découvrez des perspectives différentes&lt;/li&gt;&#xA;&lt;li&gt;Construisez une communauté bienveillante&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;apprendre-en-faisant&#34;&gt;Apprendre en faisant&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Langues vivantes dans un contexte réel&lt;/li&gt;&#xA;&lt;li&gt;Projets concrets et engageants&lt;/li&gt;&#xA;&lt;li&gt;Gratification immédiate de voir votre création intégrée&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;comment-ça-marche-&#34;&gt;Comment ça marche ?&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Comprendre&lt;/strong&gt; la thématique de la fresque&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Créer&lt;/strong&gt; votre contribution via le cadre de réflexion guidée&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Voir&lt;/strong&gt; votre création dans la fresque collective&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Découvrir&lt;/strong&gt; les connexions que l&amp;rsquo;IA a tissées avec les autres contributions&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;à-toi-de-jouer-&#34;&gt;À toi de jouer !&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#&#34;&gt;Découvrir un exemple&lt;/a&gt; | &lt;a href=&#34;#&#34;&gt;Rejoindre une fresque&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pour les enseignants</title>
-      <link>http://localhost:1313/solution/enseignant/</link>
+      <link>//localhost:1313/solution/enseignant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/solution/enseignant/</guid>
+      <guid>//localhost:1313/solution/enseignant/</guid>
       <description>&lt;h1 id=&#34;pour-les-enseignants-de-langues&#34;&gt;Pour les enseignants de langues&lt;/h1&gt;&#xA;&lt;h2 id=&#34;le-défi&#34;&gt;Le défi&lt;/h2&gt;&#xA;&lt;p&gt;Engager vos élèves dans un apprentissage authentique des langues tout en développant leurs compétences interculturelles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;la-solution-langlink&#34;&gt;La solution LangLink&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-des-fresques-narratives-clé-en-main&#34;&gt;🎯 Des fresques narratives clé en main&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Projets pédagogiques structurés et guidés par l&amp;rsquo;IA&lt;/li&gt;&#xA;&lt;li&gt;Thématiques engageantes et pertinentes&lt;/li&gt;&#xA;&lt;li&gt;Zéro préparation préalable (pas de page blanche)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-suivi-et-évaluation-simplifié&#34;&gt;📊 Suivi et évaluation simplifié&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Tableau de bord enseignant intuitif&lt;/li&gt;&#xA;&lt;li&gt;Évaluation des compétences du 21e siècle&lt;/li&gt;&#xA;&lt;li&gt;Feedback automatisé par l&amp;rsquo;IA&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-connexions-interculturelles-réelles&#34;&gt;🌍 Connexions interculturelles réelles&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Collaborations internationales facilitées&lt;/li&gt;&#xA;&lt;li&gt;Découverte authentique de cultures&lt;/li&gt;&#xA;&lt;li&gt;Compétences linguistiques en contexte&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;exemple-concret&#34;&gt;Exemple concret&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Projet &amp;ldquo;Rituels de Noël à travers le monde&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pour les établissements</title>
-      <link>http://localhost:1313/solution/etablissement/</link>
+      <link>//localhost:1313/solution/etablissement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/solution/etablissement/</guid>
+      <guid>//localhost:1313/solution/etablissement/</guid>
       <description>&lt;h1 id=&#34;pour-les-établissements&#34;&gt;Pour les établissements&lt;/h1&gt;&#xA;&lt;h2 id=&#34;votre-vision&#34;&gt;Votre vision&lt;/h2&gt;&#xA;&lt;p&gt;Développer une véritable dimension interculturelle et internationale au sein de votre établissement.&lt;/p&gt;&#xA;&lt;h2 id=&#34;notre-réponse&#34;&gt;Notre réponse&lt;/h2&gt;&#xA;&lt;p&gt;LangLink transforme vos élèves en créateurs, vos enseignants en facilitateurs, et votre établissement en communauté apprenante mondiale.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-résultats-mesurables&#34;&gt;📈 Résultats mesurables&lt;/h2&gt;&#xA;&lt;h3 id=&#34;engagement-pédagogique&#34;&gt;Engagement pédagogique&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;↑ Engagement des élèves en langues vivantes&lt;/li&gt;&#xA;&lt;li&gt;↑ Compétences du 21e siècle (collaboration, créativité, pensée critique)&lt;/li&gt;&#xA;&lt;li&gt;↑ Taux de satisfaction des élèves&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;dimension-internationale&#34;&gt;Dimension internationale&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✓ Label international renforcé&lt;/li&gt;&#xA;&lt;li&gt;✓ Partenariats académiques facilitées&lt;/li&gt;&#xA;&lt;li&gt;✓ Mobilité des élèves optimisée&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;excellence-pédagogique&#34;&gt;Excellence pédagogique&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pédagogie de projet structurée et scalable&lt;/li&gt;&#xA;&lt;li&gt;Évaluation par compétences intégrée&lt;/li&gt;&#xA;&lt;li&gt;Innovation pédagogique continue&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;accompagnement-complet&#34;&gt;Accompagnement complet&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Formation des enseignants&lt;/li&gt;&#xA;&lt;li&gt;Ressources pédagogiques sur mesure&lt;/li&gt;&#xA;&lt;li&gt;Support technique et pédagogique continu&lt;/li&gt;&#xA;&lt;li&gt;Suivi des résultats et optimisation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;calendrier-de-déploiement&#34;&gt;Calendrier de déploiement&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Semaine 1-2&lt;/strong&gt; : Formation enseignants + mise en place&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Semaine 3-4&lt;/strong&gt; : Pilote avec une classe&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mois 2-3&lt;/strong&gt; : Déploiement progressif&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;À partir du mois 4&lt;/strong&gt; : Évaluation et optimisation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;commencez-aujourdhui&#34;&gt;Commencez aujourd&amp;rsquo;hui&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#&#34;&gt;Demander une démo&lt;/a&gt; | &lt;a href=&#34;#&#34;&gt;Consulter nos tarifs&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

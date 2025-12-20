@@ -1,29 +1,29 @@
 <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradBleu" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e5ba8" />
-      <stop offset="100%" stop-color="#5a9fd8" />
+    <!-- Dégradé Bleu -->
+    <linearGradient id="blueL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5" />
+      <stop offset="50%" style="stop-color:#6B7CE5" />
+      <stop offset="100%" style="stop-color:#A89BC5" />
     </linearGradient>
     
-    <linearGradient id="gradJaune" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#e8a910" />
-      <stop offset="100%" stop-color="#ffc700" />
+    <!-- Dégradé Doré -->
+    <linearGradient id="goldL" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#F59E0B" />
+      <stop offset="50%" style="stop-color:#E5B84F" />
+      <stop offset="100%" style="stop-color:#C5A889" />
     </linearGradient>
   </defs>
-
-  <!-- L Bleu (Gauche) -->
+  
+  <!-- L Bleu -->
   <g>
-    <rect x="80" y="80" width="80" height="240" fill="url(#gradBleu)" rx="12"/>
-    <rect x="80" y="300" width="160" height="60" fill="url(#gradBleu)" rx="12"/>
+    <rect x="70" y="70" width="50" height="260" rx="10" fill="url(#blueL)" opacity="0.95"/>
+    <rect x="70" y="280" width="160" height="50" rx="10" fill="url(#blueL)" opacity="0.95"/>
   </g>
-
-  <!-- L Jaune (Droite, entrelacé) -->
+  
+  <!-- L Doré -->
   <g>
-    <rect x="240" y="80" width="80" height="240" fill="url(#gradJaune)" rx="12"/>
-    <rect x="160" y="300" width="160" height="60" fill="url(#gradJaune)" rx="12"/>
+    <rect x="280" y="70" width="50" height="260" rx="10" fill="url(#goldL)" opacity="0.95"/>
+    <rect x="170" y="70" width="160" height="50" rx="10" fill="url(#goldL)" opacity="0.95"/>
   </g>
-
-  <!-- Point de connexion blanc -->
-  <circle cx="200" cy="220" r="20" fill="#ffffff" opacity="0.95"/>
-  <circle cx="200" cy="220" r="20" fill="none" stroke="#1e5ba8" stroke-width="2" opacity="0.15"/>
 </svg>

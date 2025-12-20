@@ -1,0 +1,72 @@
+<header class="header" id="header">
+  <nav class="nav-container" role="navigation" aria-label="Navigation principale">
+    
+    <!-- Logo -->
+<a href="{{ .Site.BaseURL | relLangURL }}" class="logo" aria-label="Retour à l'accueil LangLink">
+  <img src="/logo/logo.svg" alt="LangLink Logo" class="logo-icon">
+  <span class="logo-text">LangLink</span>
+</a>
+    
+    <!-- Menu Navigation -->
+    <ul class="nav-menu" id="nav-menu" role="menubar">
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <li class="nav-item dropdown" role="none">
+          <button 
+            class="nav-link" 
+            aria-expanded="false" 
+            aria-haspopup="true"
+            aria-controls="dropdown-{{ .Identifier }}"
+            role="menuitem">
+            {{ .Name }}
+            <svg class="dropdown-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" id="dropdown-{{ .Identifier }}" role="menu">
+            {{ range .Children }}
+            <a href="{{ .URL | relLangURL }}" class="dropdown-item" role="menuitem">
+              <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <div class="item-content">
+                <strong>{{ .Name }}</strong>
+                {{ with .Params.description }}
+                <p>{{ . }}</p>
+                {{ end }}
+              </div>
+            </a>
+            {{ end }}
+          </div>
+        </li>
+        {{ else }}
+        <li class="nav-item" role="none">
+          <a href="{{ .URL | relLangURL }}" class="nav-link" role="menuitem">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <a href="{{ "contact" | relLangURL }}" class="btn btn-ghost" aria-label="Nous contacter">
+        Contact
+      </a>
+      <a href="{{ "solution/enseignant" | relLangURL }}" class="btn btn-primary" aria-label="Essayer LangLink gratuitement">
+        Essayer gratuitement
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button 
+      class="mobile-toggle" 
+      id="mobile-toggle" 
+      aria-label="Ouvrir le menu de navigation" 
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      type="button">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+    
+  </nav>
+</header>
