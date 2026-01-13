@@ -1,0 +1,283 @@
+/* ==========================================
+   LANGLINK ANIMATIONS & MICRO-INTERACTIONS
+   ========================================== */
+
+/* === TRANSITIONS GLOBALES === */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Désactiver les transitions sur les éléments qui bougent beaucoup */
+html, body, main {
+    transition: none;
+}
+
+/* === ANIMATIONS AU SCROLL === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === CLASSES D'ANIMATION === */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease both;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease both;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease both;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.8s ease both;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease both;
+}
+
+/* Délais pour animations séquentielles */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* === EFFETS HOVER SUR BOUTONS === */
+a[href*="contact"],
+a[href*="essayer"],
+a[href*="gratuit"],
+.btn,
+.cta-button,
+button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a[href*="contact"]:hover,
+a[href*="essayer"]:hover,
+a[href*="gratuit"]:hover,
+.btn:hover,
+.cta-button:hover,
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 82, 204, 0.2);
+}
+
+a[href*="contact"]:active,
+a[href*="essayer"]:active,
+a[href*="gratuit"]:active,
+.btn:active,
+.cta-button:active,
+button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* === EFFETS HOVER SUR CARDS === */
+.persona-card,
+.feature-item,
+.testimonial-card,
+[class*="card"] {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.persona-card:hover,
+.feature-item:hover,
+.testimonial-card:hover,
+[class*="card"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 82, 204, 0.15);
+}
+
+/* === EFFETS HOVER SUR LIENS === */
+.mobile-menu-item,
+.footer-section a,
+nav a {
+    position: relative;
+    display: inline-block;
+}
+
+.mobile-menu-item::after,
+.footer-section a::after,
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue, #0052CC);
+    transition: width 0.3s ease;
+}
+
+.mobile-menu-item:hover::after,
+.footer-section a:hover::after,
+nav a:hover::after {
+    width: 100%;
+}
+
+/* === ANIMATION DU LOGO === */
+.navbar-logo img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-logo:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* === ANIMATION BURGER MENU === */
+.burger-menu {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.burger-menu:hover {
+    transform: scale(1.1);
+}
+
+.burger-menu:active {
+    transform: scale(0.95);
+}
+
+/* === SMOOTH SCROLL === */
+html {
+    scroll-behavior: smooth;
+}
+
+/* === ANIMATIONS DES ICÔNES === */
+.persona-icon,
+.feature-icon,
+[class*="icon"] {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.persona-card:hover .persona-icon,
+.feature-item:hover .feature-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* === EFFET PULSE SUR LES CTA === */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.cta-final .btn,
+a[href*="gratuit"] {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.cta-final .btn:hover,
+a[href*="gratuit"]:hover {
+    animation: none;
+}
+
+/* === LOADING STATES === */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0%,
+        #e0e0e0 50%,
+        #f0f0f0 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* === RESPONSIVE - Réduire animations sur mobile === */
+@media (max-width: 768px) {
+    * {
+        transition-duration: 0.2s;
+    }
+    
+    .persona-card:hover,
+    .feature-item:hover,
+    .testimonial-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Désactiver pulse sur mobile pour économiser batterie */
+    .cta-final .btn,
+    a[href*="gratuit"] {
+        animation: none;
+    }
+}
+
+/* === PRÉFÉRENCE UTILISATEUR : Réduire mouvement === */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

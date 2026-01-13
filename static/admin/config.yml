@@ -1,0 +1,102 @@
+backend:
+  name: github
+  repo: Admin-langlink/langlink-app
+  branch: main
+  auth_endpoint: /api/auth
+  base_url: https://netlify.app
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # Solution pages
+  - name: "solution"
+    label: "Solutions"
+    folder: "content/solution"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Keywords", name: "keywords", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Blog posts
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog/posts"
+    create: true
+    slug: "{{slug}}/index"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Fresques
+  - name: "fresques"
+    label: "Fresques"
+    folder: "content/fresque"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Cas pratiques
+  - name: "cas-pratique"
+    label: "Cas Pratiques"
+    folder: "content/cas-pratique"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Accompagnement
+  - name: "accompagnement"
+    label: "Accompagnement"
+    folder: "content/accompagnement"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Pages statiques
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/a-propos/_index.md"
+        label: "À propos"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      
+      - file: "content/contact/_index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      
+      - file: "content/faq/_index.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      
+      - file: "content/tarifs/_index.md"
+        label: "Tarifs"
+        name: "tarifs"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

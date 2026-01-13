@@ -1,0 +1,286 @@
+{{ define "main" }}
+<style>
+    :root {
+        --primary-blue: #0052CC;
+        --dark-blue: #0042A0;
+        --secondary-yellow: #FFC700;
+        --dark-text: #1a1a1a;
+        --gray-text: #555;
+        --bg-light: #f5f5f7;
+        --white: #ffffff;
+        --shadow-md: 0 15px 40px rgba(0,82,204,0.3);
+        --shadow-lg: 0 30px 80px rgba(0,0,0,0.15);
+    }
+
+    .single-hero {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+        color: var(--white);
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .single-hero h1 {
+        font-size: clamp(2em, 6vw, 3em);
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .single-hero p {
+        font-size: 1.1em;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.95;
+    }
+
+    .single-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
+
+    .single-content h2 {
+        font-size: 1.8em;
+        color: var(--primary-blue);
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .single-content h3 {
+        font-size: 1.3em;
+        color: var(--dark-blue);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .single-content p {
+        font-size: 1.05em;
+        color: var(--gray-text);
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .single-content ul, .single-content ol {
+        margin: 20px 0 20px 30px;
+        color: var(--gray-text);
+        line-height: 1.8;
+    }
+
+    .single-content li {
+        margin-bottom: 12px;
+    }
+
+    .single-content strong {
+        color: var(--dark-text);
+        font-weight: 600;
+    }
+
+    .single-content em {
+        color: var(--primary-blue);
+        font-style: italic;
+    }
+
+    .single-content code {
+        background: var(--bg-light);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        color: var(--dark-blue);
+        font-size: 0.9em;
+    }
+
+    .single-content pre {
+        background: var(--dark-text);
+        color: #00ff00;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 20px 0;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .single-content blockquote {
+        border-left: 4px solid var(--primary-blue);
+        padding-left: 20px;
+        margin: 30px 0;
+        color: var(--gray-text);
+        font-style: italic;
+        background: var(--bg-light);
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .single-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 0.95em;
+    }
+
+    .single-content th {
+        background: var(--primary-blue);
+        color: var(--white);
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .single-content td {
+        border: 1px solid #e0e0e0;
+        padding: 12px;
+        color: var(--gray-text);
+    }
+
+    .single-content tr:nth-child(even) {
+        background: var(--bg-light);
+    }
+
+    /* CTA Box */
+    .cta-box {
+        background: var(--bg-light);
+        border-left: 4px solid var(--secondary-yellow);
+        padding: 30px;
+        border-radius: 8px;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    .cta-box h3 {
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+    }
+
+    .cta-box p {
+        margin-bottom: 20px;
+    }
+
+    .cta-box a {
+        display: inline-block;
+        background: var(--primary-blue);
+        color: var(--white);
+        padding: 12px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .cta-box a:hover {
+        background: var(--dark-blue);
+        transform: translateY(-2px);
+    }
+
+    /* Related Posts */
+    .related-posts {
+        background: var(--bg-light);
+        padding: 40px 20px;
+        margin-top: 60px;
+        border-radius: 8px;
+    }
+
+    .related-posts h3 {
+        color: var(--primary-blue);
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .related-card {
+        background: var(--white);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .related-card h4 {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+    .related-card p {
+        font-size: 0.95em;
+        color: var(--gray-text);
+        margin-bottom: 15px;
+    }
+
+    .related-card a {
+        color: var(--primary-blue);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .related-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .single-hero {
+            padding: 40px 15px;
+        }
+
+        .single-hero h1 {
+            font-size: 1.8em;
+        }
+
+        .single-content {
+            padding: 40px 15px;
+        }
+
+        .single-content h2 {
+            font-size: 1.5em;
+        }
+
+        .single-content h3 {
+            font-size: 1.1em;
+        }
+
+        .cta-box {
+            padding: 20px;
+        }
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="single-hero">
+    <h1>{{ .Title }}</h1>
+    {{ if .Description }}
+    <p>{{ .Description }}</p>
+    {{ end }}
+</section>
+
+<!-- Main Content -->
+<div class="single-content">
+    {{ .Content }}
+
+    <!-- CTA Box (optionnel) -->
+    {{ if .Params.cta_text }}
+    <div class="cta-box">
+        <h3>{{ .Params.cta_text }}</h3>
+        {{ if .Params.cta_description }}
+        <p>{{ .Params.cta_description }}</p>
+        {{ end }}
+        {{ if .Params.cta_link }}
+        <a href="{{ .Params.cta_link }}">{{ .Params.cta_button_text | default "Découvrir →" }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+
+{{ end }}

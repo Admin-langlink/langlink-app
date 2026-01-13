@@ -1,0 +1,599 @@
+{{ define "main" }}
+<style>
+    :root {
+        --primary-blue: #0052CC;
+        --dark-blue: #0042A0;
+        --secondary-yellow: #FFC700;
+        --dark-text: #1a1a1a;
+        --gray-text: #555;
+        --bg-light: #f5f5f7;
+        --white: #ffffff;
+        --shadow-md: 0 15px 40px rgba(0,82,204,0.3);
+        --shadow-lg: 0 30px 80px rgba(0,0,0,0.15);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--dark-text);
+    }
+
+    /* ==================== HERO SECTION ==================== */
+    .hero {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+        color: var(--white);
+        padding: 100px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(255, 199, 0, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(0, 82, 204, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        animation: fadeInDown 0.8s ease;
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero h1 {
+        font-size: clamp(2em, 8vw, 3.5em);
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.1em, 3vw, 1.4em);
+        margin-bottom: 30px;
+        opacity: 0.95;
+        line-height: 1.5;
+    }
+
+    .hero-cta-group {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 0.8s ease 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .btn {
+        padding: 14px 32px;
+        font-size: 1.05em;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background: var(--secondary-yellow);
+        color: var(--dark-blue);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(255, 199, 0, 0.3);
+    }
+
+    .btn-secondary {
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--white);
+        border: 2px solid var(--white);
+    }
+
+    .btn-secondary:hover {
+        background: var(--white);
+        color: var(--primary-blue);
+    }
+
+    /* ==================== PERSONAS SECTION ==================== */
+    .personas {
+        max-width: 1200px;
+        margin: -60px auto 80px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .personas-title {
+        text-align: center;
+        margin-bottom: 50px;
+        animation: fadeIn 0.8s ease 0.4s both;
+    }
+
+    .personas-title h2 {
+        font-size: clamp(2em, 5vw, 2.5em);
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+    }
+
+    .personas-title p {
+        font-size: 1.1em;
+        color: var(--gray-text);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .personas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .persona-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+                cursor: pointer;
+    }
+
+        .persona-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+        border-top: 4px solid var(--primary-blue);
+    }
+
+    .persona-icon {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .persona-card h3 {
+        font-size: 1.4em;
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+    }
+
+    .persona-card p {
+        color: var(--gray-text);
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    .persona-benefits {
+        text-align: left;
+        margin: 25px 0;
+        padding: 20px;
+        background: var(--bg-light);
+        border-radius: 8px;
+    }
+
+    .persona-benefits li {
+        list-style: none;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+        color: var(--gray-text);
+    }
+
+    .persona-benefits li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary-blue);
+        font-weight: bold;
+    }
+
+    .persona-card a {
+        display: inline-block;
+        background: var(--primary-blue);
+        color: var(--white);
+        padding: 10px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .persona-card a:hover {
+        background: var(--dark-blue);
+        transform: translateX(5px);
+    }
+
+    /* ==================== FEATURES SECTION ==================== */
+    .features {
+        background: var(--bg-light);
+        padding: 80px 20px;
+        margin: 60px 0;
+    }
+
+    .features-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .features-title {
+        text-align: center;
+        margin-bottom: 60px;
+        animation: fadeIn 0.8s ease 0.6s both;
+    }
+
+    .features-title h2 {
+        font-size: clamp(2em, 5vw, 2.5em);
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .feature-item {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+        animation: slideUp 0.6s ease 0.7s both;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .feature-item h3 {
+        font-size: 1.2em;
+        color: var(--primary-blue);
+        margin-bottom: 12px;
+    }
+
+    .feature-item p {
+        color: var(--gray-text);
+        line-height: 1.7;
+    }
+
+    /* ==================== TESTIMONIALS SECTION ==================== */
+    .testimonials {
+        padding: 80px 20px;
+    }
+
+    .testimonials-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .testimonials-title {
+        text-align: center;
+        margin-bottom: 60px;
+        animation: fadeIn 0.8s ease 0.8s both;
+    }
+
+    .testimonials-title h2 {
+        font-size: clamp(2em, 5vw, 2.5em);
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 12px;
+        border-left: 4px solid var(--primary-blue);
+        box-shadow: var(--shadow-md);
+        animation: slideUp 0.6s ease 0.9s both;
+    }
+
+    .testimonial-text {
+        color: var(--gray-text);
+        font-size: 1.05em;
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-style: italic;
+    }
+
+    .testimonial-author {
+        font-weight: 600;
+        color: var(--primary-blue);
+        margin-bottom: 5px;
+    }
+
+    .testimonial-role {
+        color: var(--gray-text);
+        font-size: 0.9em;
+    }
+
+    /* ==================== CTA SECTION ==================== */
+    .cta-final {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+        color: var(--white);
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .cta-final-content {
+        max-width: 700px;
+        margin: 0 auto;
+        animation: fadeIn 0.8s ease 1s both;
+    }
+
+    .cta-final h2 {
+        font-size: clamp(1.8em, 5vw, 2.5em);
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    .cta-final p {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        opacity: 0.95;
+    }
+
+    .cta-final .btn {
+        font-size: 1.1em;
+        padding: 16px 40px;
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 60px 15px;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+        }
+
+        .personas {
+            margin: -40px auto 60px;
+        }
+
+        .personas-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .features {
+            padding: 60px 15px;
+        }
+
+        .testimonials {
+            padding: 60px 15px;
+        }
+
+        .cta-final {
+            padding: 60px 15px;
+        }
+
+        .hero-cta-group {
+            flex-direction: column;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- ==================== HERO SECTION ==================== -->
+<section class="hero animate-fade-in">
+    <div class="hero-content">
+        <h1>🌍 Langlink : Connectez votre classe au monde</h1>
+        <p class="hero-subtitle animate-fade-in-up delay-200">
+            Transformez l'apprentissage des langues avec des fresques narratives interactives, interculturels et guidées par l'IA.
+        </p>
+        <div class="hero-cta-group animate-fade-in-up delay-300">
+            <a href="{{ relURL "/solution/enseignant/" }}" class="btn btn-primary">Commencer gratuitement</a>
+            <a href="{{ relURL "/fresque/" }}" class="btn btn-secondary">En savoir plus</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PERSONAS SECTION ==================== -->
+<section class="personas">
+    <div class="personas-title">
+        <h2>Adapté à chacun</h2>
+        <p>Que tu sois enseignant, apprenant, ou établissement, LangLink t'offre une solution sur mesure.</p>
+    </div>
+
+    <div class="personas-grid">
+        <!-- Enseignant -->
+        <div class="persona-card animate-scale-in delay-100">
+            <div class="persona-icon">👨‍🏫</div>
+            <h3>Pour les enseignants</h3>
+            <p>Des fresques narratives clé en main, accompagnement complet et suivi pédagogique intégré.</p>
+            <ul class="persona-benefits">
+                <li>Outils pédagogiques structurés</li>
+                <li>Formation & support continu</li>
+                <li>Évaluation simplifiée</li>
+                <li>Feedback automatisé par l'IA</li>
+            </ul>
+            <a href="{{ relURL "/solution/enseignant/" }}">Découvrir →</a>
+        </div>
+
+        <!-- Apprenant -->
+        <div class="persona-card animate-scale-in delay-200">
+            <div class="persona-icon">🎨</div>
+            <h3>Pour les apprenants</h3>
+            <p>Une expérience ludique, créative et internationale pour apprendre les langues autrement.</p>
+            <ul class="persona-benefits">
+                <li>Créativité libérée</li>
+                <li>Collaboration mondiale</li>
+                <li>Gratification immédiate</li>
+                <li>Langues vivantes en contexte</li>
+            </ul>
+            <a href="{{ relURL "/solution/apprenant/" }}">Découvrir →</a>
+        </div>
+
+        <!-- Établissement -->
+        <div class="persona-card animate-scale-in delay-300">
+            <div class="persona-icon">🏫</div>
+            <h3>Pour les établissements</h3>
+            <p>Transformez votre établissement en communauté d'apprentissage interculturel international.</p>
+            <ul class="persona-benefits">
+                <li>Dimension interculturelle renforcée</li>
+                <li>Résultats mesurables</li>
+                <li>Partenariats facilitées</li>
+                <li>Excellence pédagogique</li>
+            </ul>
+            <a href="{{ relURL "/solution/etablissement/" }}">Découvrir →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FEATURES SECTION ==================== -->
+<section class="features">
+    <div class="features-content">
+        <div class="features-title">
+            <h2>🚀 Pourquoi LangLink ?</h2>
+            <p>Une approche révolutionnaire de l'apprentissage collaboratif interculturel</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item animate-fade-in-up delay-100">
+                <div class="feature-icon">🎯</div>
+                <h3>Pas de page blanche</h3>
+                <p>Chaque fresque est guidée par une thématique engageante et structurée. Les élèves créent librement dans un cadre rassurant.</p>
+            </div>
+
+            <div class="feature-item animate-fade-in-up delay-200">
+                <div class="feature-icon">🌍</div>
+                <h3>Interculturel authentique</h3>
+                <p>Découverte réelle de perspectives différentes, compréhension des universaux humains, respect naturel de la diversité.</p>
+            </div>
+
+            <div class="feature-item animate-fade-in-up delay-300">
+                <div class="feature-icon">💡</div>
+                <h3>Compétences du 21e siècle</h3>
+                <p>Collaboration, créativité, pensée critique, communication : développées naturellement à travers le projet.</p>
+            </div>
+
+            <div class="feature-item animate-fade-in-up delay-100">
+                <div class="feature-icon">🎨</div>
+                <h3>4 visualisations immersives</h3>
+                <p>Mosaïque artistique, Projet chronologique, Carte mentale connectée, et interface de création structurée.</p>
+            </div>
+
+            <div class="feature-item animate-fade-in-up delay-200">
+                <div class="feature-icon">🤖</div>
+                <h3>IA intelligente</h3>
+                <p>L'IA détecte les connexions culturelles, tisse les liens sémantiques, révèle les universaux cachés.</p>
+            </div>
+
+            <div class="feature-item animate-fade-in-up delay-300">
+                <div class="feature-icon">🔒</div>
+                <h3>Sécurité RGPD</h3>
+                <p>Modération 24/7, données chiffrées, zéro publicité, protection complète des mineurs. Confiance garantie.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TESTIMONIALS SECTION ==================== -->
+<section class="testimonials">
+    <div class="testimonials-content">
+        <div class="testimonials-title">
+            <h2>✨ Témoignages</h2>
+            <p>Ce que disent ceux qui utilisent LangLink</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card animate-slide-in-left delay-100">
+                <p class="testimonial-text">
+                    "Mes élèves n'ont jamais été aussi engagés en cours de langues. Voir leur contribution intégrée immédiatement, c'est magique pour la motivation."
+                </p>
+                <div class="testimonial-author">Marie D.</div>
+                <div class="testimonial-role">Enseignante d'anglais, Collège Paris</div>
+            </div>
+
+            <div class="testimonial-card animate-slide-in-left delay-200">
+                <p class="testimonial-text">
+                    "Le projet 'Rituels de Noël' a transformé ma compréhension des cultures. J'ai découvert des connexions que je n'aurais jamais imaginées."
+                </p>
+                <div class="testimonial-author">Lucas, 14 ans</div>
+                <div class="testimonial-role">Élève en langues vivantes</div>
+            </div>
+
+            <div class="testimonial-card animate-slide-in-left delay-300">
+                <p class="testimonial-text">
+                    "LangLink a donné à notre établissement une véritable dimension internationale. Les résultats en langues ont augmenté de 35%."
+                </p>
+                <div class="testimonial-author">Dr. Fontaine</div>
+                <div class="testimonial-role">Directeur établissement, Lyon</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="cta-final">
+    <div class="cta-final-content">
+        <h2>Prêt à transformer l'apprentissage des langues ?</h2>
+        <p>Rejoignez des centaines d'établissements qui utilisent déjà LangLink pour créer des fresques narratives interculturels mémorables.</p>
+        <a href="{{ relURL "/contact/" }}" class="btn btn-primary">Demander une démo gratuite</a>
+    </div>
+</section>
+
+{{ end }}

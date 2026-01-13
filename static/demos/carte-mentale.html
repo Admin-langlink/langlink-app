@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresque Narrative LangLink - Carte Mentale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            padding: 15px 30px;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .toolbar h1 {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        .theme-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .control-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #667eea;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .zoom-indicator {
+            background: #f0f4ff;
+            padding: 8px 15px;
+            border-radius: 10px;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .canvas-container {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            cursor: grab;
+        }
+
+        .canvas-container.grabbing {
+            cursor: grabbing;
+        }
+
+        .mindmap-canvas {
+            position: relative;
+            width: 3000px;
+            height: 2000px;
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .connection-line {
+            stroke: #667eea;
+            stroke-width: 3;
+            fill: none;
+            opacity: 0.4;
+            transition: all 0.3s;
+        }
+
+        .connection-line.highlight {
+            stroke: #764ba2;
+            stroke-width: 5;
+            opacity: 1;
+        }
+
+        .node {
+            position: absolute;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .node:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(102,126,234,0.4);
+            z-index: 100;
+        }
+
+        .node.highlighted {
+            transform: scale(1.1);
+            box-shadow: 0 20px 50px rgba(118,75,162,0.6);
+            z-index: 200;
+        }
+
+        .node-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .node-content {
+            padding: 15px;
+        }
+
+        .node-country {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .node-title {
+            font-size: 1em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .node-desc {
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .node-connections {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(102,126,234,0.9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+
+        .center-node {
+            width: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .center-node h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .center-node p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .regular-node {
+            width: 280px;
+        }
+
+        .info-panel {
+            position: fixed;
+            right: -400px;
+            top: 80px;
+            bottom: 0;
+            width: 400px;
+            background: white;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 500;
+            overflow-y: auto;
+            padding: 30px;
+        }
+
+        .info-panel.active {
+            right: 0;
+        }
+
+        .info-panel-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f0f4ff;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3em;
+            color: #667eea;
+        }
+
+        .info-panel-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-section {
+            margin-bottom: 25px;
+        }
+
+        .info-section h3 {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .info-section p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .connection-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .chip {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .legend {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.95);
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .legend-title {
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .legend-line {
+            width: 30px;
+            height: 3px;
+            background: #667eea;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <h1>🌍 Fresque Narrative Interactive</h1>
+            <div class="theme-badge">Nos rituels de fin d'année</div>
+        </div>
+        <div class="controls">
+            <div class="zoom-indicator" id="zoomDisplay">Zoom: 100%</div>
+            <button class="control-btn" onclick="zoomIn()">➕ Zoom</button>
+            <button class="control-btn" onclick="zoomOut()">➖ Zoom</button>
+            <button class="control-btn" onclick="resetView()">🎯 Recentrer</button>
+        </div>
+    </div>
+
+    <div class="canvas-container" id="canvasContainer">
+        <div class="mindmap-canvas" id="mindmapCanvas">
+            <svg id="connections"></svg>
+        </div>
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+        <button class="info-panel-close" onclick="closeInfoPanel()">×</button>
+        <img class="info-panel-image" id="infoPanelImage" src="" alt="">
+        <h2 id="infoPanelCountry" style="color: #667eea; margin-bottom: 5px;"></h2>
+        <h3 id="infoPanelTitle" style="color: #333; margin-bottom: 20px;"></h3>
+        <div class="info-section">
+            <h3>📖 Contexte & Signification</h3>
+            <p id="infoPanelContext"></p>
+        </div>
+        <div class="info-section">
+            <h3>🌟 Pourquoi c'est important</h3>
+            <p id="infoPanelSignificance"></p>
+        </div>
+        <div class="info-section">
+            <h3>🔗 Connexions culturelles</h3>
+            <div class="connection-chips" id="infoPanelConnections"></div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div class="legend-title">💡 Navigation</div>
+        <div class="legend-item">
+            <div class="legend-line"></div>
+            <span>= Liens thématiques détectés par l'IA</span>
+        </div>
+        <div class="legend-item">
+            <span>🖱️ Cliquez sur une contribution pour voir les détails</span>
+        </div>
+        <div class="legend-item">
+            <span>↔️ Glissez pour explorer la fresque</span>
+        </div>
+    </div>
+
+    <script>
+        const nodes = [
+            {
+                id: 'center',
+                type: 'center',
+                title: '🎄 Nos rituels de fin d\'année',
+                description: 'Une exploration interculturelle',
+                x: 1400,
+                y: 900
+            },
+            {
+                id: 1,
+                country: '🇫🇷',
+                title: 'Le Réveillon',
+                desc: 'Repas familial structuré et convivial',
+                context: 'En France, le Réveillon est bien plus qu\'un simple repas. C\'est un rituel qui commence vers 20h et peut durer jusqu\'à minuit. Les plats se succèdent dans un ordre précis, chacun ayant sa signification.',
+                significance: 'Pour nous, c\'est le moment où toute la famille se retrouve. Même les membres éloignés font l\'effort de rentrer. C\'est aussi un moment de transmission.',
+                connections: ['Royaume-Uni', 'Japon', 'Martinique'],
+                image: 'https://images.unsplash.com/photo-1512910670553-88aa965d6e4e?w=400',
+                x: 800,
+                y: 600
+            },
+            {
+                id: 2,
+                country: '🇬🇧',
+                title: 'Christmas Crackers',
+                desc: 'Tradition des pétards de table',
+                context: 'Les Christmas Crackers sont apparus en Angleterre vers 1840. Chaque personne tire un cracker avec son voisin de table avant le repas.',
+                significance: 'Cette tradition nous rappelle de ne pas nous prendre au sérieux. Les blagues sont souvent nulles, et c\'est justement ça qui est drôle !',
+                connections: ['France', 'Canada'],
+                image: 'https://images.unsplash.com/photo-1576696651522-3aa8f2e00e44?w=400',
+                x: 1100,
+                y: 400
+            },
+            {
+                id: 3,
+                country: '🇲🇶',
+                title: 'Noël Tropical',
+                desc: 'Filaos décorés et chants créoles',
+                context: 'En Martinique, Noël se fête à 28°C ! On décore les filaos avec des guirlandes lumineuses. Les plages deviennent des lieux de rassemblement.',
+                significance: 'Notre Noël mélange traditions européennes et culture créole. C\'est notre identité : un beau mélange.',
+                connections: ['France', 'Brésil'],
+                image: 'https://images.unsplash.com/photo-1512719994953-eabf50895df7?w=400',
+                x: 600,
+                y: 900
+            },
+            {
+                id: 4,
+                country: '🇯🇵',
+                title: 'KFC à Noël',
+                desc: 'Poulet frit, tradition moderne',
+                context: 'Une campagne marketing efficace de KFC a transformé le poulet frit en plat de Noël au Japon. Il faut réserver des semaines à l\'avance !',
+                significance: 'Pour nous, Noël c\'est surtout passer du temps avec nos proches. Le KFC est pratique car peu de familles ont un four assez grand.',
+                connections: ['USA', 'Royaume-Uni'],
+                image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400',
+                x: 2000,
+                y: 700
+            },
+            {
+                id: 5,
+                country: '🇩🇪',
+                title: 'Weihnachtsmarkt',
+                desc: 'Marchés de Noël féeriques',
+                context: 'La tradition des Christkindlmarkt remonte au Moyen Âge. Ces marchés transforment nos centres-villes en villages féeriques.',
+                significance: 'Le Weihnachtsmarkt marque le début de la période de l\'Avent. On y va plusieurs fois, avec différents groupes d\'amis.',
+                connections: ['France', 'Autriche'],
+                image: 'https://images.unsplash.com/photo-1544919982-b61976f0ba43?w=400',
+                x: 1400,
+                y: 500
+            },
+            {
+                id: 6,
+                country: '🇲🇽',
+                title: 'Las Posadas',
+                desc: '9 jours de célébrations',
+                context: 'Du 16 au 24 décembre, les familles organisent des processions. On reconstitue le voyage de Marie et Joseph.',
+                significance: 'C\'est notre façon de vivre Noël en communauté. Chaque famille du quartier participe à tour de rôle.',
+                connections: ['Espagne', 'Philippines'],
+                image: 'https://images.unsplash.com/photo-1576696770875-f609c23ddaa7?w=400',
+                x: 900,
+                y: 1200
+            },
+            {
+                id: 7,
+                country: '🇸🇪',
+                title: 'Julbord',
+                desc: 'Buffet géant de spécialités',
+                context: 'Le Julbord est une tradition viking adaptée. C\'était un repas pour célébrer le solstice d\'hiver, la nuit la plus longue.',
+                significance: 'Avec nos hivers sombres et froids, le Julbord est un moment de lumière et de chaleur. Très démocratique.',
+                connections: ['Norvège', 'Danemark'],
+                image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400',
+                x: 1700,
+                y: 400
+            },
+            {
+                id: 8,
+                country: '🇮🇹',
+                title: 'La Befana',
+                desc: 'Sorcière gentille du 6 janvier',
+                context: 'La Befana est plus ancienne que le Père Noël en Italie. Elle vole sur son balai et descend par les cheminées.',
+                significance: 'Pour nous, Noël ne s\'arrête pas le 25 décembre. La Befana prolonge la magie pour les enfants.',
+                connections: ['Espagne', 'Russie'],
+                image: 'https://images.unsplash.com/photo-1514315384763-ba401779410f?w=400',
+                x: 1900,
+                y: 1100
+            }
+        ];
+
+        let scale = 1;
+        let panX = 0;
+        let panY = 0;
+        let isDragging = false;
+        let startX, startY;
+        let selectedNode = null;
+
+        const canvas = document.getElementById('mindmapCanvas');
+        const container = document.getElementById('canvasContainer');
+        const svg = document.getElementById('connections');
+
+        function renderNodes() {
+            nodes.forEach(node => {
+                if (node.type === 'center') {
+                    const centerNode = document.createElement('div');
+                    centerNode.className = 'node center-node';
+                    centerNode.style.left = node.x + 'px';
+                    centerNode.style.top = node.y + 'px';
+                    centerNode.innerHTML = `
+                        <h2>${node.title}</h2>
+                        <p>${node.description}</p>
+                    `;
+                    canvas.appendChild(centerNode);
+                } else {
+                    const nodeEl = document.createElement('div');
+                    nodeEl.className = 'node regular-node';
+                    nodeEl.style.left = node.x + 'px';
+                    nodeEl.style.top = node.y + 'px';
+                    nodeEl.innerHTML = `
+                        <div class="node-connections">🔗 ${node.connections.length}</div>
+                        <img class="node-image" src="${node.image}" alt="${node.title}">
+                        <div class="node-content">
+                            <div class="node-country">${node.country}</div>
+                            <div class="node-title">${node.title}</div>
+                            <div class="node-desc">${node.desc}</div>
+                        </div>
+                    `;
+                    
+                    nodeEl.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        openInfoPanel(node);
+                    });
+
+                    nodeEl.addEventListener('mouseenter', () => highlightConnections(node.id));
+                    nodeEl.addEventListener('mouseleave', () => clearHighlights());
+                    
+                    canvas.appendChild(nodeEl);
+                }
+            });
+
+            drawConnections();
+        }
+
+        function drawConnections() {
+            const centerNode = nodes.find(n => n.type === 'center');
+            const regularNodes = nodes.filter(n => n.type !== 'center');
+
+            regularNodes.forEach(node => {
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                const x1 = centerNode.x + 200;
+                const y1 = centerNode.y + 80;
+                const x2 = node.x + 140;
+                const y2 = node.y + 100;
+                
+                const midX = (x1 + x2) / 2;
+                const midY = (y1 + y2) / 2;
+                
+                const d = `M ${x1} ${y1} Q ${midX} ${midY} ${x2} ${y2}`;
+                line.setAttribute('d', d);
+                line.classList.add('connection-line');
+                line.dataset.nodeId = node.id;
+                
+                svg.appendChild(line);
+            });
+        }
+
+        function highlightConnections(nodeId) {
+            document.querySelectorAll('.connection-line').forEach(line => {
+                if (line.dataset.nodeId == nodeId) {
+                    line.classList.add('highlight');
+                }
+            });
+            
+            document.querySelectorAll('.node').forEach(node => {
+                if (node.style.left === nodes.find(n => n.id == nodeId)?.x + 'px') {
+                    node.classList.add('highlighted');
+                }
+            });
+        }
+
+        function clearHighlights() {
+            document.querySelectorAll('.connection-line').forEach(line => {
+                line.classList.remove('highlight');
+            });
+            document.querySelectorAll('.node').forEach(node => {
+                node.classList.remove('highlighted');
+            });
+        }
+
+        function openInfoPanel(node) {
+            document.getElementById('infoPanelImage').src = node.image;
+            document.getElementById('infoPanelCountry').textContent = node.country + ' ' + node.title;
+            document.getElementById('infoPanelTitle').textContent = node.desc;
+            document.getElementById('infoPanelContext').textContent = node.context;
+            document.getElementById('infoPanelSignificance').textContent = node.significance;
+            
+            const connectionsHTML = node.connections.map(c => 
+                `<div class="chip">${c}</div>`
+            ).join('');
+            document.getElementById('infoPanelConnections').innerHTML = connectionsHTML;
+            
+            document.getElementById('infoPanel').classList.add('active');
+            selectedNode = node.id;
+            highlightConnections(node.id);
+        }
+
+        function closeInfoPanel() {
+            document.getElementById('infoPanel').classList.remove('active');
+            clearHighlights();
+            selectedNode = null;
+        }
+
+        function updateTransform() {
+            canvas.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+            document.getElementById('zoomDisplay').textContent = `Zoom: ${Math.round(scale * 100)}%`;
+        }
+
+        function zoomIn() {
+            scale = Math.min(scale + 0.2, 2);
+            updateTransform();
+        }
+
+        function zoomOut() {
+            scale = Math.max(scale - 0.2, 0.5);
+            updateTransform();
+        }
+
+        function resetView() {
+            scale = 1;
+            panX = -1000;
+            panY = -400;
+            updateTransform();
+        }
+
+        container.addEventListener('mousedown', (e) => {
+            if (e.target === container || e.target === canvas) {
+                isDragging = true;
+                startX = e.clientX - panX;
+                startY = e.clientY - panY;
+                container.classList.add('grabbing');
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                panX = e.clientX - startX;
+                panY = e.clientY - startY;
+                updateTransform();
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            container.classList.remove('grabbing');
+        });
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.1 : 0.1;
+            scale = Math.max(0.5, Math.min(2, scale + delta));
+            updateTransform();
+        });
+
+        renderNodes();
+        resetView();
+    </script>
+</body>
+</html>
