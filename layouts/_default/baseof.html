@@ -26,99 +26,113 @@
 {{ $animations := resources.Get "css/animations.css" | minify }}
 <link rel="stylesheet" href="{{ $animations.RelPermalink }}">
 
+<!-- Navigation améliorée -->
+{{ $navEnhanced := resources.Get "css/navigation-enhanced.css" | minify }}
+<link rel="stylesheet" href="{{ $navEnhanced.RelPermalink }}">
+
 </head>
 <body>
+    <!-- Overlay pour menu mobile -->
+    <div class="menu-overlay"></div>
+    
+    <!-- Le reste du contenu -->
+
     <!-- ==================== NAVBAR ==================== -->
-    <nav class="navbar">
-        <a href="{{ .Site.BaseURL }}" class="navbar-logo" style="display: flex; align-items: center;">
-  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="height: 45px; width: auto;">
-    <defs>
-      <linearGradient id="gradBleu" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#1e5ba8" />
-        <stop offset="100%" stop-color="#5a9fd8" />
-      </linearGradient>
-      <linearGradient id="gradJaune" x1="100%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#e8a910" />
-        <stop offset="100%" stop-color="#ffc700" />
-      </linearGradient>
-    </defs>
-    <rect x="80" y="80" width="80" height="240" fill="url(#gradBleu)" rx="12"/>
-    <rect x="80" y="300" width="160" height="60" fill="url(#gradBleu)" rx="12"/>
-    <rect x="240" y="80" width="80" height="240" fill="url(#gradJaune)" rx="12"/>
-    <rect x="160" y="300" width="160" height="60" fill="url(#gradJaune)" rx="12"/>
-    <circle cx="200" cy="220" r="20" fill="#ffffff" opacity="0.95"/>
-  </svg>
-</a>
-        <button class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
-            ☰
-        </button>
-    </nav>
+   <nav class="navbar">
+    <!-- Logo -->
+    <a href="{{ .Site.BaseURL }}" class="navbar-logo" style="display: flex; align-items: center;">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="height: 45px; width: auto;">
+            <defs>
+                <linearGradient id="gradBleu" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e5ba8" />
+                    <stop offset="100%" stop-color="#5a9fd8" />
+                </linearGradient>
+                <linearGradient id="gradJaune" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#e8a910" />
+                    <stop offset="100%" stop-color="#ffc700" />
+                </linearGradient>
+            </defs>
+            <rect x="80" y="80" width="80" height="240" fill="url(#gradBleu)" rx="12"/>
+            <rect x="80" y="300" width="160" height="60" fill="url(#gradBleu)" rx="12"/>
+            <rect x="240" y="80" width="80" height="240" fill="url(#gradJaune)" rx="12"/>
+            <rect x="160" y="300" width="160" height="60" fill="url(#gradJaune)" rx="12"/>
+            <circle cx="200" cy="220" r="20" fill="#ffffff" opacity="0.95"/>
+        </svg>
+    </a>
+    
+    <!-- Burger Menu -->
+    <button class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
 
     <!-- ==================== MOBILE MENU ==================== -->
     <div class="mobile-menu" id="mobileMenu">
         <!-- Solution -->
-        <div class="mobile-menu-section">
-            <div class="mobile-menu-section-title">🎯 Solution</div>
-            <a href="{{ relURL "/solution/enseignant/" }}" class="mobile-menu-item">Pour les enseignants</a>
-            <a href="{{ relURL "/solution/apprenant/" }}" class="mobile-menu-item">Pour les apprenants</a>
-            <a href="{{ relURL "/solution/etablissement/" }}" class="mobile-menu-item">Pour les établissements</a>
-        </div>
+    <section>
+        <h3>💡 Solution</h3>
+        <a href="/solution/enseignant/">Pour les enseignants</a>
+        <a href="/solution/apprenant/">Pour les apprenants</a>
+        <a href="/solution/etablissement/">Pour les établissements</a>
+    </section>
 
-        <!-- Fresque -->
-        <div class="mobile-menu-section">
-            <div class="mobile-menu-section-title">🎨 Comment ça marche ?</div>
-            <a href="{{ relURL "/fresque/" }}" class="mobile-menu-item">Vue d'ensemble</a>
-            <a href="{{ relURL "/fresque/mosaique/" }}" class="mobile-menu-item">Mosaïque</a>
-            <a href="{{ relURL "/fresque/projet/" }}" class="mobile-menu-item">Projet Pédagogique</a>
-            <a href="{{ relURL "/fresque/carte-mentale/" }}" class="mobile-menu-item">Carte Mentale</a>
-            <a href="{{ relURL "/fresque/reponse/" }}" class="mobile-menu-item">Je Réponds</a>
-        </div>
+    <!-- Fresque -->
+    <section>
+        <h3>🎨 Fresque</h3>
+        <a href="/fresque/">Vue d'ensemble</a>
+        <a href="/fresque/mosaique/">Mosaïque</a>
+        <a href="/fresque/projet/">Projet Pédagogique</a>
+        <a href="/fresque/carte-mentale/">Carte Mentale</a>
+        <a href="/fresque/reponse/">Je Réponds</a>
+    </section>
 
-        <!-- Cas Pratiques -->
-        <div class="mobile-menu-section">
-            <div class="mobile-menu-section-title">📚 Cas Pratiques</div>
-            <a href="{{ relURL "/cas-pratique/" }}" class="mobile-menu-item">Vue d'ensemble</a>
-            <a href="{{ relURL "/cas-pratique/exemples/" }}" class="mobile-menu-item">Exemples de projets</a>
-            <a href="{{ relURL "/cas-pratique/exemples/rituels-noel/" }}" class="mobile-menu-item">Rituels de Noël</a>
-            <a href="{{ relURL "/cas-pratique/temoignages/" }}" class="mobile-menu-item">Témoignages</a>
-        </div>
+    <!-- Cas Pratiques -->
+    <section>
+        <h3>📚 Cas Pratiques</h3>
+        <a href="/cas-pratique/">Vue d'ensemble</a>
+        <a href="/cas-pratique/exemples/">Exemples de projets</a>
+        <a href="/cas-pratique/temoignages/">Témoignages</a>
+    </section>
 
-        <!-- Plateforme -->
-        <div class="mobile-menu-section">
-            <div class="mobile-menu-section-title">⚙️ Plateforme</div>
-            <a href="{{ relURL "/plateforme/" }}" class="mobile-menu-item">Vue d'ensemble</a>
-            <a href="{{ relURL "/plateforme/experience-utilisateur/" }}" class="mobile-menu-item">App Élèves</a>
-            <a href="{{ relURL "/plateforme/securite-conformite/" }}" class="mobile-menu-item">Sécurité & RGPD</a>
-        </div>
+    <!-- Plateforme -->
+    <section>
+        <h3>⚙️ Plateforme</h3>
+        <a href="/plateforme/">Vue d'ensemble</a>
+        <a href="/plateforme/experience-utilisateur/">App Élèves</a>
+        <a href="/plateforme/securite-conformite/">Sécurité & RGPD</a>
+    </section>
 
-        <!-- Accompagnement -->
-        <div class="mobile-menu-section">
-            <div class="mobile-menu-section-title">🎓 Accompagnement</div>
-            <a href="{{ relURL "/accompagnement/" }}" class="mobile-menu-item">Vue d'ensemble</a>
-            <a href="{{ relURL "/accompagnement/formation-enseignants/" }}" class="mobile-menu-item">Formation</a>
-            <a href="{{ relURL "/accompagnement/guides-pedagogiques/" }}" class="mobile-menu-item">Guides</a>
-            <a href="{{ relURL "/accompagnement/fiches-sequences/" }}" class="mobile-menu-item">Fiches Séquences</a>
-        </div>
+    <!-- Accompagnement -->
+    <section>
+        <h3>🤝 Accompagnement</h3>
+        <a href="/accompagnement/">Vue d'ensemble</a>
+        <a href="/accompagnement/formation-enseignants/">Formation</a>
+        <a href="/accompagnement/guides-pedagogiques/">Guides</a>
+        <a href="/accompagnement/fiches-sequences/">Fiches Séquences</a>
+    </section>
 
-        <!-- Blog -->
-        <div class="mobile-menu-section">
-            <div class="mobile-menu-section-title">📝 Blog</div>
-            <a href="{{ relURL "/blog/posts/" }}" class="mobile-menu-item">Tous les articles</a>
-            <a href="{{ relURL "/blog/posts/qu-est-ce-qu-une-fresque-narrative/" }}" class="mobile-menu-item">Fresques Narratives</a>
-            <a href="{{ relURL "/blog/posts/reseaux-sociaux-apprentissage-langues/" }}" class="mobile-menu-item">Réseaux sociaux</a>
-            <a href="{{ relURL "/blog/posts/trouver-correspondant-apprendre-langue/" }}" class="mobile-menu-item">Trouver un correspondant</a>
-            <a href="{{ relURL "/blog/posts/securite-donnees-scolaires-rgpd/" }}" class="mobile-menu-item">Sécurité données</a>
-            <a href="{{ relURL "/blog/posts/interagir-vraie-personne-apprendre-langue/" }}" class="mobile-menu-item">Interaction authentique</a>
-        </div>
+    <!-- Blog -->
+    <section>
+        <h3>📝 Blog</h3>
+        <a href="/blog/posts/">Tous les articles</a>
+        <a href="/blog/posts/qu-est-ce-qu-une-fresque-narrative/">Fresques Narratives</a>
+        <a href="/blog/posts/reseaux-sociaux-apprentissage-langues/">Réseaux sociaux</a>
+    </section>
 
-        <!-- Info -->
-        <div class="mobile-menu-section">
-            <div class="mobile-menu-section-title">ℹ️ Infos</div>
-            <a href="{{ relURL "/a-propos/" }}" class="mobile-menu-item">À propos</a>
-            <a href="{{ relURL "/contact/" }}" class="mobile-menu-item">Contact</a>
-            <a href="{{ relURL "/faq/" }}" class="mobile-menu-item">FAQ</a>
-            <a href="{{ relURL "/tarifs/" }}" class="mobile-menu-item">Tarifs</a>
-        </div>
+    <!-- Infos -->
+    <section>
+        <h3>ℹ️ Infos</h3>
+        <a href="/a-propos/">À propos</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/tarifs/">Tarifs</a>
+    </section>
+
+    <!-- CTA Contact -->
+    <a href="/contact/" class="cta-contact">📧 Nous contacter</a>
+</div>
     </div>
 
     <!-- ==================== MAIN CONTENT ==================== -->
@@ -191,34 +205,7 @@
     </footer>
 
     <!-- ==================== JAVASCRIPT ==================== -->
-    <script>
-        // Burger Menu Toggle
-        const burgerMenu = document.getElementById('burgerMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        burgerMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            burgerMenu.classList.toggle('active');
-            burgerMenu.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.mobile-menu-item').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                burgerMenu.classList.remove('active');
-                burgerMenu.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.navbar') && !e.target.closest('.mobile-menu')) {
-                mobileMenu.classList.remove('active');
-                burgerMenu.classList.remove('active');
-                burgerMenu.setAttribute('aria-expanded', 'false');
-            }
-        });
-    </script>
+{{ $navigation := resources.Get "js/navigation.js" | minify }}
+<script src="{{ $navigation.RelPermalink }}" defer></script>
 </body>
 </html>
