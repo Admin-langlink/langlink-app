@@ -1,7 +1,34 @@
-/resources/_gen/
-*.exe
-node_modules/
-# Hugo
+# Hugo generated files
 public/
 resources/
 .hugo_build.lock
+
+# Hugo cache
+/resources/_gen/
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.exe
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build artifacts
+dist/
+build/
