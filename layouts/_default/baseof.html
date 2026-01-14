@@ -18,17 +18,10 @@
     <link rel="apple-touch-icon" href="{{ relURL "/favicon.svg" }}">
     <title>{{ .Title }} | LangLink</title>
     
-    <!-- CSS optimisé -->
-{{ $global := resources.Get "css/global.css" | minify }}
-<link rel="stylesheet" href="{{ $global.RelPermalink }}">
-
-<!-- Animations -->
-{{ $animations := resources.Get "css/animations.css" | minify }}
-<link rel="stylesheet" href="{{ $animations.RelPermalink }}">
-
-<!-- Navigation améliorée -->
-{{ $navEnhanced := resources.Get "css/navigation-enhanced.css" | minify }}
-<link rel="stylesheet" href="{{ $navEnhanced.RelPermalink }}">
+    <!-- CSS unifié optimisé -->
+{{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" 
+      integrity="{{ $styles.Data.Integrity }}">
 
 </head>
 <body>
@@ -40,25 +33,13 @@
     <!-- ==================== NAVBAR ==================== -->
    <nav class="navbar">
     <!-- Logo -->
-    <a href="{{ .Site.BaseURL }}" class="navbar-logo" style="display: flex; align-items: center;">
-        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="height: 45px; width: auto;">
-            <defs>
-                <linearGradient id="gradBleu" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#1e5ba8" />
-                    <stop offset="100%" stop-color="#5a9fd8" />
-                </linearGradient>
-                <linearGradient id="gradJaune" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#e8a910" />
-                    <stop offset="100%" stop-color="#ffc700" />
-                </linearGradient>
-            </defs>
-            <rect x="80" y="80" width="80" height="240" fill="url(#gradBleu)" rx="12"/>
-            <rect x="80" y="300" width="160" height="60" fill="url(#gradBleu)" rx="12"/>
-            <rect x="240" y="80" width="80" height="240" fill="url(#gradJaune)" rx="12"/>
-            <rect x="160" y="300" width="160" height="60" fill="url(#gradJaune)" rx="12"/>
-            <circle cx="200" cy="220" r="20" fill="#ffffff" opacity="0.95"/>
-        </svg>
-    </a>
+    <a href="{{ .Site.BaseURL }}" class="navbar-logo">
+  <img src="{{ relURL "/images/logo.svg" }}" 
+       alt="LangLink" 
+       width="45" 
+       height="45"
+       loading="eager">
+</a>
     
     <!-- Burger Menu -->
     <button class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">

@@ -1,5 +1,6 @@
 // ================================
-// NAVIGATION INTELLIGENTE
+// NAVIGATION INTELLIGENTE - LANGLINK
+// Version optimisée avec RAF throttling
 // ================================
 
 // Variables
@@ -11,13 +12,24 @@ const body = document.body;
 
 let lastScroll = 0;
 let isMenuOpen = false;
+let ticking = false; // Pour RAF throttling
 
 // ================================
-// HEADER INTELLIGENT (hide on scroll)
+// HEADER INTELLIGENT (optimisé avec RAF)
 // ================================
 
 if (header) {
     window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true }); // ✅ passive: true = meilleure performance
+    
+    function handleScroll() {
         const currentScroll = window.pageYOffset;
 
         if (currentScroll <= 0) {
@@ -35,7 +47,7 @@ if (header) {
         }
 
         lastScroll = currentScroll;
-    });
+    }
 }
 
 // ================================
