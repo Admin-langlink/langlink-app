@@ -1,0 +1,20 @@
+<section class="hero section">
+  <div class="container">
+
+    <div class="hero__tag">
+      <span class="tag">Mosaic</span>
+    </div>
+
+    <h1 class="hero__title">{{ .Title }}</h1>
+
+    <p class="hero__subtitle">
+      {{ .Params.subtitle | default "Créez, partagez et explorez avec une communauté mondiale." }}
+    </p>
+
+    <div class="hero__actions">
+      <a href="/mosaic/rejoindre/" class="btn btn--primary">Rejoindre maintenant</a>
+      <a href="/mosaic/comment-ca-marche/" class="btn btn--secondary">Découvrir la Mosaic</a>
+    </div>
+
+  </div>
+</section>

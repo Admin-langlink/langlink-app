@@ -1,0 +1,27 @@
+<nav class="nav" aria-label="Navigation Mosaic">
+  <div class="container">
+    <div class="nav__inner">
+
+      <a href="/mosaic/" class="nav__logo">
+        Langlink <span>Mosaic</span>
+      </a>
+
+      <ul class="nav__links">
+    <li><a href="/">Accueil</a></li>
+    {{ range .Site.Menus.mosaic }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+    </ul>
+
+
+      <a href="/classroom/" class="nav__switch">
+        Vous êtes enseignant ? →
+      </a>
+
+      <a href="/mosaic/rejoindre/" class="nav__cta">
+        {{ .Site.Params.mosaic_cta }}
+      </a>
+
+    </div>
+  </div>
+</nav>

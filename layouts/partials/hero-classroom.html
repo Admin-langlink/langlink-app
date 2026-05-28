@@ -1,0 +1,20 @@
+<section class="hero section">
+  <div class="container">
+
+    <div class="hero__tag">
+      <span class="tag">Classroom</span>
+    </div>
+
+    <h1 class="hero__title">{{ .Title }}</h1>
+
+    <p class="hero__subtitle">
+      {{ .Params.subtitle | default "Projets interculturels pour les enseignants et leurs classes." }}
+    </p>
+
+    <div class="hero__actions">
+      <a href="/classroom/demo-pilote/" class="btn btn--primary">Demander un pilote gratuit</a>
+      <a href="/classroom/comment-ca-marche/" class="btn btn--secondary">Voir comment ça marche</a>
+    </div>
+
+  </div>
+</section>

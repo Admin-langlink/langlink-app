@@ -1,0 +1,68 @@
+{{ define "main" }}
+
+<section class="hero section">
+  <div class="container">
+    <h1 class="hero__title">Connectez votre classe au monde</h1>
+    <p class="hero__subtitle">
+      Langlink réunit des apprenants du monde entier autour de projets culturels communs.
+      Choisissez votre univers.
+    </p>
+  </div>
+</section>
+
+<section style="padding-bottom: var(--section-gap);">
+  <div class="container">
+    <div class="grid-2">
+
+      <div style="
+        background: #EEF5FF;
+        border: 0.5px solid #C5D8F0;
+        border-radius: 16px;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      ">
+        <span class="tag">Classroom</span>
+        <h2 style="color:#0C3B6E;">Apprenez les langues avec de vrais correspondants</h2>
+        <p style="color:#2C4A6A;">
+          Enseignants, enseignez autrement avec des projets structurés, sécurisés et guidés.
+        </p>
+        <a href="/classroom/" class="btn btn--primary" style="background:#185FA5; border-radius:8px; margin-top:auto;">
+          Découvrir Classroom →
+        </a>
+      </div>
+
+      <div style="
+        background: #1A0E3A;
+        border: 0.5px solid rgba(155,114,255,0.3);
+        border-radius: 16px;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      ">
+        <span class="tag" style="background:#2D1B69; color:#C9ACFF; border-radius:100px;">Mosaic</span>
+        <h2 style="color:#F0EAFF;">Créez, partagez, explorez avec le monde</h2>
+        <p style="color:#AFA9D0;">
+          Rejoignez une communauté mondiale où la langue devient prétexte à la création.
+        </p>
+        <a href="/mosaic/" class="btn btn--primary" style="background:#7B3FE4; border-radius:100px; margin-top:auto;">
+          Rejoindre Mosaic →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <ul class="trust-bar__items">
+    <li><strong>500+</strong> établissements</li>
+    <li><strong>10 000+</strong> élèves actifs</li>
+    <li><strong>25</strong> pays</li>
+    <li><strong>95%</strong> de satisfaction enseignants</li>
+  </ul>
+</div>
+
+{{ end }}
