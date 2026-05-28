@@ -1,7 +1,7 @@
 {{ $title := .Title | default .Site.Title }}
 {{ $description := .Params.description | default .Site.Params.description }}
 {{ $section := .Section | default "default" }}
-{{ $ogImage := printf "/images/og-%s.jpg" $section }}
+{{ $ogImage := printf "/images/og-%s.png" $section }}
 
 <title>{{ $title }} — Langlink</title>
 <meta name="description" content="{{ $description }}" />

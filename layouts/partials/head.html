@@ -12,3 +12,4 @@
 <!-- CSS via Hugo Pipes -->
 {{ $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
+<link rel="icon" type="image/png" href="/images/favicon-temp.png" />
