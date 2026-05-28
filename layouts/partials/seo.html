@@ -1,5 +1,20 @@
 {{ $title := .Title | default .Site.Title }}
 {{ $description := .Params.description | default .Site.Params.description }}
+{{ $section := .Section | default "default" }}
+{{ $ogImage := printf "/images/og-%s.jpg" $section }}
 
+<title>{{ $title }} — Langlink</title>
 <meta name="description" content="{{ $description }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
+
+<meta property="og:title" content="{{ $title }} — Langlink" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ $ogImage }}" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }} — Langlink" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ $ogImage }}" />
