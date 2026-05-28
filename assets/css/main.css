@@ -271,3 +271,56 @@ p:last-child { margin-bottom: 0; }
   justify-content: center;
   flex-wrap: wrap;
 }
+.cta-band {
+  background:    var(--color-surface);
+  border-top:    0.5px solid var(--color-border);
+  border-bottom: 0.5px solid var(--color-border);
+  padding:       4rem 0;
+  text-align:    center;
+}
+
+.cta-band__title {
+  margin-bottom: 0.75rem;
+}
+
+.cta-band__sub {
+  color:         var(--color-text-muted);
+  margin-bottom: 2rem;
+  font-size:     1rem;
+}
+.nav__cta--pending,
+.btn--pending {
+  opacity: 0.92;
+  cursor: default;
+  pointer-events: none;
+}
+
+button.nav__cta,
+button.btn {
+  border: none;
+  font-family: inherit;
+}
+.nav__cta--pending,
+.btn--pending {
+  opacity: 0.92;
+  cursor: default;
+  pointer-events: none;
+}
+
+button.nav__cta,
+button.btn {
+  border: none;
+  font-family: inherit;
+}
+.nav__cta--pending,
+.btn--pending {
+  opacity: 0.92;
+  cursor: default;
+  pointer-events: none;
+}
+
+button.nav__cta,
+button.btn {
+  border: none;
+  font-family: inherit;
+}
