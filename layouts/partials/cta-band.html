@@ -27,10 +27,13 @@
 
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       {{ if eq .Section "classroom" }}
-        <button type="button" class="btn btn--primary btn--pending" aria-disabled="true">
-          Demander une adhésion enseignant
-        </button>
-        <a href="/ressources/" class="btn btn--secondary">Voir les ressources</a>
+  <a href="https://form.typeform.com/to/yy41uqJw"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="btn btn--primary">
+    Donnez-nous votre avis
+  </a>
+  <a href="/ressources/" class="btn btn--secondary">Voir les ressources</a>
       {{ else if eq .Section "mosaic" }}
         <button type="button" class="btn btn--primary btn--pending" aria-disabled="true">
           Créer mon compte
