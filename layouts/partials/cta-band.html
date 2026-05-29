@@ -1,0 +1,46 @@
+<section class="cta-band">
+  <div class="container">
+
+    <h2 class="cta-band__title">
+      {{ if .Params.cta_title }}
+        {{ .Params.cta_title }}
+      {{ else if eq .Section "classroom" }}
+        Prêt à connecter votre classe au monde ?
+      {{ else if eq .Section "mosaic" }}
+        Prêt à rejoindre une communauté mondiale créative ?
+      {{ else }}
+        Découvrez l’univers Langlink
+      {{ end }}
+    </h2>
+
+    <p class="cta-band__sub">
+      {{ if .Params.cta_subtitle }}
+        {{ .Params.cta_subtitle }}
+      {{ else if eq .Section "classroom" }}
+        Lancez un projet interculturel structuré avec vos élèves.
+      {{ else if eq .Section "mosaic" }}
+        Créez, partagez et explorez avec des participants du monde entier.
+      {{ else }}
+        Choisissez le parcours qui vous correspond : enseignants ou grand public.
+      {{ end }}
+    </p>
+
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      {{ if eq .Section "classroom" }}
+        <button type="button" class="btn btn--primary btn--pending" aria-disabled="true">
+          Demander une adhésion enseignant
+        </button>
+        <a href="/ressources/" class="btn btn--secondary">Voir les ressources</a>
+      {{ else if eq .Section "mosaic" }}
+        <button type="button" class="btn btn--primary btn--pending" aria-disabled="true">
+          Créer mon compte
+        </button>
+        <a href="/mosaic/comment-ca-marche/" class="btn btn--secondary">En savoir plus</a>
+      {{ else }}
+        <a href="/classroom/" class="btn btn--primary" style="background:#185FA5;">Je suis enseignant</a>
+        <a href="/mosaic/" class="btn btn--primary" style="background:#7B3FE4;">Explorer Mosaic</a>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

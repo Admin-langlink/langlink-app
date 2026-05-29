@@ -1,0 +1,26 @@
+<nav class="nav" aria-label="Navigation Classroom">
+  <div class="container">
+    <div class="nav__inner">
+
+      <a href="/classroom/" class="nav__logo">
+        Langlink <span>Classroom</span>
+      </a>
+
+      <ul class="nav__links">
+    <li><a href="/">Accueil</a></li>
+    {{ range .Site.Menus.classroom }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+    </ul>
+      <a href="/mosaic/" class="nav__switch">
+        Découvrir Mosaic →
+      </a>
+
+      <button type="button" class="nav__cta nav__cta--pending" aria-disabled="true">
+  Demander une adhésion enseignant
+</button>
+
+
+    </div>
+  </div>
+</nav>

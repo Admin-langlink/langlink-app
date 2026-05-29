@@ -1,27 +1,73 @@
 baseURL = "https://langlink.app/"
-languageCode = "fr"
-title = "LangLink"
-pagerSize = 3
+languageCode = "fr-FR"
+defaultContentLanguage = "fr"
+title = "Langlink"
+
+enableRobotsTXT = true
+enableGitInfo    = true
+
+[params]
+  description    = "Langlink connecte des classes du monde entier autour de projets culturels communs."
+  author         = "Langlink"
+  classroom_cta  = "Demander un pilote"
+  mosaic_cta     = "Rejoindre maintenant"
+
+[menu]
+
+  [[menu.classroom]]
+    name       = "Comment ça marche"
+    url        = "/classroom/comment-ca-marche/"
+    weight     = 10
+
+  [[menu.classroom]]
+    name       = "Sécurité & Pédagogie"
+    url        = "/classroom/securite-pedagogie/"
+    weight     = 20
+
+  [[menu.classroom]]
+    name       = "Ressources"
+    url        = "/ressources/"
+    weight     = 30
+
+  [[menu.mosaic]]
+    name       = "Comment ça marche"
+    url        = "/mosaic/comment-ca-marche/"
+    weight     = 10
+
+  [[menu.mosaic]]
+    name       = "Communauté"
+    url        = "/mosaic/communaute/"
+    weight     = 20
+
+  [[menu.mosaic]]
+    name       = "Galerie"
+    url        = "/mosaic/galerie/"
+    weight     = 30
+
+  [[menu.footer]]
+    name       = "À propos"
+    url        = "/a-propos/"
+    weight     = 10
+
+  [[menu.footer]]
+    name       = "Contact"
+    url        = "/contact/"
+    weight     = 20
+
+  [[menu.footer]]
+    name       = "Mentions légales"
+    url        = "/mentions-legales/"
+    weight     = 30
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  writeStats = true
 
 [outputs]
-  home = ["HTML", "JSON"]
-
-[[menu.main]]
-  name = "Accueil"
-  url = "/"
-  weight = 1
-
-[[menu.main]]
-  name = "Fresques Narratives"
-  url = "/fresques/"
-  weight = 2
-
-[[menu.main]]
-  name = "Services"
-  url = "/services/"
-  weight = 3
-
-[[menu.main]]
-  name = "Exemples"
-  url = "/exemples/"
-  weight = 4
+  home    = ["HTML", "RSS"]
+  section = ["HTML"]
+  page    = ["HTML"]

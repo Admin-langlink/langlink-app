@@ -1,16 +1,6 @@
 [build]
-  command = "hugo --minify && cp -r static/admin public/"
+  command = "hugo --minify"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.120.0"
-
-[[redirects]]
-  from = "/admin"
-  to = "/admin/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
+  HUGO_VERSION = "0.147.1"

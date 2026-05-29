@@ -1,0 +1,7 @@
+{{ if eq .Section "classroom" }}
+  {{ partial "hero-classroom.html" . }}
+{{ else if eq .Section "mosaic" }}
+  {{ partial "hero-mosaic.html" . }}
+{{ else }}
+  {{ partial "hero-default.html" . }}
+{{ end }}
