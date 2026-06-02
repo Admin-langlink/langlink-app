@@ -1,7 +1,7 @@
 ---
 title: "À propos"
 subtitle: "Langlink est né d'une envie de rendre l'interculturel concret."
-description: "L'histoire, la mission et la vision derrière Langlink."
+description: "La création, la mission et la vision derrière Langlink."
 ---
 
 ## Notre mission
