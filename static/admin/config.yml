@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: Admin-langlink/langlink-app
   branch: main
 
 media_folder: static/images
