@@ -324,3 +324,103 @@ button.btn {
   border: none;
   font-family: inherit;
 }
+/* ============================================================
+   PAGE APPLICATION — extensions spécifiques
+   ============================================================ */
+
+:root {
+  --app-classroom : #185FA5;   /* aligné sur data-theme classroom */
+  --app-mosaic    : #7B3FE4;   /* aligné sur data-theme mosaic    */
+  --app-accent    : #EC4899;
+  --app-shadow    : 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Hero */
+.app-hero { background: linear-gradient(135deg, #EEF2FF 0%, #FDF2F8 100%); text-align: center; }
+.app-accent { color: var(--app-accent); }
+
+/* Titre de section centré */
+.app-section-title { text-align: center; margin-bottom: 2.5rem; }
+
+/* Visuels côte à côte */
+.app-visuals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+.app-visual-card { border-radius: var(--card-radius); overflow: hidden; box-shadow: var(--app-shadow); margin: 0; }
+.app-visual-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.app-visual-card figcaption { padding: 0.75rem 1rem; font-size: 0.85rem; color: var(--color-text-muted); background: var(--color-surface); text-align: center; }
+
+/* 4 briques */
+.app-bricks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.app-brick {
+  background: var(--color-surface);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  border-left: 4px solid var(--color-text);
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+.app-brick:hover { transform: translateY(-3px); box-shadow: var(--app-shadow); }
+.app-brick__icon  { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+.app-brick__title { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--color-text); }
+.app-brick__text  { font-size: 0.95rem; line-height: 1.65; color: var(--color-text-muted); margin: 0; }
+
+/* Comparatif */
+.app-compare-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; }
+.app-compare-card { background: var(--color-bg); border-radius: var(--card-radius); padding: 2.5rem 2rem; box-shadow: var(--app-shadow); text-align: center; }
+.app-compare-card--classroom { border-top: 5px solid var(--app-classroom); }
+.app-compare-card--mosaic    { border-top: 5px solid var(--app-mosaic); }
+.app-compare-card__badge { font-size: 1.25rem; font-weight: 700; font-family: var(--font-heading); display: block; margin-bottom: 1.25rem; }
+.app-compare-card--classroom .app-compare-card__badge { color: var(--app-classroom); }
+.app-compare-card--mosaic    .app-compare-card__badge { color: var(--app-mosaic); }
+.app-compare-card__list { list-style: none; padding: 0; margin: 0 0 1.75rem; text-align: left; }
+.app-compare-card__list li { padding: 0.45rem 0; border-bottom: 0.5px solid var(--color-border); font-size: 0.95rem; color: var(--color-text); }
+.app-compare-card--classroom .app-compare-card__list li::before { content: "✓ "; color: var(--app-classroom); font-weight: 700; }
+.app-compare-card--mosaic    .app-compare-card__list li::before { content: "✓ "; color: var(--app-mosaic);    font-weight: 700; }
+.app-compare-vs { width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--color-text); color: var(--color-bg); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; flex-shrink: 0; }
+
+/* Boutons nouveaux — ne remplacent pas .btn--primary / .btn--secondary existants */
+.btn--classroom { background: var(--app-classroom); color: #fff; border-radius: var(--btn-radius); }
+.btn--mosaic    { background: var(--app-mosaic);    color: #fff; border-radius: var(--btn-radius); }
+.btn--cta-light { background: #fff; color: var(--color-text); border-radius: var(--btn-radius); }
+.btn--cta-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.65); border-radius: var(--btn-radius); }
+
+/* Pourquoi */
+.app-why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 1rem; }
+.app-why-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+.app-why-item__number { font-size: 2.5rem; font-weight: 900; color: #E5E7EB; line-height: 1; flex-shrink: 0; width: 3rem; font-family: var(--font-heading); }
+.app-why-item__text { font-size: 1rem; line-height: 1.7; color: var(--color-text-muted); margin: 0; }
+.app-why-item__text strong { color: var(--color-text); font-weight: 600; }
+
+/* Preuves visuelles */
+.app-proof-video { margin-bottom: 3rem; text-align: center; }
+.app-video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--card-radius); box-shadow: var(--app-shadow); margin-bottom: 0.75rem; }
+.app-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.app-proof-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 3rem; }
+.app-proof-gallery__item { border-radius: var(--card-radius); overflow: hidden; box-shadow: var(--app-shadow); margin: 0; }
+.app-proof-gallery__item img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.app-proof-gallery__item figcaption { padding: 0.65rem 1rem; font-size: 0.82rem; color: var(--color-text-muted); background: var(--color-bg); text-align: center; }
+
+/* Témoignages */
+.app-testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+.app-testimonial { background: var(--color-bg); border-radius: var(--card-radius); padding: 1.75rem; box-shadow: var(--app-shadow); border-left: 4px solid var(--app-accent); margin: 0; }
+.app-testimonial p { font-size: 1rem; line-height: 1.7; color: var(--color-text); font-style: italic; margin-bottom: 1rem; }
+.app-testimonial cite { font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); font-style: normal; }
+
+/* CTA final */
+.app-cta { background: var(--color-text); text-align: center; }
+.app-cta h2 { color: var(--color-bg); }
+.app-cta__sub { font-size: 1.1rem; margin-bottom: 2rem; color: rgba(255,255,255,0.75); }
+.app-cta__buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-visuals,
+  .app-bricks,
+  .app-why-grid,
+  .app-proof-gallery { grid-template-columns: 1fr; }
+  .app-compare-grid  { grid-template-columns: 1fr; }
+  .app-compare-vs    { margin: 0 auto; }
+}
