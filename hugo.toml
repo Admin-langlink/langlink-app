@@ -71,3 +71,6 @@ enableGitInfo    = true
   home    = ["HTML", "RSS"]
   section = ["HTML"]
   page    = ["HTML"]
+[services]
+  [services.googleAnalytics]
+    ID = "G-HW62RLV6YR"
