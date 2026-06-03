@@ -24,7 +24,7 @@ Dans les deux cas :
 - Les contributions sont **nuancées, modérées et vérifiées** (pas de messages vides, pas de trolls, pas de superficiel)
 - Le résultat final n'est pas une simple conversation : c'est une **œuvre collective**, construite fragment par fragment, qui révèlera au final quelque chose de plus grand que la somme de ses parties
 
-Apprendre une langue ici, c'est contribuer à quelque chose qui se construit ensemble.
+Apprendre une langue, c'est contribuer à une oeuvre qui se construit ensemble.
 
 ---
 
@@ -49,4 +49,4 @@ Pas de cours théoriques sur "les différences culturelles" mais de vraies renco
 Langlink évolue.
 
 **Vous avez un retour, une idée, une réaction ?**
-[Contactez-nous](/contact/) — chaque message est lu.
+[Contactez-nous](/contact/)
