@@ -78,11 +78,11 @@ p:last-child { margin-bottom: 0; }
 }
 
 .nav__logo {
-  font-family:      var(--font-heading);
-  font-weight:      500;
-  font-size:        1.125rem;
-  color:            var(--ll-brand);
-  white-space:      nowrap;
+ font-family:  var(--font-heading);
+  font-weight:  500;
+  font-size:    1.125rem;
+  color:        var(--color-text);  /* ← s'adapte automatiquement au thème */
+  white-space:  nowrap;
 }
 
 .nav__links {
