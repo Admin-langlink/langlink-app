@@ -1,7 +1,7 @@
 ---
-title: "Comment ça marche"
+title: "Commencez votre première fresque ici"
 subtitle: "Contribuez, découvrez, échangez."
-description: "Comment fonctionne Langlink Mosaic."
+description: "Rejoignez une fresque narrative mondiale. Contribuez en quelques minutes, progressez sans vous en rendre compte, sans cours et sans exercice."
 ---
 
 Langlink Mosaic permet d'apprendre et de participer facilement à des créations interculturelles.
@@ -19,7 +19,7 @@ Mosaic propose régulièrement de nouvelles fresques thématiques : 🌍 Fresque
 Vous choisissez celle qui vous parle.
 
 **Vous contribuez. En langue étrangère.**
-Vous répondez à une question, partagez une image, exprimez un point de vue — dans la langue que vous apprenez ou pratiquez. Le contenu posté (photos, sons, vidéos) doit contenir des légendes obligatoires "Contexte & Signification" pour expliquer ou nuancer pourquoi ce contenu est pertinent localement.
+Vous répondez à une question, partagez une image, exprimez un point de vue, dans la langue que vous apprenez ou pratiquez. Le contenu posté (photos, sons, vidéos) doit contenir des légendes obligatoires "Contexte & Signification" pour expliquer ou nuancer pourquoi ce contenu est pertinent localement.
 
 **La fresque se révèle.**
 Vos mots rejoignent ceux d'autres participants. L'IA tisse les liens culturels. La fresque grandit, se densifie, révèle ce que des inconnus ont en commun, et ce qui les distingue, sans jugement ou appréciation.

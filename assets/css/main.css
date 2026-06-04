@@ -133,6 +133,11 @@ p:last-child { margin-bottom: 0; }
   line-height: 1.6;
 }
 
+.hero__actions,
+.hero ul {
+  margin-top: 2rem;
+}
+
 .grid-2 {
   display:               grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

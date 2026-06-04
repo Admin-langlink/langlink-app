@@ -5,21 +5,25 @@
       <span class="tag">Mosaic</span>
     </div>
 
-    <h1 class="hero__title">{{ .Title }}</h1>
+    <h1 class="hero__title">Pratiquez une langue. Progressez en créant, pas en récitant.</h1>
 
     <p class="hero__subtitle">
       {{ .Params.subtitle | default "Créez, partagez et explorez avec une communauté mondiale." }}
     </p>
 
-    <div class="hero__actions">
-     <a href="https://form.typeform.com/to/QFO4FXkA"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn btn--primary">
-  Contribuez
-</a>
-<a href="/mosaic/comment-ca-marche/" class="btn btn--secondary">Découvrir la Mosaic</a>
+    <ul style="list-style:none; margin: 1.5rem auto; max-width:480px; display:flex; flex-direction:column; gap:0.5rem; text-align:left;">
+      <li style="font-size:0.9rem; color:var(--color-text-muted);">✓ Pas de niveau requis, pas de cours</li>
+      <li style="font-size:0.9rem; color:var(--color-text-muted);">✓ Quelques minutes par session, à n'importe quelle heure</li>
+      <li style="font-size:0.9rem; color:var(--color-text-muted);">✓ Vos mots rejoignent une œuvre mondiale réelle</li>
+      <li style="font-size:0.9rem; color:var(--color-text-muted);">✓ Contributions vérifiées, communauté bienveillante</li>
+    </ul>
 
+    <div class="hero__actions">
+      <a href="https://form.typeform.com/to/QFO4FXkA"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn--primary">Contribuez</a>
+      <a href="/mosaic/comment-ca-marche/" class="btn btn--secondary">Découvrir la Mosaic</a>
     </div>
 
   </div>

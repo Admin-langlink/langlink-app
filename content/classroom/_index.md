@@ -1,12 +1,12 @@
 ---
 title: "Langlink Classroom"
 subtitle: "Projets interculturels pour les enseignants et leurs classes."
-description: "Langlink Classroom — Projets culturels internationaux pour les enseignants. Sécurisé, pédagogique, clé en main."
+description: "Motivez vos élèves avec de vrais échanges internationaux. Projets interculturels clés en main, conformes RGPD, pour les cours de langue. Projets culturels internationaux pour les enseignants."
 ---
 
-Langlink Classroom aide les enseignants à mettre en place des projets interculturels structurés avec leurs élèves.
+Langlink Classroom aide les enseignants à mettre en place des projets culturels internationaux structurés avec leurs élèves.
 
-- projets guidés
-- cadre pédagogique clair
-- expérience sécurisée
-- accompagnement de mise en œuvre
+- Des correspondants réels dans différents pays
+- Un cadre pédagogique clé en main
+- Expérience sécurisée, conforme RGPD
+- Modération des contenus

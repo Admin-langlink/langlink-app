@@ -3,7 +3,11 @@
 {{ $section := .Section | default "default" }}
 {{ $ogImage := printf "images/og-%s.png" $section }}
 
-<title>{{ $title }} — Langlink</title>
+{{ if strings.HasSuffix $title "Langlink" }}
+  <title>{{ $title }}</title>
+{{ else }}
+  <title>{{ $title }} — Langlink</title>
+{{ end }}
 <meta name="description" content="{{ $description }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
 

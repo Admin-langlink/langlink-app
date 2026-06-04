@@ -15,8 +15,8 @@ enableGitInfo    = true
 [menu]
 
   [[menu.classroom]]
-    name       = "Comment ça marche"
-    url        = "/classroom/comment-ca-marche/"
+    name       = "Lancer un projet"
+    url        = "/classroom/lancer-un-projet/"
     weight     = 10
 
   [[menu.classroom]]
@@ -30,8 +30,8 @@ enableGitInfo    = true
     weight     = 30
 
   [[menu.mosaic]]
-    name       = "Comment ça marche"
-    url        = "/mosaic/comment-ca-marche/"
+    name       = "Welcome"
+    url        = "/mosaic/welcome/"
     weight     = 10
 
   [[menu.mosaic]]
@@ -71,6 +71,7 @@ enableGitInfo    = true
   home    = ["HTML", "RSS"]
   section = ["HTML"]
   page    = ["HTML"]
+
 [services]
   [services.googleAnalytics]
     ID = "G-HW62RLV6YR"

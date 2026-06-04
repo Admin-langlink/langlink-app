@@ -1,7 +1,7 @@
 ---
 title: "Langlink Mosaic"
-subtitle: "Créez, partagez et explorez avec une communauté du monde entier."
-description: "Langlink Mosaic — Apprenez les langues en contribuant à des fresques narratives collectives. Création rapide, gratification immédiate, rencontres réelles."
+subtitle: "Apprenez les langues et rejoignez des milliers de contributeurs."
+description: "Echangez avec de vraies personnes. Contribuez à des fresques narratives collectives. Pas de cours, pas d'exercice. Rapide, gratification immédiate, rencontres et créations réelles."
 ---
 
 ## La langue, comme prétexte à la création.
