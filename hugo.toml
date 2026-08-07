@@ -4,7 +4,10 @@ defaultContentLanguage = "fr"
 title = "Langlink"
 
 enableRobotsTXT = true
-enableGitInfo    = true
+# enableGitInfo requires a full Git history at build time; the Netlify deploy
+# environment builds from a source archive, so reading the Git log fails and
+# aborts the build. No template uses .GitInfo / .Lastmod, so it stays off.
+enableGitInfo    = false
 
 [params]
   description    = "Langlink connecte des classes du monde entier autour de projets culturels communs."
