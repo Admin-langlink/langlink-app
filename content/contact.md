@@ -4,7 +4,7 @@ subtitle: "On vous répond rapidement."
 description: "Contactez l'équipe Langlink."
 ---
 
-Pour toute demande de démo, de partenariat ou d'information, contactez l'équipe Langlink.
+Pour toute demande de démo, de partenariat ou d'information, [contactez l'équipe Langlink](https://tally.so/r/jadb2E).
 
 - demande de démonstration
 - question pédagogique
