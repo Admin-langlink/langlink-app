@@ -25,3 +25,113 @@ collections:
           - { name: subtitle, label: Sous-titre, required: false }
           - { name: description, label: Description pour Google, required: false }
           - { name: body, label: Texte de la page, widget: richtext }
+      - name: accueil
+        label: Accueil
+        file: content/_index.md
+        preview_path: /
+        fields:
+          - { name: title, label: Titre }
+          - { name: description, label: Description pour Google, required: false }
+      - name: a-propos
+        label: À propos
+        file: content/a-propos.md
+        preview_path: /a-propos/
+        fields:
+          - { name: title, label: Titre }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+      - name: application
+        label: Application
+        file: content/application/index.md
+        preview_path: /application/
+        fields:
+          - { name: title, label: Titre }
+          - { name: description, label: Description pour Google, required: false }
+      - name: mentions-legales
+        label: Mentions légales
+        file: content/mentions-legales.md
+        preview_path: /mentions-legales/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+      - name: ressources
+        label: Ressources
+        file: content/ressources/_index.md
+        preview_path: /ressources/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+
+  - name: classroom
+    label: Classroom
+    files:
+      - name: classroom-accueil
+        label: Accueil Classroom
+        file: content/classroom/_index.md
+        preview_path: /classroom/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+      - name: demo-pilote
+        label: Demander un pilote
+        file: content/classroom/demo-pilote.md
+        preview_path: /classroom/demo-pilote/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+      - name: lancer-un-projet
+        label: Lancer un projet
+        file: content/classroom/lancer-un-projet.md
+        preview_path: /classroom/lancer-un-projet/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+      - name: securite-pedagogie
+        label: Sécurité et pédagogie
+        file: content/classroom/securite-pedagogie.md
+        preview_path: /classroom/securite-pedagogie/
+        fields:
+          - { name: title, label: Titre }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+
+  - name: mosaic
+    label: Mosaic
+    files:
+      - name: welcome
+        label: Commencez ici
+        file: content/mosaic/welcome.md
+        preview_path: /mosaic/welcome/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+      - name: galerie
+        label: Galerie
+        file: content/mosaic/galerie.md
+        preview_path: /mosaic/galerie/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
+      - name: rejoindre
+        label: Rejoindre Mosaic
+        file: content/mosaic/rejoindre.md
+        preview_path: /mosaic/rejoindre/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext, required: false }
