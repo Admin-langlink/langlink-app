@@ -1,6 +1,6 @@
 ---
-title: "À propos de Langlink"
-description: "Langlink est né d'une histoire vraie en salle de classe. Voici notre histoire, notre mission et les convictions qui guident chaque décision."
+title: À propos de Langlink
+description: Langlink est né d'une histoire vraie en salle de classe. Voici notre histoire, notre mission et les convictions qui guident chaque décision!
 date: 2024-01-01
 draft: false
 ---
