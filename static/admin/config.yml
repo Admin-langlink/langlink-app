@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: Admin-langlink/langlink-app
+  branch: main
+  auth_methods: [token]
+
+publish_mode: editorial_workflow
+site_url: https://langlink.app
+
+media_folder: /static/images
+public_folder: /images
+
+collections:
+  - name: pages
+    label: Pages du site
+    files:
+      - name: contact
+        label: Contact
+        file: content/contact.md
+        preview_path: /contact/
+        fields:
+          - { name: title, label: Titre }
+          - { name: subtitle, label: Sous-titre, required: false }
+          - { name: description, label: Description pour Google, required: false }
+          - { name: body, label: Texte de la page, widget: richtext }
